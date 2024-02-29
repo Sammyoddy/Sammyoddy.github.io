@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+  resources: Odeyemi Samuel O. CV.pdf
+
+website:
+  title: "SAMMY ODEYEMI"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: index.qmd#portfolio
+        text: Portfolio
+      - href: Odeyemi Samuel O. CV.pdf
+        text: CV
+      - href: abcde.qmd
+        text: Home
+    
+    right:
+      - icon: twitter
+        href: https://twitter.com/arduinounoboy
+      - icon: github
+        href: https://github.com/sammyoddy
+      - icon: envelope
+        href: mailto:thesamuelodeyemi@gmail.com
+
+format:
+  html:
+    theme: sketchy
+    css: styles.css
+    toc: true
+
+editor: visual
+ 
