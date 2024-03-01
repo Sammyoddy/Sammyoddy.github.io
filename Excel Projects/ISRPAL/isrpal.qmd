@@ -1,0 +1,73 @@
+---
+title: "FATALITIES IN THE ISRAEL-PALESTINE CONFLICT: 2000-2023 ANALYSIS"
+toc: true
+monofont: 'Consolas'
+---
+
+### Israel-Palestine Fatality Dataset Analysis
+
+![](ISRPAL FATALITIES PAGE.png){width="350"}
+
+#### Introduction
+
+The Israel-Palestine conflict has spanned decades, resulting in significant loss of life. The analysis aims to explore fatality trends, identify patterns, and provide insights based on the available data.
+
+The Israel-Palestine conflict from 2000 to 2023 was a period marked by significant events and escalating tensions.This period was characterized by a cycle of violence and attempts at peace negotiations. It’s important to note that this is a complex issue with deep historical roots and differing narratives.The specific causes of the conflict during 2000-2003 are multifaceted and include:
+
+1\. Al-Aqsa Intifada (2000)
+
+2\. Failed Peace Negotiations (2000)
+
+3\. Political Changes (2001)
+
+4\. Violence and Retaliation (2002)
+
+5\. Roadmap for Peace (2003)
+
+#### Overview
+
+1.  **Data Source**: The [dataset](https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian){style="color:blue;"}, sourced from [Kaggle](https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian){style="color:blue;"}, contains information about fatalities in the Israel-Palestine conflict. Each record represents an individual who lost their life during specific incidents.
+
+    **Fields**:
+
+    -   **Date**: The date of the incident.
+
+    -   **Location**: Where the incident occurred (e.g., Gaza, West Bank).
+
+    -   **Fatalities**: The number of people killed.
+
+    -   **Citizenship**:The Citizenship of fatalities recorded
+
+    -   **Perpetrator**: The group responsible (e.g., IDF, Hamas).
+
+    -   **Target**: The affected group (e.g., civilians, militants)
+
+#### Key Questions
+
+1.  **Temporal Trends**: How have fatalities evolved over time? Are there specific periods of heightened violence?
+
+2.  **Geographical Patterns**: Which regions (Gaza, West Bank, etc.) have experienced the most fatalities?
+
+3.  **Perpetrators and Targets**: Who are the main perpetrators, and who bears the brunt of the violence (civilians, militants, etc.)?
+
+    ## Dashboard
+
+![](ISRPAL DASHBOARD.png)
+
+::: callout-important
+## Important!!!
+
+Right-click on image to open dashboard in new tab, if content too tiny
+:::
+
+## Conclusion
+
+In conclusion, the Israel-Palestine analysis has yielded valuable insights into the deaths recorded and how distributed they are:
+
+-   **Insights**:
+
+    -   Palestinians suffered a high fatality count at **10,092** and only **1** American Died.
+
+    -   **2014** is peak year for highest death toll at **2326**.
+
+    -   Over **9000** people died by **Gunfire** losely followed by Explosion at **555**

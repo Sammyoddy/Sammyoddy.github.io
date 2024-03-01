@@ -1,0 +1,85 @@
+---
+title: "Video Game Sales Analysis for Synergy Ltd."
+toc: true
+monofont: 'Consolas'
+---
+
+![](SYNERGY PAGE.png){fig-align="left" width="350"}
+
+## Introduction
+
+In this data analysis project, I delve into the fascinating world of video game sales at Synergy Sales. The goal is to explore trends, patterns, and insights related to video game sales worldwide. The dataset spans from 1980 to 2020, covering various regions, genres, and gaming platforms. By meticulously analyzing this data, I aim to provide valuable business insights for Synergy Ltd.
+
+## Overview
+
+The analysis revolves around answering critical questions:
+
+1.  **Which market has the highest video game sales from 1980 to 2016?**
+
+2.  **What are the total sales of the top 5 game genres and top 5 platforms worldwide during this period?**
+
+3.  **Which game genres dominated different regions from 1980 to 2020?**
+
+4.  **How did the total sales trend evolve globally during specific time periods?**
+
+## Data Source
+
+The dataset used is sourced from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} and contains information on video games with sales exceeding 100,000 copies. It includes essential fields such as:
+
+-   **Rank**: Overall sales ranking
+
+-   **Name**: Game title
+
+-   **Platform**: Release platform (e.g., PC, PS4)
+
+-   **Year**: Year of the game’s release
+
+## Methodology
+
+I followed a structured approach, adhering to the six steps of the data analysis process:
+
+1.  **Ask**: I defined the problem, communicated with stakeholders, and understood the business context. Synergy Ltd. requested an interactive dashboard showcasing game sales trends by region, genre, and platform.
+
+2.  **Prepare**: I obtained the [dataset](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"}, ensuring data integrity and cleanliness. Our primary analysis occurred on a duplicate worksheet to preserve the original data.
+
+3.  **Process**: I cleaned and transformed the data, preparing it for visualization.
+
+4.  **Share**: I created an interactive dashboard in Excel, allowing users to explore sales trends based on their preferences.
+
+5.  **Analyze**: I visualized the data, identifying patterns and drawing meaningful conclusions.
+
+6.  **Act**: Our insights informed strategic decisions for Synergy Ltd.
+
+## Key Dashboard Requirements
+
+Our interactive dashboard fulfills the following requirements:
+
+1.  Users can select specific years, regions, platforms, and genres to compare sales trends.
+
+2.  The dashboard displays the top 5 game genres and platforms by sales, corresponding to the chosen criteria.
+
+3.  It provides the percentage of sales for genres and platforms based on selected years and regions among other things.
+
+## Dashboard
+
+## ![](SYNERGY DASHBOARD.png)
+
+::: {.callout-note appearance="simple"}
+## Important!!!
+
+Right-click on image to open dashboard in new tab, if content too tiny
+:::
+
+## Conclusion
+
+In conclusion, the video game sales analysis for Synergy Ltd. has yielded valuable insights into the gaming industry:
+
+-   **Insights**:
+
+    -   North America dominated video game sales and Europe and Japan follow closely.
+
+    -   Action and Sports genres lead in sales.
+
+    -   PlayStation and Xbox platforms remain popular globally.
+
+    -   Sales reached a peak in the year 2008 at **\$678.9M**, followed by gradual decline.

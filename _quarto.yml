@@ -13,8 +13,6 @@ website:
         text: Portfolio
       - href: Odeyemi Samuel O. CV.pdf
         text: CV
-      - href: abcde.qmd
-        text: Werreyyyyyyy
     
     right:
       - icon: twitter
