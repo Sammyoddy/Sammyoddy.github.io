@@ -1,0 +1,2 @@
+"0","#select Author and Narrator columns"
+"0","audible %>% select(author,narrator) %>% head(10) %>%kable()"

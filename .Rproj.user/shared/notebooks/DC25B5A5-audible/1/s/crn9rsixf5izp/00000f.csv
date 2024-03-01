@@ -1,0 +1,7 @@
+"0","  audible <- audible %>% mutate("
+"0","    price = case_when("
+"0","      str_detect(price, "","") ~ as.numeric(str_remove(price, "","")),"
+"0","      str_detect(price, ""Free"") ~ as.numeric(str_remove(price, ""Free"")),"
+"0","      TRUE ~ as.numeric(price)"
+"0","    ),price=if_else(is.na(price),0,price)"
+"0","  )"

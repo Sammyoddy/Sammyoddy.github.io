@@ -1,0 +1,17 @@
+{
+  "index.qmd": {
+    "index.html": "4e80d23a"
+  },
+  "about.qmd": {
+    "about.html": "151fc161"
+  },
+  "audible/audible.qmd": {
+    "audible.html": "f19777e1"
+  },
+  "cv.qmd": {
+    "cv.html": "bef6a045"
+  },
+  "abcde.qmd": {
+    "abcde.html": "8ccb578e"
+  }
+}
