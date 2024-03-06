@@ -48,7 +48,7 @@ about:
   <div style="display:flex; justify-content: space-between;">
     <div style="flex:50%; padding: 10px;">
       <div style="display: flex; flex-direction: column; align-items: center;">
-        <a href="/Excel Projects/ISRPAL/isrpal.html" target="_blank"><img src="/Excel Projects/ISRPAL/ISRPAL FATALITIES MAIN.png" style="width:384px;height:250px;margin-bottom:10px;"></a> This is an Analysis on Israel Palestine conflict and the Fatalities that occured.<br> I employed the use of Microsoft Excel to perform various operations ranging from Data cleaning up to Visualization
+        <a href="/Excel Projects/ISRPAL/isrpal.html" target="_blank"><img src="/Excel Projects/ISRPAL/ISRPAL FATALITIES MAIN.png" style="margin-bottom:10px; max-width: 100%; height: auto;"></a> This is an Analysis on Israel Palestine conflict and the Fatalities that occured.<br> I employed the use of Microsoft Excel to perform various operations ranging from Data cleaning up to Visualization
         <a class="btn btn-primary" href="/Excel Projects/ISRPAL/isrpal.html" role="button" target="_blank" style="width:169px;height:51px;padding:10px;">View Project</a>
       </div></div>
 
