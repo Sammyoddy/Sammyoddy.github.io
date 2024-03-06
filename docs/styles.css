@@ -1,1 +1,18 @@
-/* css styles */
+/* styles.css */
+
+/* Adjust font size and line height for readability on smaller screens */
+.content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Center the header text on smaller screens */
+h1 {
+    text-align: center;
+}
+
+/* Center the project button on smaller screens */
+.btn-primary {
+    display: block;
+    margin: 0 auto;
+}
