@@ -1,4 +1,14 @@
 ---
+format: html
+css: styles.css
+---
+
+---
+html:
+  head: '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+---
+
+---
 title: "SAMMY ODEYEMI"
 about: 
   template: jolla
@@ -47,6 +57,23 @@ about:
         <a href="/Excel Projects/SYNERGY VIDEO GAME/synergy.html" target="_blank"><img src="/Excel Projects/SYNERGY VIDEO GAME/SYNERGY MAIN.png" style="width:384px;height:250px;margin-bottom:10px;"></a> This is a video Game Sales Analysis for Synergy Ltd.<br> I employed the use of Microsoft Excel to perform various operations ranging from Data cleaning up to Visualization
         <a class="btn btn-primary" href="/Excel Projects/SYNERGY VIDEO GAME/synergy.html" role="button" target="_blank" style="width:169px;height:51px;padding:10px;">View Project</a>
       </div></div></div>
+      
+      
+          <h3 style="text-align:right;">R Projects</h3>
+  <div style="display:flex; justify-content: space-between;">
+    <div style="flex:50%; padding: 10px;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="/fifa21/fifa212.jpg" style="width:384px;height:250px;margin-bottom:10px;">
+        <a class="btn btn-primary" href="#" role="button" target="_blank" style="width:169px;height:51px;padding:10px;">View Project</a>
+      </div>
+    </div>
+    <div style="flex:50%; padding: 10px;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <a href="/audible/audible.html"  target="_blank" ><img src="/audible/audiblemain.jpg" style="width:384px;height:250px;margin-bottom:10px;"></a>
+        <a class="btn btn-primary" href="/audible/audible.html" role="button" target="_blank" style="width:169px;height:51px;padding:10px;">View Project</a>
+      </div>
+    </div>
+  </div>
       
 </section>
 ```

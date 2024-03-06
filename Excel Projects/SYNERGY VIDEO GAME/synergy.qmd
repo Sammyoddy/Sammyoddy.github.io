@@ -4,7 +4,7 @@ toc: true
 monofont: 'Consolas'
 ---
 
-![](SYNERGY PAGE.png){fig-align="left" width="350"}
+![](SYNERGY%20PAGE.png){fig-align="left" width="350"}
 
 ## Introduction
 
@@ -14,7 +14,7 @@ In this data analysis project, I delve into the fascinating world of video game 
 
 The analysis revolves around answering critical questions:
 
-1.  **Which market has the highest video game sales from 1980 to 2016?**
+1.  **Which market has the highest video game sales from 1980 to 2020?**
 
 2.  **What are the total sales of the top 5 game genres and top 5 platforms worldwide during this period?**
 
@@ -24,7 +24,7 @@ The analysis revolves around answering critical questions:
 
 ## Data Source
 
-The dataset used is sourced from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} and contains information on video games with sales exceeding 100,000 copies. It includes essential fields such as:
+The [dataset](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} used is sourced from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} and contains information on video games with sales exceeding 100,000 copies. It includes essential fields such as:
 
 -   **Rank**: Overall sales ranking
 
@@ -62,7 +62,7 @@ Our interactive dashboard fulfills the following requirements:
 
 ## Dashboard
 
-## ![](SYNERGY DASHBOARD.png)
+## ![](SYNERGY%20DASHBOARD.png)
 
 ::: {.callout-note appearance="simple"}
 ## Important!!!

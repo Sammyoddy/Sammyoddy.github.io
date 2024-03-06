@@ -6,7 +6,7 @@ monofont: 'Consolas'
 
 ### Israel-Palestine Fatality Dataset Analysis
 
-![](ISRPAL FATALITIES PAGE.png){width="350"}
+![](ISRPAL%20FATALITIES%20PAGE.png){width="320"}
 
 #### Introduction
 
@@ -52,7 +52,7 @@ The Israel-Palestine conflict from 2000 to 2023 was a period marked by significa
 
     ## Dashboard
 
-![](ISRPAL DASHBOARD.png)
+![](ISRPAL%20DASHBOARD.png)
 
 ::: callout-important
 ## Important!!!
