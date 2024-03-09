@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SAMMY ODEYEMI",
     "section": "",
-    "text": "Hi!, I am a grounded and goal-oriented Computer Science professional with demonstrated expertise in Data Analytics. Skilled in SQL, R, and Power BI, I specialize in transforming complex data into clear insights for informed decision-making."
+    "text": "Hi!, I am a grounded and goal-oriented Computer Science professional with demonstrated expertise in Data Analytics. Skilled in SQL, R, and Power BI, I specialize in transforming complex data into clear insights for informed decision-making.\n\n\n \n  \n    My Portfolio\n  \n  \n  Excel Projects\n  \n  \n    \n      \n    \n    \n      This is a Video Game Sales Analysis for Synergy Ltd. I employed the use of Microsoft Excel to perform various operations ranging from Data Cleaning up to Visualization\n    \n    View Project\n  \n\n\n  R Projects"
   },
   {
     "objectID": "audible/audible.html#authornarrator",
@@ -102,7 +102,7 @@
     "href": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#introduction",
     "title": "Video Game Sales Analysis for Synergy Ltd.",
     "section": "Introduction",
-    "text": "Introduction\nIn this data analysis project, I delve into the fascinating world of video game sales at Synergy Sales. The goal is to explore trends, patterns, and insights related to video game sales worldwide. The dataset spans from 1980 to 2020, covering various regions, genres, and gaming platforms. By meticulously analyzing this data, I aim to provide valuable business insights for Synergy Ltd."
+    "text": "Introduction\nIn this data analytics project, I delve into the fascinating world of video game sales at Synergy Sales. The goal is to explore trends, patterns, and insights related to video game sales worldwide. The dataset spans from 1980 to 2020, covering various regions, genres, and gaming platforms. By meticulously analyzing this data, I aim to provide valuable business insights for Synergy Ltd."
   },
   {
     "objectID": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#overview",
@@ -123,7 +123,7 @@
     "href": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#methodology",
     "title": "Video Game Sales Analysis for Synergy Ltd.",
     "section": "Methodology",
-    "text": "Methodology\nI followed a structured approach, adhering to the six steps of the data analysis process:\n\nAsk: I defined the problem, communicated with stakeholders, and understood the business context. Synergy Ltd. requested an interactive dashboard showcasing game sales trends by region, genre, and platform.\nPrepare: I obtained the dataset, ensuring data integrity and cleanliness. Our primary analysis occurred on a duplicate worksheet to preserve the original data.\nProcess: I cleaned and transformed the data, preparing it for visualization.\nShare: I created an interactive dashboard in Excel, allowing users to explore sales trends based on their preferences.\nAnalyze: I visualized the data, identifying patterns and drawing meaningful conclusions.\nAct: Our insights informed strategic decisions for Synergy Ltd."
+    "text": "Methodology\nI followed a structured approach, adhering to the six steps of the data analysis process:\n\nAsk: I defined the problem, communicated with stakeholders, and understood the business context. Synergy Ltd. requested an interactive dashboard showcasing game sales trends by region, genre, and platform.\nPrepare: I obtained the dataset, ensuring data integrity and cleanliness. Our primary analysis occurred on a duplicate worksheet to preserve the original data.\nProcess: I cleaned and transformed the data, preparing it for visualization.\nShare: I created an interactive dashboard in Excel, allowing users to explore sales trends based on their preferences.\nAnalyze: I visualized the data, identifying patterns and drawing meaningful conclusions.\nAct: Our insights informed strategic decisions for Synergy Ltd.\nExamine the Dataset\nA peek into the data; the first 10 rows of data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRank\nName\nPlatform\nYear\nGenre\nPublisher\nNA_Sales\nEU_Sales\nJP_Sales\nOther_Sales\nGlobal_Sales\n\n\n\n\n1\nWii Sports\nWii\n2006\nSports\nNintendo\n$41,490,000\n$29,020,000\n$3,770,000.00\n$8,460,000\n$82,740,000\n\n\n2\nSuper Mario Bros.\nNES\n1985\nPlatform\nNintendo\n$29,080,000\n$3,580,000\n$6,810,000.00\n$770,000\n$40,240,000\n\n\n3\nMario Kart Wii\nWii\n2008\nRacing\nNintendo\n$15,850,000\n$12,880,000\n$3,790,000.00\n$3,310,000\n$35,820,000\n\n\n4\nWii Sports Resort\nWii\n2009\nSports\nNintendo\n$15,750,000\n$11,010,000\n$3,280,000.00\n$2,960,000\n$33,000,000\n\n\n5\nPokemon Red/Pokemon Blue\nGB\n1996\nRole-Playing\nNintendo\n$11,270,000\n$8,890,000\n$10,220,000.00\n$1,000,000\n$31,370,000\n\n\n6\nTetris\nGB\n1989\nPuzzle\nNintendo\n$23,200,000\n$2,260,000\n$4,220,000.00\n$580,000\n$30,260,000\n\n\n7\nNew Super Mario Bros.\nDS\n2006\nPlatform\nNintendo\n$11,380,000\n$9,230,000\n$6,500,000.00\n$2,900,000\n$30,010,000\n\n\n8\nWii Play\nWii\n2006\nMisc\nNintendo\n$14,030,000\n$9,200,000\n$2,930,000.00\n$2,850,000\n$29,020,000\n\n\n9\nNew Super Mario Bros. Wii\nWii\n2009\nPlatform\nNintendo\n$14,590,000\n$7,060,000\n$4,700,000.00\n$2,260,000\n$28,620,000\n\n\n10\nDuck Hunt\nNES\n1984\nShooter\nNintendo\n$26,930,000\n$630,000\n$280,000.00\n$470,000\n$28,310,000"
   },
   {
     "objectID": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#key-dashboard-requirements",
@@ -158,7 +158,7 @@
     "href": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#section",
     "title": "Video Game Sales Analysis for Synergy Ltd.",
     "section": "",
-    "text": "Important!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny"
+    "text": "Important!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny\n\n\nTo interact with the excel dashboard, click here"
   },
   {
     "objectID": "Excel Projects/ISRPAL/isrpal.html#conclusion",
@@ -166,5 +166,12 @@
     "title": "FATALITIES IN THE ISRAEL-PALESTINE CONFLICT: 2000-2023 ANALYSIS",
     "section": "Conclusion",
     "text": "Conclusion\nIn conclusion, the Israel-Palestine analysis has yielded valuable insights into the deaths recorded and how distributed they are:\n\nInsights:\n\nPalestinians suffered a high fatality count at 10,092 and only 1 American Died.\n2014 is peak year for highest death toll at 2326.\nOver 9000 people died by Gunfire losely followed by Explosion at 555"
+  },
+  {
+    "objectID": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#recommendations",
+    "href": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#recommendations",
+    "title": "Video Game Sales Analysis for Synergy Ltd.",
+    "section": "Recommendations",
+    "text": "Recommendations\n1. Regions aside from Europe, Japan and North America should be looked into as to why Video Game purchases are not made and strategic marketing of these video games should be upped in the region\n2. I strongly advise that marketing and promotion be reinforced to resolve the issue of low sales for Game Genres and less purchased games.\n3. Collaborations with brands and sponsorship deals can help Game Platforms and Publishers with low sales."
   }
 ]

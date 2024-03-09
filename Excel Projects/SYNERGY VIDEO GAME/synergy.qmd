@@ -4,11 +4,11 @@ toc: true
 monofont: 'Consolas'
 ---
 
-![](SYNERGY%20PAGE.png){fig-align="left" width="350"}
+![](SYNERGY%20PAGE.png){fig-align="center" width="350"}
 
 ## Introduction
 
-In this data analysis project, I delve into the fascinating world of video game sales at Synergy Sales. The goal is to explore trends, patterns, and insights related to video game sales worldwide. The dataset spans from 1980 to 2020, covering various regions, genres, and gaming platforms. By meticulously analyzing this data, I aim to provide valuable business insights for Synergy Ltd.
+In this data analytics project, I delve into the fascinating world of video game sales at Synergy Sales. The goal is to explore trends, patterns, and insights related to video game sales worldwide. The dataset spans from 1980 to 2020, covering various regions, genres, and gaming platforms. By meticulously analyzing this data, I aim to provide valuable business insights for Synergy Ltd.
 
 ## Overview
 
@@ -24,7 +24,7 @@ The analysis revolves around answering critical questions:
 
 ## Data Source
 
-The [dataset](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} used is sourced from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} and contains information on video games with sales exceeding 100,000 copies. It includes essential fields such as:
+The [dataset](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} used is sourced from [Kaggle](https://www.kaggle.com){style="color:blue;"} and contains information on video games with sales exceeding 100,000 copies. It includes essential fields such as:
 
 -   **Rank**: Overall sales ranking
 
@@ -50,6 +50,26 @@ I followed a structured approach, adhering to the six steps of the data analysis
 
 6.  **Act**: Our insights informed strategic decisions for Synergy Ltd.
 
+    ## Examine the Dataset
+
+    A peek into the data; the first 10 rows of data
+
+    ```{r, echo=FALSE, message=FALSE}
+    #load libraries
+    library(knitr)
+    library(tidyverse)
+    ```
+
+    ```{r, echo=FALSE, message=FALSE}
+    #read in audible csv 
+    synergy <-read_csv("C:/Users/SAMMY/Desktop/Portfoliooo/Sammy Odeyemi/Excel Projects/SYNERGY VIDEO GAME/synergygames.csv")
+    ```
+
+```{r, echo=FALSE}
+#examine dataset 
+kable(head(synergy,10)) 
+```
+
 ## Key Dashboard Requirements
 
 Our interactive dashboard fulfills the following requirements:
@@ -69,6 +89,16 @@ Our interactive dashboard fulfills the following requirements:
 
 Right-click on image to open dashboard in new tab, if content too tiny
 :::
+
+To interact with the excel dashboard, [click here](https://docs.google.com/spreadsheets/d/1MgupqU3UkujLIxkbMIwgry4sgDuM7gj_/edit?usp=drive_link&ouid=107549502594190094236&rtpof=true&sd=true){style="COLOR:BLUE;"}
+
+## Recommendations {#recommendations}
+
+1\. Regions aside from Europe, Japan and North America should be looked into as to why Video Game purchases are not made and strategic marketing of these video games should be upped in the region
+
+2\. I strongly advise that marketing and promotion be reinforced to resolve the issue of low sales for Game Genres and less purchased games.
+
+3\. Collaborations with brands and sponsorship deals can help Game Platforms and Publishers with low sales.
 
 ## Conclusion
 
