@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SAMMY ODEYEMI - FATALITIES IN THE ISRAEL-PALESTINE CONFLICT: 2000-2023 ANALYSIS</title>
+<title>SAMMY ODEYEMI - Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#israel-palestine-fatality-dataset-analysis" id="toc-israel-palestine-fatality-dataset-analysis" class="nav-link active" data-scroll-target="#israel-palestine-fatality-dataset-analysis">Israel-Palestine Fatality Dataset Analysis</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#key-dashboard-requirements" id="toc-key-dashboard-requirements" class="nav-link" data-scroll-target="#key-dashboard-requirements">Key Dashboard Requirements</a></li>
+  <li><a href="#dashboard" id="toc-dashboard" class="nav-link" data-scroll-target="#dashboard">Dashboard</a>
+  <ul class="collapse">
+  <li><a href="#to-interact-with-the-excel-dashboard-click-here" id="toc-to-interact-with-the-excel-dashboard-click-here" class="nav-link" data-scroll-target="#to-interact-with-the-excel-dashboard-click-here">To interact with the Excel Dashboard, click here</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -136,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">FATALITIES IN THE ISRAEL-PALESTINE CONFLICT: 2000-2023 ANALYSIS</h1>
+<h1 class="title">Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis</h1>
 </div>
 
 
@@ -151,44 +158,280 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="israel-palestine-fatality-dataset-analysis" class="level3">
-<h3 class="anchored">Israel-Palestine Fatality Dataset Analysis</h3>
-<p><img src="ISRPAL FATALITIES PAGE.png" class="img-fluid" width="320"></p>
-<section id="introduction" class="level4">
-<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ISRPAL FATALITIES PAGE.png" class="img-fluid figure-img" width="320"></p>
+</figure>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>The Israel-Palestine conflict has spanned decades, resulting in significant loss of life. The analysis aims to explore fatality trends, identify patterns, and provide insights based on the available data.</p>
-<p>The Israel-Palestine conflict from 2000 to 2023 was a period marked by significant events and escalating tensions.This period was characterized by a cycle of violence and attempts at peace negotiations. It’s important to note that this is a complex issue with deep historical roots and differing narratives.The specific causes of the conflict during 2000-2003 are multifaceted and include:</p>
+<p>The Israel-Palestine conflict from 2000 to 2023 was a period marked by significant events and escalating tensions.This period was characterized by a cycle of violence and attempts at peace negotiations. It’s important to note that this is a complex issue with deep historical roots and differing narratives.The specific causes of the conflict during 2000-2023 are multifaceted and include:</p>
 <p>1. Al-Aqsa Intifada (2000)</p>
 <p>2. Failed Peace Negotiations (2000)</p>
 <p>3. Political Changes (2001)</p>
 <p>4. Violence and Retaliation (2002)</p>
 <p>5. Roadmap for Peace (2003)</p>
+<p>Beyond 2003, the conflict persisted with sporadic violence, peace talks, and ongoing tensions. Efforts toward a lasting resolution continued, but obstacles remained, including territorial disputes, security concerns, and differing visions for the future.</p>
 </section>
-<section id="overview" class="level4">
-<h4 class="anchored" data-anchor-id="overview">Overview</h4>
-<ol type="1">
-<li><p><strong>Data Source</strong>: The <a href="https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian" style="color:blue;">dataset</a>, sourced from <a href="https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian" style="color:blue;">Kaggle</a>, contains information about fatalities in the Israel-Palestine conflict. Each record represents an individual who lost their life during specific incidents.</p>
-<p><strong>Fields</strong>:</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>Data Source</strong>: The <a href="https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian" style="color:blue;">dataset</a>, sourced from <a href="https://www.kaggle.com" style="color:blue;">Kaggle</a>, contains information about fatalities in the Israel-Palestine conflict. Each record represents an individual who lost their life during specific incidents.</p>
+<p>This <a href="https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian" style="color:blue;">dataset</a> on fatalities related to the Israel-Palestine conflict can be explored to gain insights such as :</p>
+<p><strong>Insights</strong>:</p>
 <ul>
-<li><p><strong>Date</strong>: The date of the incident.</p></li>
-<li><p><strong>Location</strong>: Where the incident occurred (e.g., Gaza, West Bank).</p></li>
-<li><p><strong>Fatalities</strong>: The number of people killed.</p></li>
-<li><p><strong>Citizenship</strong>:The Citizenship of fatalities recorded</p></li>
-<li><p><strong>Perpetrator</strong>: The group responsible (e.g., IDF, Hamas).</p></li>
-<li><p><strong>Target</strong>: The affected group (e.g., civilians, militants)</p></li>
-</ul></li>
-</ol>
+<li><p><strong>Fatality Trends</strong></p></li>
+<li><p><strong>Demographic Analysis</strong></p></li>
+<li><p><strong>Geospatial Analysis</strong></p></li>
+<li><p><strong>Hostilities Participation Analysis</strong></p></li>
+<li><p><strong>Weapons Used</strong></p></li>
+<li><p><strong>Perpetrator Profiles</strong></p></li>
+</ul>
 </section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>I followed a structured approach, adhering to the six steps of the data analysis process:</p>
+<ol type="1">
+<li><p><strong>Define Objective and Stakeholders</strong>: Clearly state the goal (analyze Israel-Palestine fatalities) and identify who needs this information (researchers, policymakers).</p></li>
+<li><p><strong>Collect and Validate Data</strong>: Get the fatality dataset and ensure it’s accurate.</p></li>
+<li><p><strong>Clean and Transform Data</strong>: Fix any issues in the data and make it ready for analysis.</p></li>
+<li><p><strong>Create Interactive Dashboard</strong>: Build a user-friendly tool for exploring the data.</p></li>
+<li><p><strong>Visualize Trends</strong>: Use charts to see patterns (e.g., fatalities over time).</p></li>
+<li><p><strong>Draw Conclusions</strong>: Analyze findings (e.g., age disparities, regional impact).</p></li>
+<li><p><strong>Inform Decisions</strong>: Share insights to guide conflict resolution efforts. 🌍🔍</p>
+<h2 id="examine-the-dataset" class="anchored">Examine the Dataset</h2>
+<p>A peek into the data; the first 10 rows of data</p></li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 4%">
+<col style="width: 1%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">date_of_event</th>
+<th style="text-align: right;">age</th>
+<th style="text-align: left;">citizenship</th>
+<th style="text-align: left;">event_location</th>
+<th style="text-align: left;">event_location_district</th>
+<th style="text-align: left;">event_location_region</th>
+<th style="text-align: left;">date_of_death</th>
+<th style="text-align: left;">gender</th>
+<th style="text-align: left;">took_part_in_the_hostilities</th>
+<th style="text-align: left;">place_of_residence</th>
+<th style="text-align: left;">place_of_residence_district</th>
+<th style="text-align: left;">type_of_injury</th>
+<th style="text-align: left;">ammunition</th>
+<th style="text-align: left;">killed_by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">’Abd a-Rahman Suleiman Muhammad Abu Daghash</td>
+<td style="text-align: left;">24/09/2023</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Nur Shams R.C.</td>
+<td style="text-align: left;">Tulkarm</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">24/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Nur Shams R.C.</td>
+<td style="text-align: left;">Tulkarm</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">live ammunition</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Usayed Farhan Muhammad ’Ali Abu ’Ali</td>
+<td style="text-align: left;">24/09/2023</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Nur Shams R.C.</td>
+<td style="text-align: left;">Tulkarm</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">24/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Nur Shams R.C.</td>
+<td style="text-align: left;">Tulkarm</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">live ammunition</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">’Abdallah ’Imad Sa’ed Abu Hassan</td>
+<td style="text-align: left;">22/09/2023</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Kfar Dan</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">22/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">al-Yamun</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">live ammunition</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Durgham Muhammad Yihya al-Akhras</td>
+<td style="text-align: left;">20/09/2023</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">’Aqbat Jaber R.C.</td>
+<td style="text-align: left;">Jericho</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">20/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">’Aqbat Jaber R.C.</td>
+<td style="text-align: left;">Jericho</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">live ammunition</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Raafat ’Omar Ahmad Khamaisah</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Jenin R.C.</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">live ammunition</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">’Ata Yasser ’Ata Musa</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Jenin R.C.</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">20/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">missile</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Yusef Salem Yusef Radwan</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Gaza City</td>
+<td style="text-align: left;">Gaza</td>
+<td style="text-align: left;">Gaza Strip</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Khan Yunis</td>
+<td style="text-align: left;">Khan Yunis</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">live ammunition</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mahmoud Khaled S’ud ’Ar’arawi</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Jenin R.C.</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Jenin R.C.</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">missile</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mahmoud ’Ali Nafe’a a-S’adi</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">Jenin R.C.</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">19/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Jenin R.C.</td>
+<td style="text-align: left;">Jenin</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">missile</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Milad Munzer Wajih a-Ra’i</td>
+<td style="text-align: left;">09/09/2023</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">Palestinian</td>
+<td style="text-align: left;">al-’Arrub R.C.</td>
+<td style="text-align: left;">Hebron</td>
+<td style="text-align: left;">West Bank</td>
+<td style="text-align: left;">09/09/2023</td>
+<td style="text-align: left;">M</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">al-’Arrub Camp</td>
+<td style="text-align: left;">Hebron</td>
+<td style="text-align: left;">gunfire</td>
+<td style="text-align: left;">live ammunition</td>
+<td style="text-align: left;">Israeli security forces</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="key-dashboard-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="key-dashboard-requirements">Key Dashboard Requirements</h2>
 <section id="key-questions" class="level4">
-<h4 class="anchored">Key Questions</h4>
+<h4 class="anchored" data-anchor-id="key-questions">Key Questions</h4>
 <ol type="1">
 <li><p><strong>Temporal Trends</strong>: How have fatalities evolved over time? Are there specific periods of heightened violence?</p></li>
 <li><p><strong>Geographical Patterns</strong>: Which regions (Gaza, West Bank, etc.) have experienced the most fatalities?</p></li>
-<li><p><strong>Perpetrators and Targets</strong>: Who are the main perpetrators, and who bears the brunt of the violence (civilians, militants, etc.)?</p>
-<h2 id="dashboard" class="anchored" data-anchor-id="key-questions">Dashboard</h2></li>
+<li><p><strong>Perpetrators and Targets</strong>: Who are the main perpetrators, and who bears the brunt of the violence (civilians, militants, etc.)?</p></li>
 </ol>
-<p><img src="ISRPAL DASHBOARD.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-important callout-titled">
+</section>
+</section>
+<section id="dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="dashboard">Dashboard</h2>
+<p><img src="ISRPAL DASHBOARD2.png" class="img-fluid"></p>
+<div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -201,6 +444,8 @@ Important!!!
 <p>Right-click on image to open dashboard in new tab, if content too tiny</p>
 </div>
 </div>
+<section id="to-interact-with-the-excel-dashboard-click-here" class="level3">
+<h3 class="anchored" data-anchor-id="to-interact-with-the-excel-dashboard-click-here">To interact with the Excel Dashboard, <a href="https://docs.google.com/spreadsheets/d/1IRARIBUMYmjIEr1WREhYTHq3tS7vsgQG/edit?usp=drive_link&amp;ouid=107549502594190094236&amp;rtpof=true&amp;sd=true" style="COLOR:BLUE;">click here</a></h3>
 </section>
 </section>
 <section id="conclusion" class="level2">
@@ -213,6 +458,10 @@ Important!!!
 <li><p><strong>2014</strong> is peak year for highest death toll at <strong>2326</strong>.</p></li>
 <li><p>Over <strong>9000</strong> people died by <strong>Gunfire</strong> losely followed by Explosion at <strong>555</strong></p></li>
 </ul></li>
+</ul>
+<!-- -->
+<ul>
+<li>These insights can guide strategic decisions for conflict resolution efforts. 🕊️🌍</li>
 </ul>
 
 

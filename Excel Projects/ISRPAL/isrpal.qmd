@@ -1,18 +1,16 @@
 ---
-title: "FATALITIES IN THE ISRAEL-PALESTINE CONFLICT: 2000-2023 ANALYSIS"
+title: "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis"
 toc: true
 monofont: 'Consolas'
 ---
 
-### Israel-Palestine Fatality Dataset Analysis
+![](ISRPAL%20FATALITIES%20PAGE.png){fig-align="center" width="320"}
 
-![](ISRPAL%20FATALITIES%20PAGE.png){width="320"}
-
-#### Introduction
+## Introduction
 
 The Israel-Palestine conflict has spanned decades, resulting in significant loss of life. The analysis aims to explore fatality trends, identify patterns, and provide insights based on the available data.
 
-The Israel-Palestine conflict from 2000 to 2023 was a period marked by significant events and escalating tensions.This period was characterized by a cycle of violence and attempts at peace negotiations. It’s important to note that this is a complex issue with deep historical roots and differing narratives.The specific causes of the conflict during 2000-2003 are multifaceted and include:
+The Israel-Palestine conflict from 2000 to 2023 was a period marked by significant events and escalating tensions.This period was characterized by a cycle of violence and attempts at peace negotiations. It’s important to note that this is a complex issue with deep historical roots and differing narratives.The specific causes of the conflict during 2000-2023 are multifaceted and include:
 
 1\. Al-Aqsa Intifada (2000)
 
@@ -24,23 +22,67 @@ The Israel-Palestine conflict from 2000 to 2023 was a period marked by significa
 
 5\. Roadmap for Peace (2003)
 
-#### Overview
+Beyond 2003, the conflict persisted with sporadic violence, peace talks, and ongoing tensions. Efforts toward a lasting resolution continued, but obstacles remained, including territorial disputes, security concerns, and differing visions for the future.
 
-1.  **Data Source**: The [dataset](https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian){style="color:blue;"}, sourced from [Kaggle](https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian){style="color:blue;"}, contains information about fatalities in the Israel-Palestine conflict. Each record represents an individual who lost their life during specific incidents.
+## Overview
 
-    **Fields**:
+**Data Source**: The [dataset](https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian){style="color:blue;"}, sourced from [Kaggle](https://www.kaggle.com){style="color:blue;"}, contains information about fatalities in the Israel-Palestine conflict. Each record represents an individual who lost their life during specific incidents.
 
-    -   **Date**: The date of the incident.
+This [dataset](https://www.kaggle.com/datasets/willianoliveiragibin/fatalities-in-the-israeli-palestinian){style="color:blue;"} on fatalities related to the Israel-Palestine conflict can be explored to gain insights such as :
 
-    -   **Location**: Where the incident occurred (e.g., Gaza, West Bank).
+**Insights**:
 
-    -   **Fatalities**: The number of people killed.
+-   **Fatality Trends**
 
-    -   **Citizenship**:The Citizenship of fatalities recorded
+-   **Demographic Analysis**
 
-    -   **Perpetrator**: The group responsible (e.g., IDF, Hamas).
+-   **Geospatial Analysis**
 
-    -   **Target**: The affected group (e.g., civilians, militants)
+-   **Hostilities Participation Analysis**
+
+-   **Weapons Used**
+
+-   **Perpetrator Profiles**
+
+## Methodology
+
+I followed a structured approach, adhering to the six steps of the data analysis process:
+
+1.  **Define Objective and Stakeholders**: Clearly state the goal (analyze Israel-Palestine fatalities) and identify who needs this information (researchers, policymakers).
+
+2.  **Collect and Validate Data**: Get the fatality dataset and ensure it’s accurate.
+
+3.  **Clean and Transform Data**: Fix any issues in the data and make it ready for analysis.
+
+4.  **Create Interactive Dashboard**: Build a user-friendly tool for exploring the data.
+
+5.  **Visualize Trends**: Use charts to see patterns (e.g., fatalities over time).
+
+6.  **Draw Conclusions**: Analyze findings (e.g., age disparities, regional impact).
+
+7.  **Inform Decisions**: Share insights to guide conflict resolution efforts. 🌍🔍
+
+    ## Examine the Dataset
+
+    A peek into the data; the first 10 rows of data
+
+    ```{r, echo=FALSE, message=FALSE}
+    #load libraries 
+    library(knitr)
+    library(tidyverse)
+    ```
+
+    ```{r, echo=FALSE, message=FALSE}
+    #read in audible csv  
+    isrpal <-read_csv("C:/Users/SAMMY/Desktop/Portfoliooo/Sammy Odeyemi/Excel Projects/ISRPAL/isrpal.csv")
+    ```
+
+```{r, echo=FALSE}
+#examine dataset  
+kable(head(isrpal,10)) 
+```
+
+## Key Dashboard Requirements
 
 #### Key Questions
 
@@ -50,15 +92,17 @@ The Israel-Palestine conflict from 2000 to 2023 was a period marked by significa
 
 3.  **Perpetrators and Targets**: Who are the main perpetrators, and who bears the brunt of the violence (civilians, militants, etc.)?
 
-    ## Dashboard
+## Dashboard
 
-![](ISRPAL%20DASHBOARD.png)
+![](ISRPAL%20DASHBOARD2.png)
 
-::: callout-important
+::: {.callout-note appearance="simple"}
 ## Important!!!
 
 Right-click on image to open dashboard in new tab, if content too tiny
 :::
+
+### To interact with the Excel Dashboard, [click here](https://docs.google.com/spreadsheets/d/1IRARIBUMYmjIEr1WREhYTHq3tS7vsgQG/edit?usp=drive_link&ouid=107549502594190094236&rtpof=true&sd=true){style="COLOR:BLUE;"}
 
 ## Conclusion
 
@@ -71,3 +115,7 @@ In conclusion, the Israel-Palestine analysis has yielded valuable insights into 
     -   **2014** is peak year for highest death toll at **2326**.
 
     -   Over **9000** people died by **Gunfire** losely followed by Explosion at **555**
+
+<!-- -->
+
+-   These insights can guide strategic decisions for conflict resolution efforts. 🕊️🌍

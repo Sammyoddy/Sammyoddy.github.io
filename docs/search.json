@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SAMMY ODEYEMI",
     "section": "",
-    "text": "Hi!, I am a grounded and goal-oriented Computer Science professional with demonstrated expertise in Data Analytics. Skilled in SQL, R, and Power BI, I specialize in transforming complex data into clear insights for informed decision-making.\n\n\n \n  \n    My Portfolio\n  \n  \n  Excel Projects\n  \n  \n    \n      \n    \n    \n      This is a Video Game Sales Analysis for Synergy Ltd. I employed the use of Microsoft Excel to perform various operations ranging from Data Cleaning up to Visualization\n    \n    View Project\n  \n\n\n  R Projects"
+    "text": "Hi!, I am a grounded and goal-oriented Computer Science professional with demonstrated expertise in Data Analytics. Skilled in SQL, R, and Power BI, I specialize in transforming complex data into clear insights for informed decision-making.\n\n\n \n  \n    My Portfolio\n  \n  \n  Excel Projects\n  \n  \n  \n    \n      \n    \n    \n      This is an Analysis on the Israel-Palestine conflict and the fatalities that occurred. I employed Microsoft Excel to perform various operations, ranging from data cleaning to visualization.\n    \n    View Project\n  \n  \n  \n    \n      \n    \n    \n      This is a Video Game Sales Analysis for Synergy Ltd. I employed Microsoft Excel to perform various operations, ranging from data cleaning to visualization.\n    \n    View Project"
   },
   {
     "objectID": "audible/audible.html#authornarrator",
@@ -116,7 +116,7 @@
     "href": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#data-source",
     "title": "Video Game Sales Analysis for Synergy Ltd.",
     "section": "Data Source",
-    "text": "Data Source\nThe dataset used is sourced from Kaggle and contains information on video games with sales exceeding 100,000 copies. It includes essential fields such as:\n\nRank: Overall sales ranking\nName: Game title\nPlatform: Release platform (e.g., PC, PS4)\nYear: Year of the game’s release"
+    "text": "Data Source\nThe dataset used is sourced from Kaggle and contains information on video games with sales exceeding 16,000 copies. It includes essential fields such as:\n\nRank: Overall sales ranking\nName: Game title\nPlatform: Release platform (e.g., PC, PS4)\nYear: Year of the game’s release"
   },
   {
     "objectID": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#methodology",
@@ -158,14 +158,14 @@
     "href": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#section",
     "title": "Video Game Sales Analysis for Synergy Ltd.",
     "section": "",
-    "text": "Important!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny\n\n\nTo interact with the excel dashboard, click here"
+    "text": "Important!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny\n\n\n\nTo interact with the Excel Dashboard, click here"
   },
   {
     "objectID": "Excel Projects/ISRPAL/isrpal.html#conclusion",
     "href": "Excel Projects/ISRPAL/isrpal.html#conclusion",
-    "title": "FATALITIES IN THE ISRAEL-PALESTINE CONFLICT: 2000-2023 ANALYSIS",
+    "title": "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis",
     "section": "Conclusion",
-    "text": "Conclusion\nIn conclusion, the Israel-Palestine analysis has yielded valuable insights into the deaths recorded and how distributed they are:\n\nInsights:\n\nPalestinians suffered a high fatality count at 10,092 and only 1 American Died.\n2014 is peak year for highest death toll at 2326.\nOver 9000 people died by Gunfire losely followed by Explosion at 555"
+    "text": "Conclusion\nIn conclusion, the Israel-Palestine analysis has yielded valuable insights into the deaths recorded and how distributed they are:\n\nInsights:\n\nPalestinians suffered a high fatality count at 10,092 and only 1 American Died.\n2014 is peak year for highest death toll at 2326.\nOver 9000 people died by Gunfire losely followed by Explosion at 555\n\n\n\n\nThese insights can guide strategic decisions for conflict resolution efforts. 🕊️🌍"
   },
   {
     "objectID": "Excel Projects/SYNERGY VIDEO GAME/synergy.html#recommendations",
@@ -173,5 +173,40 @@
     "title": "Video Game Sales Analysis for Synergy Ltd.",
     "section": "Recommendations",
     "text": "Recommendations\n1. Regions aside from Europe, Japan and North America should be looked into as to why Video Game purchases are not made and strategic marketing of these video games should be upped in the region\n2. I strongly advise that marketing and promotion be reinforced to resolve the issue of low sales for Game Genres and less purchased games.\n3. Collaborations with brands and sponsorship deals can help Game Platforms and Publishers with low sales."
+  },
+  {
+    "objectID": "Excel Projects/ISRPAL/isrpal.html#introduction",
+    "href": "Excel Projects/ISRPAL/isrpal.html#introduction",
+    "title": "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis",
+    "section": "Introduction",
+    "text": "Introduction\nThe Israel-Palestine conflict has spanned decades, resulting in significant loss of life. The analysis aims to explore fatality trends, identify patterns, and provide insights based on the available data.\nThe Israel-Palestine conflict from 2000 to 2023 was a period marked by significant events and escalating tensions.This period was characterized by a cycle of violence and attempts at peace negotiations. It’s important to note that this is a complex issue with deep historical roots and differing narratives.The specific causes of the conflict during 2000-2023 are multifaceted and include:\n1. Al-Aqsa Intifada (2000)\n2. Failed Peace Negotiations (2000)\n3. Political Changes (2001)\n4. Violence and Retaliation (2002)\n5. Roadmap for Peace (2003)\nBeyond 2003, the conflict persisted with sporadic violence, peace talks, and ongoing tensions. Efforts toward a lasting resolution continued, but obstacles remained, including territorial disputes, security concerns, and differing visions for the future."
+  },
+  {
+    "objectID": "Excel Projects/ISRPAL/isrpal.html#methodology",
+    "href": "Excel Projects/ISRPAL/isrpal.html#methodology",
+    "title": "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis",
+    "section": "Methodology",
+    "text": "Methodology\nI followed a structured approach, adhering to the six steps of the data analysis process:\n\nDefine Objective and Stakeholders: Clearly state the goal (analyze Israel-Palestine fatalities) and identify who needs this information (researchers, policymakers).\nCollect and Validate Data: Get the fatality dataset and ensure it’s accurate.\nClean and Transform Data: Fix any issues in the data and make it ready for analysis.\nCreate Interactive Dashboard: Build a user-friendly tool for exploring the data.\nVisualize Trends: Use charts to see patterns (e.g., fatalities over time).\nDraw Conclusions: Analyze findings (e.g., age disparities, regional impact).\nInform Decisions: Share insights to guide conflict resolution efforts. 🌍🔍\nExamine the Dataset\nA peek into the data; the first 10 rows of data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nname\ndate_of_event\nage\ncitizenship\nevent_location\nevent_location_district\nevent_location_region\ndate_of_death\ngender\ntook_part_in_the_hostilities\nplace_of_residence\nplace_of_residence_district\ntype_of_injury\nammunition\nkilled_by\n\n\n\n\n’Abd a-Rahman Suleiman Muhammad Abu Daghash\n24/09/2023\n32\nPalestinian\nNur Shams R.C.\nTulkarm\nWest Bank\n24/09/2023\nM\nNA\nNur Shams R.C.\nTulkarm\ngunfire\nlive ammunition\nIsraeli security forces\n\n\nUsayed Farhan Muhammad ’Ali Abu ’Ali\n24/09/2023\n21\nPalestinian\nNur Shams R.C.\nTulkarm\nWest Bank\n24/09/2023\nM\nNA\nNur Shams R.C.\nTulkarm\ngunfire\nlive ammunition\nIsraeli security forces\n\n\n’Abdallah ’Imad Sa’ed Abu Hassan\n22/09/2023\n16\nPalestinian\nKfar Dan\nJenin\nWest Bank\n22/09/2023\nM\nNA\nal-Yamun\nJenin\ngunfire\nlive ammunition\nIsraeli security forces\n\n\nDurgham Muhammad Yihya al-Akhras\n20/09/2023\n19\nPalestinian\n’Aqbat Jaber R.C.\nJericho\nWest Bank\n20/09/2023\nM\nNA\n’Aqbat Jaber R.C.\nJericho\ngunfire\nlive ammunition\nIsraeli security forces\n\n\nRaafat ’Omar Ahmad Khamaisah\n19/09/2023\n15\nPalestinian\nJenin R.C.\nJenin\nWest Bank\n19/09/2023\nM\nNA\nJenin\nJenin\ngunfire\nlive ammunition\nIsraeli security forces\n\n\n’Ata Yasser ’Ata Musa\n19/09/2023\n29\nPalestinian\nJenin R.C.\nJenin\nWest Bank\n20/09/2023\nM\nNA\nJenin\nJenin\ngunfire\nmissile\nIsraeli security forces\n\n\nYusef Salem Yusef Radwan\n19/09/2023\n24\nPalestinian\nGaza City\nGaza\nGaza Strip\n19/09/2023\nM\nNo\nKhan Yunis\nKhan Yunis\ngunfire\nlive ammunition\nIsraeli security forces\n\n\nMahmoud Khaled S’ud ’Ar’arawi\n19/09/2023\n25\nPalestinian\nJenin R.C.\nJenin\nWest Bank\n19/09/2023\nM\nNA\nJenin R.C.\nJenin\ngunfire\nmissile\nIsraeli security forces\n\n\nMahmoud ’Ali Nafe’a a-S’adi\n19/09/2023\n23\nPalestinian\nJenin R.C.\nJenin\nWest Bank\n19/09/2023\nM\nNA\nJenin R.C.\nJenin\ngunfire\nmissile\nIsraeli security forces\n\n\nMilad Munzer Wajih a-Ra’i\n09/09/2023\n15\nPalestinian\nal-’Arrub R.C.\nHebron\nWest Bank\n09/09/2023\nM\nNA\nal-’Arrub Camp\nHebron\ngunfire\nlive ammunition\nIsraeli security forces"
+  },
+  {
+    "objectID": "Excel Projects/ISRPAL/isrpal.html#key-dashboard-requirements",
+    "href": "Excel Projects/ISRPAL/isrpal.html#key-dashboard-requirements",
+    "title": "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis",
+    "section": "Key Dashboard Requirements",
+    "text": "Key Dashboard Requirements\n\nKey Questions\n\nTemporal Trends: How have fatalities evolved over time? Are there specific periods of heightened violence?\nGeographical Patterns: Which regions (Gaza, West Bank, etc.) have experienced the most fatalities?\nPerpetrators and Targets: Who are the main perpetrators, and who bears the brunt of the violence (civilians, militants, etc.)?"
+  },
+  {
+    "objectID": "Excel Projects/ISRPAL/isrpal.html#overview",
+    "href": "Excel Projects/ISRPAL/isrpal.html#overview",
+    "title": "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis",
+    "section": "Overview",
+    "text": "Overview\nData Source: The dataset, sourced from Kaggle, contains information about fatalities in the Israel-Palestine conflict. Each record represents an individual who lost their life during specific incidents.\nThis dataset on fatalities related to the Israel-Palestine conflict can be explored to gain insights such as :\nInsights:\n\nFatality Trends\nDemographic Analysis\nGeospatial Analysis\nHostilities Participation Analysis\nWeapons Used\nPerpetrator Profiles"
+  },
+  {
+    "objectID": "Excel Projects/ISRPAL/isrpal.html#dashboard",
+    "href": "Excel Projects/ISRPAL/isrpal.html#dashboard",
+    "title": "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis",
+    "section": "Dashboard",
+    "text": "Dashboard\n\n\n\n\n\n\n\nImportant!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny\n\n\n\nTo interact with the Excel Dashboard, click here"
   }
 ]

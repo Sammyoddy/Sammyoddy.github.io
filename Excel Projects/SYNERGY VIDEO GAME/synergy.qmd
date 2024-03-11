@@ -24,7 +24,7 @@ The analysis revolves around answering critical questions:
 
 ## Data Source
 
-The [dataset](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} used is sourced from [Kaggle](https://www.kaggle.com){style="color:blue;"} and contains information on video games with sales exceeding 100,000 copies. It includes essential fields such as:
+The [dataset](https://www.kaggle.com/datasets/gregorut/videogamesales){style="color:blue;"} used is sourced from [Kaggle](https://www.kaggle.com){style="color:blue;"} and contains information on video games with sales exceeding 16,000 copies. It includes essential fields such as:
 
 -   **Rank**: Overall sales ranking
 
@@ -90,7 +90,7 @@ Our interactive dashboard fulfills the following requirements:
 Right-click on image to open dashboard in new tab, if content too tiny
 :::
 
-To interact with the excel dashboard, [click here](https://docs.google.com/spreadsheets/d/1MgupqU3UkujLIxkbMIwgry4sgDuM7gj_/edit?usp=drive_link&ouid=107549502594190094236&rtpof=true&sd=true){style="COLOR:BLUE;"}
+###      To interact with the Excel Dashboard, [click here](https://docs.google.com/spreadsheets/d/1MgupqU3UkujLIxkbMIwgry4sgDuM7gj_/edit?usp=drive_link&ouid=107549502594190094236&rtpof=true&sd=true){style="COLOR:BLUE;"}
 
 ## Recommendations {#recommendations}
 
