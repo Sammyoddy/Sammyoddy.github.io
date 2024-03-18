@@ -1,0 +1,95 @@
+---
+title: "Quantum Sales Solutions Analysis"
+toc: true
+monofont: 'Consolas'
+---
+
+![](QUANTUM%20PAGE.png){fig-align="center" width="380" height="253"}
+
+## Introduction
+
+Welcome to the Quantum Sales Solutions [dataset](https://drive.google.com/file/d/1g25SQHG5yIdIxRw19t0wcgwdGcu70y1O/view?usp=sharing){style="COLOR:BLUE;"} documentation! In this comprehensive guide, we explore the captivating world of beverage and snack sales, focusing on the year 2023. Whether you’re a data analyst, a business strategist, or simply curious about the flavors that defined that era, this documentation promises valuable insights.
+
+## Overview
+
+Quantum Sales Solutions, a dynamic player in the market, orchestrates the distribution and delight of delectable treats. The dataset spans the year 2023 and encompasses a rich tapestry of products, regions, and consumer preferences. Let’s dive into the pixelated aisles of Quantum Sales Solutions and uncover the stories behind the sales for the year.
+
+## Data Source
+
+The [dataset](https://drive.google.com/file/d/1g25SQHG5yIdIxRw19t0wcgwdGcu70y1O/view?usp=sharing){style="color:blue;"} for this project was meticulously collected by Quantum Sales Solutions. It captures transactions, quantities, and other relevant information related to beverages, dried fruits, nuts, candy, and soups.This dataset has been cleaned, organized, and prepared for analysis.
+
+## Methodology
+
+I followed a structured approach, adhering to the six steps of the data analysis process:
+
+1.  **Ask**: I defined the problem, communicated with stakeholders, and understood the business context. Synergy Ltd. requested an interactive dashboard showcasing game sales trends by region, genre, and platform.
+
+2.  **Prepare**: I obtained the [dataset](https://drive.google.com/file/d/1g25SQHG5yIdIxRw19t0wcgwdGcu70y1O/view?usp=sharing){style="color:blue;"}, ensuring data integrity and cleanliness. Our primary analysis occurred on a duplicate worksheet to preserve the original data.
+
+3.  **Process**: I cleaned and transformed the data, preparing it for visualization.
+
+4.  **Share**: I created an interactive dashboard in Excel, allowing users to explore sales trends based on their preferences.
+
+5.  **Analyze**: I visualized the data, identifying patterns and drawing meaningful conclusions.
+
+6.  **Act**: Our insights informed strategic decisions for Synergy Ltd.
+
+    ## Examine the Dataset
+
+    A peek into the data; the first 10 rows of data:
+
+    ```{r, echo=FALSE, message=FALSE}
+    library(tidyverse)
+    library(knitr)
+    ```
+
+```{r, echo=FALSE, message=FALSE}
+quantumsales<-read_csv('C:/Users/SAMMY/Desktop/Portfoliooo/Sammy Odeyemi/Excel Projects/QUANTUM SALES SOLUTIONS/Quantum Sales.csv')
+
+```
+
+```{r}
+kable(head(quantumsales,10))
+```
+
+## Key Dashboard Requirements
+
+#### Our interactive dashboard fulfills the following requirements:
+
+1.  Users can select Customers that patronize Quantum Sales Solutions, Regions, Products and Cities to compare sales trends.
+
+2.  The dashboard displays the top 7 Salespersons, Sales by Product Category corresponding to the chosen criteria.
+
+## Dashboard
+
+![](QUANTUM%20SALES%20DASHBOARD.png)
+
+::: {.callout-note appearance="simple"}
+## Important!!!
+
+Right-click on image to open dashboard in new tab, if content too tiny
+:::
+
+### To interact with the Excel Dashboard, [click here](https://docs.google.com/spreadsheets/d/1ZSvjRw0L-T2-a0StG1drW7EDL9oaOYCb/edit?usp=sharing&ouid=107549502594190094236&rtpof=true&sd=true){style="color:blue;"}
+
+## Recommendations
+
+1.  Recognize top performers like **Nancy Freehafer** with rewards and provide training opportunities for those underperforming to improve their skills.
+
+2.  Promote top-selling product categories more prominently, and analyze low-performing categories for potential improvements or discontinuation.
+
+3.  Develop growth strategies for regions that are underperforming like in the West and Increase investment in high-performing regions
+
+## Conclusion
+
+In conclusion, the product sales analysis for Quantum Sales Solutions has yielded valuable insights into the sales for the year 2023:
+
+-   **Insights**:
+
+    -   The **North** had more Sales garnering **32%** of total sales .
+
+    -   **Beverages** sold the most at **₦110,577**
+
+    -   **December** grossed highest sales by month at **₦66,643**
+
+    -   Sales for the year **2023** totaled the sum of **₦435,036**

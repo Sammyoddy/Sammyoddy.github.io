@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "\nSAMMY ODEYEMI\n",
     "section": "",
-    "text": "SAMMY ODEYEMI\n\n\n\n\nHi!, I am a grounded and goal-oriented Computer Science professional with demonstrated expertise in Data Analytics. Skilled in SQL, R, and Power BI,\n\n\nI specialize in transforming complex data into clear insights for informed decision-making.\n\n\n\nMy Portfolio\n\n\n\nExcel Projects\n\n\n\n\n\n\n\n  \n    \n  \n  \n    This is an Analysis on the Israel-Palestine conflict and the fatalities that occurred. I employed Microsoft Excel to perform various operations, ranging from data cleaning to visualization.\n  \n  View Project\n  \n\n\n\n\n  \n    \n  \n  \n    This is a Video Game Sales Analysis for Synergy Ltd. I employed Microsoft Excel to perform various operations, ranging from data cleaning to visualization.\n  \n  View Project\n  \n\n\n\n\n\n\nR Projects"
+    "text": "SAMMY ODEYEMI\n\n\n\n\nHi!, I am a grounded and goal-oriented Computer Science professional with demonstrated expertise in Data Analytics. Skilled in SQL, R, and Power BI,\n\n\nI specialize in transforming complex data into clear insights for informed decision-making.\n\n\n\nMy Portfolio\n\n\n\nExcel Projects\n\n\n\n\n\n\n\n  \n    \n  \n  \n    This is an Analysis on Quantum Sales Solutions data for the year 2023. The company specializes in the sales of edible products. I employed Microsoft Excel to perform various operations, ranging from data cleaning up to visualization.\n  \n  View Project\n  \n\n\n\n\n\n  \n    \n  \n  \n    This is an Analysis on the Israel-Palestine conflict and the fatalities that occurred. I employed Microsoft Excel to perform various operations, ranging from data cleaning to visualization.\n  \n  View Project\n  \n\n\n\n\n\n  \n    \n    \n  \n    This is a Video Game Sales Analysis for Synergy Ltd. I employed Microsoft Excel to perform various operations, ranging from data cleaning to visualization.\n  \n  View Project\n  \n\n\n\n\n\n\nR Projects\n\n\n\n\n   \n   \n    \n   \nThis is a Data Cleaning Project for Audible. I employed R and RStudio to perform Data Cleaning, and took it a nudge further by analysing and making Visualization.     \nView Project"
   },
   {
     "objectID": "audible/audible.html#authornarrator",
@@ -208,5 +208,152 @@
     "title": "Fatalities in the Israel-Palestine Conflict: 2000-2023 Analysis",
     "section": "Dashboard",
     "text": "Dashboard\n\n\n\n\n\n\n\nImportant!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny\n\n\n\nTo interact with the Excel Dashboard, click here"
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#introduction",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#introduction",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Introduction",
+    "text": "Introduction\nWelcome to the Quantum Sales Solutions dataset documentation! In this comprehensive guide, we explore the captivating world of beverage and snack sales, focusing on the year 2023. Whether you’re a data analyst, a business strategist, or simply curious about the flavors that defined that era, this documentation promises valuable insights."
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#overview",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#overview",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Overview",
+    "text": "Overview\nQuantum Sales Solutions, a dynamic player in the market, orchestrates the distribution and delight of delectable treats. The dataset spans the year 2023 and encompasses a rich tapestry of products, regions, and consumer preferences. Let’s dive into the pixelated aisles of Quantum Sales Solutions and uncover the stories behind the sales for the year."
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#data-source",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#data-source",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Data Source",
+    "text": "Data Source\nThe dataset for this project was meticulously collected by Quantum Sales Solutions. It captures transactions, quantities, and other relevant information related to beverages, dried fruits, nuts, candy, and soups.This dataset has been cleaned, organized, and prepared for analysis."
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#methodology",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#methodology",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Methodology",
+    "text": "Methodology\nI followed a structured approach, adhering to the six steps of the data analysis process:\n\nAsk: I defined the problem, communicated with stakeholders, and understood the business context. Synergy Ltd. requested an interactive dashboard showcasing game sales trends by region, genre, and platform.\nPrepare: I obtained the dataset, ensuring data integrity and cleanliness. Our primary analysis occurred on a duplicate worksheet to preserve the original data.\nProcess: I cleaned and transformed the data, preparing it for visualization.\nShare: I created an interactive dashboard in Excel, allowing users to explore sales trends based on their preferences.\nAnalyze: I visualized the data, identifying patterns and drawing meaningful conclusions.\nAct: Our insights informed strategic decisions for Synergy Ltd.\nExamine the Dataset\nA peek into the data; the first 10 rows of data:\n\n\nkable(head(quantumsales,10))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrder ID\nOrder Date\nCustomer ID\nCustomer Name\nAddress\nCity\nState\nZIP/Postal Code\nCountry/Region\nSalesperson\nRegion\nShipped Date\nShipper Name\nShip Name\nShip Address\nShip City\nShip State\nShip ZIP/Postal Code\nShip Country/Region\nPayment Type\nProduct Name\nCategory\nUnit Price\nQuantity\nRevenue\nShipping Fee\n\n\n\n\n1001\n01/27/14\n27\nCompany AA\n789 27th Street\nLas Vegas\nNV\n99999\nUSA\nMariya Sergienko\nWest\n01/29/14\nShipping Company B\nKaren Toh\n789 27th Street\nLas Vegas\nNV\n99999\nUSA\nCheck\nBeer\nBeverages\n$14.00\n49\n$686.00\n$66.54\n\n\n1002\n01/27/14\n27\nCompany AA\n789 27th Street\nLas Vegas\nNV\n99999\nUSA\nMariya Sergienko\nWest\n01/29/14\nShipping Company B\nKaren Toh\n789 27th Street\nLas Vegas\nNV\n99999\nUSA\nCheck\nDried Plums\nDried Fruit & Nuts\n$3.50\n47\n$164.50\n$16.61\n\n\n1003\n01/04/2014\n4\nCompany D\n123 4th Street\nNew York\nNY\n99999\nUSA\nAndrew Cencini\nEast\n01/06/2014\nShipping Company A\nChristina Lee\n123 4th Street\nNew York\nNY\n99999\nUSA\nCredit Card\nDried Pears\nDried Fruit & Nuts\n$30.00\n69\n$2,070.00\n$198.72\n\n\n1004\n01/04/2014\n4\nCompany D\n123 4th Street\nNew York\nNY\n99999\nUSA\nAndrew Cencini\nEast\n01/06/2014\nShipping Company A\nChristina Lee\n123 4th Street\nNew York\nNY\n99999\nUSA\nCredit Card\nDried Apples\nDried Fruit & Nuts\n$53.00\n89\n$4,717.00\n$448.12\n\n\n1005\n01/04/2014\n4\nCompany D\n123 4th Street\nNew York\nNY\n99999\nUSA\nAndrew Cencini\nEast\n01/06/2014\nShipping Company A\nChristina Lee\n123 4th Street\nNew York\nNY\n99999\nUSA\nCredit Card\nDried Plums\nDried Fruit & Nuts\n$3.50\n11\n$38.50\n$3.73\n\n\n1006\n01/12/2014\n12\nCompany L\n123 12th Street\nLas Vegas\nNV\n99999\nUSA\nMariya Sergienko\nWest\n01/14/14\nShipping Company B\nJohn Edwards\n123 12th Street\nLas Vegas\nNV\n99999\nUSA\nCredit Card\nChai\nBeverages\n$18.00\n81\n$1,458.00\n$141.43\n\n\n1007\n01/12/2014\n12\nCompany L\n123 12th Street\nLas Vegas\nNV\n99999\nUSA\nMariya Sergienko\nWest\n01/14/14\nShipping Company B\nJohn Edwards\n123 12th Street\nLas Vegas\nNV\n99999\nUSA\nCredit Card\nCoffee\nBeverages\n$46.00\n44\n$2,024.00\n$198.35\n\n\n1008\n01/08/2014\n8\nCompany H\n123 8th Street\nPortland\nOR\n99999\nUSA\nNancy Freehafer\nNorth\n01/10/2014\nShipping Company C\nElizabeth Andersen\n123 8th Street\nPortland\nOR\n99999\nUSA\nCredit Card\nChocolate Biscuits Mix\nBaked Goods & Mixes\n$9.20\n38\n$349.60\n$36.01\n\n\n1009\n01/04/2014\n4\nCompany D\n123 4th Street\nNew York\nNY\n99999\nUSA\nAndrew Cencini\nEast\n01/06/2014\nShipping Company C\nChristina Lee\n123 4th Street\nNew York\nNY\n99999\nUSA\nCheck\nChocolate Biscuits Mix\nBaked Goods & Mixes\n$9.20\n88\n$809.60\n$79.34\n\n\n1010\n01/29/14\n29\nCompany CC\n789 29th Street\nDenver\nCO\n99999\nUSA\nJan Kotas\nWest\n01/31/14\nShipping Company B\nSoo Jung Lee\n789 29th Street\nDenver\nCO\n99999\nUSA\nCheck\nChocolate\nCandy\n$12.75\n94\n$1,198.50\n$122.25"
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#key-dashboard-requirements",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#key-dashboard-requirements",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Key Dashboard Requirements",
+    "text": "Key Dashboard Requirements\n\nOur interactive dashboard fulfills the following requirements:\n\nUsers can select Customers that patronize Quantum Sales Solutions, Regions, Products and Cities to compare sales trends.\nThe dashboard displays the top 7 Salespersons, Sales by Product Category corresponding to the chosen criteria."
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#dashboard",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#dashboard",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Dashboard",
+    "text": "Dashboard\n\n\n\n\n\n\n\nImportant!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny\n\n\n\nTo interact with the Excel Dashboard, click here"
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#recommendations",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#recommendations",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nRecognize top performers like Nancy Freehafer with rewards and provide training opportunities for those underperforming to improve their skills.\nPromote top-selling product categories more prominently, and analyze low-performing categories for potential improvements or discontinuation.\nDevelop growth strategies for regions that are underperforming like in the West and Increase investment in high-performing regions"
+  },
+  {
+    "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#conclusion",
+    "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#conclusion",
+    "title": "Quantum Sales Solutions Analysis",
+    "section": "Conclusion",
+    "text": "Conclusion\nIn conclusion, the product sales analysis for Quantum Sales Solutions has yielded valuable insights into the sales for the year 2023:\n\nInsights:\n\nThe North had more Sales garnering 32% of total sales .\nBeverages sold the most at ₦110,577\nDecember grossed highest sales by month at ₦66,643\nSales for the year 2023 totaled the sum of ₦435,036"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#authornarrator",
+    "href": "R Projects/audible/audible.html#authornarrator",
+    "title": "Audible Data Cleaning",
+    "section": "Author and Narrator Columns",
+    "text": "Author and Narrator Columns\nThe Author and Narrator columns contain the names of the Authors and Narrators of the Audiobooks.\n\n#select Author and Narrator columns\naudible %&gt;% select(author,narrator) %&gt;% head(10) %&gt;%kable()\n\n\n\n\nauthor\nnarrator\n\n\n\n\nWrittenby:GeronimoStilton\nNarratedby:BillLobely\n\n\nWrittenby:RickRiordan\nNarratedby:RobbieDaymond\n\n\nWrittenby:JeffKinney\nNarratedby:DanRussell\n\n\nWrittenby:RickRiordan\nNarratedby:SoneelaNankani\n\n\nWrittenby:RickRiordan\nNarratedby:JesseBernstein\n\n\nWrittenby:SuzanneCollins\nNarratedby:TatianaMaslany\n\n\nWrittenby:WinterMorgan\nNarratedby:LukeDaniels\n\n\nWrittenby:RickRiordan\nNarratedby:RobbieDaymond\n\n\nWrittenby:MaryPopeOsborne\nNarratedby:MaryPopeOsborne\n\n\nWrittenby:RickRiordan\nNarratedby:RobbieDaymond\n\n\n\n\n\nThese columns in the dataset have a common issue known as string concatenation errors. This occurs when two or more strings are joined together without appropriate spacing or delimiters. In this case, the names of authors and narrators are concatenated without spaces, making it difficult to distinguish between first and last names.\nAdditionally, the strings ‘Writtenby:’ and ‘Narratedby:’ are concatenated with the names, adding unnecessary clutter to our data; hence the need to remove unnecessary strings and add spaces between the names using regular expressions.\n\n\n#author and narrator column cleaned of unwanted characters and spaces added where necessary\naudible&lt;-audible %&gt;%mutate_at(vars(author,narrator),\n  ~if_else(str_detect(.,\"(Writtenby:)|(Narratedby:)\"),\n        str_replace_all(str_remove(.,\"(Writtenby:)|(Narratedby:)|\\\\d+\"),\n                        \"(?&lt;=[a-z])(?=[A-Z])\", \" \"),\n        .)\n  )\n\n\ncross-check\nIt becomes important to check the content of these columns after performing the operation\n\n\naudible %&gt;% select(author,narrator) %&gt;% head(5) %&gt;% kable()\n\n\n\n\nauthor\nnarrator\n\n\n\n\nGeronimo Stilton\nBill Lobely\n\n\nRick Riordan\nRobbie Daymond\n\n\nJeff Kinney\nDan Russell\n\n\nRick Riordan\nSoneela Nankani\n\n\nRick Riordan\nJesse Bernstein"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#time",
+    "href": "R Projects/audible/audible.html#time",
+    "title": "Audible Data Cleaning",
+    "section": "Time Column",
+    "text": "Time Column\nThe Time column is the total duration of each audiobook\n\naudible %&gt;% select(time) %&gt;% head(5) %&gt;%kable()\n\n\n\n\ntime\n\n\n\n\n2 hrs and 20 mins\n\n\n13 hrs and 8 mins\n\n\n2 hrs and 3 mins\n\n\n11 hrs and 16 mins\n\n\n10 hrs\n\n\n\n\n\nIt is a column of string datatype and the contents are needed to be extracted and typecasted to numeric values to aid further analysis.\n\n# Create new columns off the time column and typecast to numeric \naudible &lt;- audible %&gt;%\n  mutate(\n    # Extract hours and minutes into separate columns\n    hours = as.numeric(str_extract(time, \"\\\\d+(?=\\\\s*hr)\")),\n    minutes = as.numeric(str_extract(time, \"\\\\d+(?=\\\\s*min)\")),\n    \n    # Convert time to seconds\n    time_seconds = case_when(\n      str_detect(time, \"hrs|hr\") & !str_detect(time, \"mins|min\") ~\n        as.numeric(str_extract(time, \"\\\\d+(?=\\\\s*hr)\")) * 3600,\n      str_detect(time, \"hrs|hr\") & str_detect(time, \"min|mins\") ~\n        as.numeric(str_extract(time, \"\\\\d+(?=\\\\s*hr)\")) * 3600 +\n        as.numeric(str_extract(time, \"\\\\d+(?=\\\\s*min)\")) * 60,\n      str_detect(time, \"mins|min\") ~\n        as.numeric(str_extract(time, \"\\\\d+\")) * 60,\n      TRUE ~ as.numeric(time)\n    )\n  )\n\nWarning: There was 1 warning in `mutate()`.\nℹ In argument: `time_seconds = case_when(...)`.\nCaused by warning:\n! NAs introduced by coercion\n\n\n\n\n\n\n\n\nNA values\n\n\n\nThe NA values are introduced because there are some observations that may not have either hours or minutes. In such instances, since there is no hour or minute to extract as the case may be, the newly created ‘hours’ or ‘minutes’ columns return NA. This is a common occurrence in data processing when the expected data is not present in certain observations. And to handle such instances, NA values are replaced with zero\n\n\n\n# Handle NA values (if there are cases like \"2 hours\" with no mins or \"45 mins\" with no hours)\naudible$hours[is.na(audible$hours)] &lt;- 0\naudible$minutes[is.na(audible$minutes)] &lt;- 0 \n\ncross-check\n\naudible %&gt;% select(time,hours,minutes,time_seconds) %&gt;% head(6) %&gt;% kable()\n\n\n\n\ntime\nhours\nminutes\ntime_seconds\n\n\n\n\n2 hrs and 20 mins\n2\n20\n8400\n\n\n13 hrs and 8 mins\n13\n8\n47280\n\n\n2 hrs and 3 mins\n2\n3\n7380\n\n\n11 hrs and 16 mins\n11\n16\n40560\n\n\n10 hrs\n10\n0\n36000\n\n\n10 hrs and 35 mins\n10\n35\n38100"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#releasedate",
+    "href": "R Projects/audible/audible.html#releasedate",
+    "title": "Audible Data Cleaning",
+    "section": "Release Date Column",
+    "text": "Release Date Column\nThe Release Date Column just as the name implies is the release date of each and every audiobook contained in the dataset.\n\naudible %&gt;% select(releasedate) %&gt;% head(5) %&gt;% kable()\n\n\n\n\nreleasedate\n\n\n\n\n04-08-08\n\n\n01-05-18\n\n\n06-11-20\n\n\n05-10-21\n\n\n13-01-10\n\n\n\n\n\nIt is of string datatype, hence the need to convert to Date in its truest form.\n\n#converted releasedate column of data type string to date as should be\naudible$releasedate&lt;- as.Date(audible$releasedate,format=\"%d-%m-%y\")\n#Extract the Year COlumn from the releasedate Column\naudible&lt;-audible %&gt;%mutate(Year=year(audible$releasedate))"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#stars",
+    "href": "R Projects/audible/audible.html#stars",
+    "title": "Audible Data Cleaning",
+    "section": "Stars Column",
+    "text": "Stars Column\nThe Stars Column represents the average rating given by users for a particular audiobook. It has a band of 1 to 5. But during scraping of the data, the rating was scraped into the same column as the stars bringing about a string concatenation error. There should be a separate rating column that represents the number of users who have rated the audiobook.\n\naudible %&gt;% select(stars) %&gt;% head(6)\n\n# A tibble: 6 × 1\n  stars                        \n  &lt;chr&gt;                        \n1 5 out of 5 stars34 ratings   \n2 4.5 out of 5 stars41 ratings \n3 4.5 out of 5 stars38 ratings \n4 4.5 out of 5 stars12 ratings \n5 4.5 out of 5 stars181 ratings\n6 5 out of 5 stars72 ratings   \n\n\n\n#split stars column into Stars and Rating Column,remove unwanted characters and convert columns to numeric \n  audible &lt;- audible %&gt;% \n    separate(stars, into = c(\"Stars\", \"Rating\"), sep = \"out of 5 stars\") %&gt;% \n    mutate(\n      Stars = as.numeric(str_remove_all(Stars, \" \")),\n      Rating = as.numeric(str_remove_all(Rating, \",|ratings\"))\n    ) %&gt;% \n    mutate_at(\n      vars(Stars, Rating),\n      ~if_else(is.na(.), 0, .)\n    )\n\ncross-check\n\naudible %&gt;% select(Stars,Rating) %&gt;% head(7) %&gt;% kable()\n\n\n\n\nStars\nRating\n\n\n\n\n5.0\n34\n\n\n4.5\n41\n\n\n4.5\n38\n\n\n4.5\n12\n\n\n4.5\n181\n\n\n5.0\n72\n\n\n5.0\n11"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#price-column",
+    "href": "R Projects/audible/audible.html#price-column",
+    "title": "Audible Data Cleaning",
+    "section": "Price Column",
+    "text": "Price Column\nThe Price column represents the price of the audiobook.\n\naudible %&gt;% select(price) %&gt;% head(10) \n\n# A tibble: 10 × 1\n   price   \n   &lt;chr&gt;   \n 1 468.00  \n 2 820.00  \n 3 410.00  \n 4 615.00  \n 5 820.00  \n 6 656.00  \n 7 233.00  \n 8 820.00  \n 9 1,256.00\n10 820.00  \n\n\nThis column is of string datatype and it has some unwanted characters such as the , and Free indicating that these books come at no cost at all.\n\naudible %&gt;% select(price) %&gt;% filter(price==\"Free\")%&gt;% head(3)\n\n# A tibble: 3 × 1\n  price\n  &lt;chr&gt;\n1 Free \n2 Free \n3 Free \n\n\nIt is imperative to remove these characters and typecast the data type\n\n  audible &lt;- audible %&gt;% mutate(\n    price = case_when(\n      str_detect(price, \",\") ~ as.numeric(str_remove(price, \",\")),\n      str_detect(price, \"Free\") ~ as.numeric(str_remove(price, \"Free\")),\n      TRUE ~ as.numeric(price)\n    ),price=if_else(is.na(price),0,price)\n  )\n\ncross-check\n\naudible %&gt;% select(price) %&gt;% head(10)\n\n# A tibble: 10 × 1\n   price\n   &lt;dbl&gt;\n 1   468\n 2   820\n 3   410\n 4   615\n 5   820\n 6   656\n 7   233\n 8   820\n 9  1256\n10   820"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#subsetting",
+    "href": "R Projects/audible/audible.html#subsetting",
+    "title": "Audible Data Cleaning",
+    "section": "Subsetting Needed Columns",
+    "text": "Subsetting Needed Columns\nSelecting useful columns\n\naudible %&gt;% select(name:time,hours:time_seconds,releasedate,Year,language,Stars:price) %&gt;% head(10) %&gt;% kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nname\nauthor\nnarrator\ntime\nhours\nminutes\ntime_seconds\nreleasedate\nYear\nlanguage\nStars\nRating\nprice\n\n\n\n\nGeronimo Stilton #11 & #12\nGeronimo Stilton\nBill Lobely\n2 hrs and 20 mins\n2\n20\n8400\n2008-08-04\n2008\nEnglish\n5.0\n34\n468\n\n\nThe Burning Maze\nRick Riordan\nRobbie Daymond\n13 hrs and 8 mins\n13\n8\n47280\n2018-05-01\n2018\nEnglish\n4.5\n41\n820\n\n\nThe Deep End\nJeff Kinney\nDan Russell\n2 hrs and 3 mins\n2\n3\n7380\n2020-11-06\n2020\nEnglish\n4.5\n38\n410\n\n\nDaughter of the Deep\nRick Riordan\nSoneela Nankani\n11 hrs and 16 mins\n11\n16\n40560\n2021-10-05\n2021\nEnglish\n4.5\n12\n615\n\n\nThe Lightning Thief: Percy Jackson, Book 1\nRick Riordan\nJesse Bernstein\n10 hrs\n10\n0\n36000\n2010-01-13\n2010\nEnglish\n4.5\n181\n820\n\n\nThe Hunger Games: Special Edition\nSuzanne Collins\nTatiana Maslany\n10 hrs and 35 mins\n10\n35\n38100\n2018-10-30\n2018\nEnglish\n5.0\n72\n656\n\n\nQuest for the Diamond Sword\nWinter Morgan\nLuke Daniels\n2 hrs and 23 mins\n2\n23\n8580\n2014-11-25\n2014\nEnglish\n5.0\n11\n233\n\n\nThe Dark Prophecy\nRick Riordan\nRobbie Daymond\n12 hrs and 32 mins\n12\n32\n45120\n2017-05-02\n2017\nEnglish\n5.0\n50\n820\n\n\nMerlin Mission Collection\nMary Pope Osborne\nMary Pope Osborne\n10 hrs and 56 mins\n10\n56\n39360\n2017-05-02\n2017\nEnglish\n5.0\n5\n1256\n\n\nThe Tyrant’s Tomb\nRick Riordan\nRobbie Daymond\n13 hrs and 22 mins\n13\n22\n48120\n2019-09-24\n2019\nEnglish\n5.0\n58\n820"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#data-validity",
+    "href": "R Projects/audible/audible.html#data-validity",
+    "title": "Audible Data Cleaning",
+    "section": "Data Validity",
+    "text": "Data Validity\nThis is measure to ensure that all columns have the right datatype\n\naudible %&gt;% str()\n\ntibble [87,489 × 13] (S3: tbl_df/tbl/data.frame)\n $ name        : chr [1:87489] \"Geronimo Stilton #11 & #12\" \"The Burning Maze\" \"The Deep End\" \"Daughter of the Deep\" ...\n $ author      : chr [1:87489] \"Geronimo Stilton\" \"Rick Riordan\" \"Jeff Kinney\" \"Rick Riordan\" ...\n $ narrator    : chr [1:87489] \"Bill Lobely\" \"Robbie Daymond\" \"Dan Russell\" \"Soneela Nankani\" ...\n $ time        : chr [1:87489] \"2 hrs and 20 mins\" \"13 hrs and 8 mins\" \"2 hrs and 3 mins\" \"11 hrs and 16 mins\" ...\n $ releasedate : Date[1:87489], format: \"2008-08-04\" \"2018-05-01\" ...\n $ language    : chr [1:87489] \"English\" \"English\" \"English\" \"English\" ...\n $ Stars       : num [1:87489] 5 4.5 4.5 4.5 4.5 5 5 5 5 5 ...\n $ Rating      : num [1:87489] 34 41 38 12 181 72 11 50 5 58 ...\n $ price       : num [1:87489] 468 820 410 615 820 ...\n $ hours       : num [1:87489] 2 13 2 11 10 10 2 12 10 13 ...\n $ minutes     : num [1:87489] 20 8 3 16 0 35 23 32 56 22 ...\n $ time_seconds: num [1:87489] 8400 47280 7380 40560 36000 ...\n $ Year        : num [1:87489] 2008 2018 2020 2021 2010 ..."
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#saving-the-data",
+    "href": "R Projects/audible/audible.html#saving-the-data",
+    "title": "Audible Data Cleaning",
+    "section": "Saving the Data",
+    "text": "Saving the Data\n\nwrite.csv(audible,\"C:/Users/SAMMY/Desktop/Audible/audible_cleaned.csv\")"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#top-5-authors-on-audible",
+    "href": "R Projects/audible/audible.html#top-5-authors-on-audible",
+    "title": "Audible Data Cleaning",
+    "section": "Top 5 Authors on Audible",
+    "text": "Top 5 Authors on Audible\n\n# Filter top 5 authors\ntop_authors &lt;- audible %&gt;%\n  group_by(author) %&gt;%\n  summarise(n = n()) %&gt;%\n  arrange(n) %&gt;%\n  top_n(5)\n\nSelecting by n\n\n# Bar plot of top 5 Audible Authors\nggplot(top_authors, aes(x = reorder(author, n), y = n, fill = author)) +\n  geom_bar(stat = \"identity\") +\n   geom_text(aes(label = n), hjust = -0.1, color = \"black\", size = 3.5) +\n  scale_fill_manual(values = c(\"矢島雅弘,石橋遊\"=\"#FFA000\",\"Smart Reading\"=\"#FFB347\",\"中西貴之,BJ\"=\"#FFC680\",\"div.\"=\"#FFDAB3\",\"Online Studio Productions\"=\"#FFEFE0\")) +\n  coord_flip() +\n  labs(x = \"Author\", y = \"Book Count\", title = \"Top 5 Authors in Audible Dataset\") +\n  theme_classic() +\n  theme(legend.position = \"none\",plot.title = element_text(hjust = 0.5))"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#distribution-of-star-rating",
+    "href": "R Projects/audible/audible.html#distribution-of-star-rating",
+    "title": "Audible Data Cleaning",
+    "section": "Distribution of Star Rating",
+    "text": "Distribution of Star Rating\n\nstar_summary &lt;- audible %&gt;%\n  group_by(Stars) %&gt;%\n  summarise(count = n()) %&gt;%\n  arrange(desc(Stars))\n\n# Create the bar plot\nggplot(star_summary, aes(x =reorder(Stars,Stars), y = count)) +\n  geom_bar(stat = \"identity\", fill = \"#FFA000\", color = \"#000000\") +\n  geom_text(aes(label = count), vjust = -.5,hjust=0.5, color= \"black\", size = 3.5)+\n  labs(x = \"Star Rating\", y = \"Count\", title = \"Distribution of Star Ratings\") +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#heatmap-of-books-released-by-year",
+    "href": "R Projects/audible/audible.html#heatmap-of-books-released-by-year",
+    "title": "Audible Data Cleaning",
+    "section": "Heatmap of Books Released By Year",
+    "text": "Heatmap of Books Released By Year\n\nunique_years &lt;- unique(audible$Year)\nyear_summary &lt;- audible %&gt;%\n  group_by(Year) %&gt;%\n  summarise(count = n()) %&gt;%\n  arrange(Year)\n\n# Create heatmap\nggplot(year_summary, aes(x = \"\", y = Year, fill = count)) +\n  geom_tile(color = \"white\") +\n  scale_fill_gradient(low = \"linen\", high = \"#FFA000\") +\n  geom_text(aes(label = count), vjust = 0.5, hjust = 1,color = \"black\", size = 2.8,alpha=1)+\n  scale_y_continuous(breaks = unique_years)+\n  labs(x = \"Book Count\", y = \"Year\", title = \"Heatmap of Books Released Each Year\") +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n\n\n\n\nYou can access source code here"
+  },
+  {
+    "objectID": "R Projects/audible/audible.html",
+    "href": "R Projects/audible/audible.html",
+    "title": "Audible Data Cleaning",
+    "section": "",
+    "text": "The Audible dataset is a collection of data related to audiobooks gathered from Audible. It contains data from authors of audiobooks to release dates. The data represents the important details of audiobooks from 1998 till 2025 (pre-planned releases) and it was obtained from Kaggle. A peek into the Audible dataset indicates that there are some errors and inconsistencies which can be corrected using string manipulation techniques along side other data cleaning techniques."
+  },
+  {
+    "objectID": "R Projects/audible/audible.html#top-5-authors-in-audible",
+    "href": "R Projects/audible/audible.html#top-5-authors-in-audible",
+    "title": "Audible Data Cleaning",
+    "section": "Top 5 Authors in Audible",
+    "text": "Top 5 Authors in Audible\n\n# Filter top 5 authors\ntop_authors &lt;- audible %&gt;%\n  group_by(author) %&gt;%\n  summarise(n = n()) %&gt;%\n  arrange(n) %&gt;%\n  top_n(5)\n\nSelecting by n\n\n# Bar plot of top 5 Audible Authors\nggplot(top_authors, aes(x = reorder(author, n), y = n, fill = author)) +\n  geom_bar(stat = \"identity\") +\n   geom_text(aes(label = n), hjust = -0.1, color = \"black\", size = 3.5) +\n  scale_fill_manual(values = c(\"矢島雅弘,石橋遊\"=\"#FFA000\",\"Smart Reading\"=\"#FFB347\",\"中西貴之,BJ\"=\"#FFC680\",\"div.\"=\"#FFDAB3\",\"Online Studio Productions\"=\"#FFEFE0\")) +\n  coord_flip() +\n  labs(x = \"Author\", y = \"Book Count\", title = \"Top 5 Authors in Audible\") +\n  theme_classic() +\n  theme(legend.position = \"none\",plot.title = element_text(hjust = 0.5))"
   }
 ]

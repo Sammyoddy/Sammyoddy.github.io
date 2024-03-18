@@ -73,7 +73,7 @@ I followed a structured approach, adhering to the six steps of the data analysis
     ```
 
     ```{r, echo=FALSE, message=FALSE}
-    #read in audible csv  
+    #read in isr-pal csv  
     isrpal <-read_csv("C:/Users/SAMMY/Desktop/Portfoliooo/Sammy Odeyemi/Excel Projects/ISRPAL/isrpal.csv")
     ```
 

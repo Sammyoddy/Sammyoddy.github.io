@@ -1,0 +1,316 @@
+---
+title: "Audible Data Cleaning"
+toc: true
+monofont: 'Consolas'
+---
+
+![](audiblepage.jpg){fig-align="center"}
+
+```{=html}
+Data Cleaning is the process of identifying and correcting or removing errors, inaccuracies, and inconsistencies and overall appropriating the data to improve the quality of the data, thereby making it more suitable for analysis. It is a crucial step in the data analysis process as the quality of data directly impacts the validity of the results. It can involve but not limited to: 
+<ul>
+  <li>Handling Missing Values</li>
+  <li>Removing Duplicates</li>
+  <li>Data Type Conversion</li>
+  <li>Outlier Detection</li>
+  <li>Error Correction</li>
+</ul>
+```
+The Audible dataset is a collection of data related to audiobooks gathered from [Audible](audible.in "link to Audiobooks"){style="color:blue"}. It contains data from authors of audiobooks to release dates. The data represents the important details of audiobooks from 1998 till 2025 (pre-planned releases) and it was obtained from [Kaggle](https://www.kaggle.com/datasets/snehangsude/audible-dataset "audible dataset"){style="color:blue;"}. A peek into the Audible dataset indicates that there are some errors and inconsistencies which can be corrected using string manipulation techniques along side other data cleaning techniques.
+
+# Libraries Used
+
+The `tidyverse` library is a collection of R packages that can be used in Data Analysis. Some of the packages to be used are the `readr` for data import, `dplyr` for data wrangling, `stringr` for string manipulation to mention a few. Since these packages are housed in the `tidyverse`. I call this library since it is already installed.
+
+```{r}
+#load libraries
+library(knitr)
+library(tidyverse)
+library(ggplot2)
+library(lubridate)
+library(RColorBrewer)
+
+```
+
+# Data Import
+
+The Audible [dataset](https://www.kaggle.com/datasets/snehangsude/audible-dataset){style="color:blue;"} is a csv file from Kaggle and in order to deep dive into the data I proceeded to import it into RStudio, the IDE for the R Programming Language.
+
+::: {style="background-color:gray;"}
+```{r}
+#read in audible csv 
+audible<-read_csv("C:/Users/SAMMY/Desktop/Audible/audible_uncleaned.csv")
+```
+:::
+
+A peek into the dataset just to get familiar with what the data is about :
+
+```{r}
+#examine dataset 
+kable(head(audible,10)) 
+```
+
+# Data Cleaning
+
+## Author and Narrator Columns {#authornarrator}
+
+The [`Author`]{style="color:teal;"} and [`Narrator`]{style="color:teal;"} columns contain the names of the Authors and Narrators of the Audiobooks.
+
+```{r}
+#select Author and Narrator columns
+audible %>% select(author,narrator) %>% head(10) %>%kable()
+```
+
+These columns in the dataset have a common issue known as string concatenation errors. This occurs when two or more strings are joined together without appropriate spacing or delimiters. In this case, the names of authors and narrators are concatenated without spaces, making it difficult to distinguish between first and last names.
+
+Additionally, the strings '*Writtenby:*' and '*Narratedby:*' are concatenated with the names, adding unnecessary clutter to our data; hence the need to remove unnecessary strings and add spaces between the names using regular expressions.
+
+::: {style="background-color:gray;"}
+```{r}
+#author and narrator column cleaned of unwanted characters and spaces added where necessary
+audible<-audible %>%mutate_at(vars(author,narrator),
+  ~if_else(str_detect(.,"(Writtenby:)|(Narratedby:)"),
+        str_replace_all(str_remove(.,"(Writtenby:)|(Narratedby:)|\\d+"),
+                        "(?<=[a-z])(?=[A-Z])", " "),
+        .)
+  )
+```
+:::
+
+**cross-check**
+
+It becomes important to **check** the content of these columns after performing the operation
+
+<div>
+
+```{r}
+audible %>% select(author,narrator) %>% head(5) %>% kable()
+```
+
+</div>
+
+## Time Column {#time}
+
+The `Time` column is the total duration of each audiobook
+
+```{r}
+audible %>% select(time) %>% head(5) %>%kable()
+```
+
+It is a column of string datatype and the contents are needed to be extracted and typecasted to numeric values to aid further analysis.
+
+```{r}
+# Create new columns off the time column and typecast to numeric 
+audible <- audible %>%
+  mutate(
+    # Extract hours and minutes into separate columns
+    hours = as.numeric(str_extract(time, "\\d+(?=\\s*hr)")),
+    minutes = as.numeric(str_extract(time, "\\d+(?=\\s*min)")),
+    
+    # Convert time to seconds
+    time_seconds = case_when(
+      str_detect(time, "hrs|hr") & !str_detect(time, "mins|min") ~
+        as.numeric(str_extract(time, "\\d+(?=\\s*hr)")) * 3600,
+      str_detect(time, "hrs|hr") & str_detect(time, "min|mins") ~
+        as.numeric(str_extract(time, "\\d+(?=\\s*hr)")) * 3600 +
+        as.numeric(str_extract(time, "\\d+(?=\\s*min)")) * 60,
+      str_detect(time, "mins|min") ~
+        as.numeric(str_extract(time, "\\d+")) * 60,
+      TRUE ~ as.numeric(time)
+    )
+  )
+
+```
+
+::: {.callout-note appearance="simple"}
+## NA values
+
+The NA values are introduced because there are some observations that may not have either hours or minutes. In such instances, since there is no hour or minute to extract as the case may be, the newly created 'hours' or 'minutes' columns return NA. This is a common occurrence in data processing when the expected data is not present in certain observations. And to handle such instances, NA values are replaced with zero
+:::
+
+```{r}
+# Handle NA values (if there are cases like "2 hours" with no mins or "45 mins" with no hours)
+audible$hours[is.na(audible$hours)] <- 0
+audible$minutes[is.na(audible$minutes)] <- 0 
+```
+
+**cross-check**
+
+```{r}
+audible %>% select(time,hours,minutes,time_seconds) %>% head(6) %>% kable()
+```
+
+## Release Date Column {#releasedate}
+
+The `Release Date` Column just as the name implies is the release date of each and every audiobook contained in the dataset.
+
+```{r}
+audible %>% select(releasedate) %>% head(5) %>% kable()
+```
+
+It is of string datatype, hence the need to convert to Date in its truest form.
+
+```{r}
+#converted releasedate column of data type string to date as should be
+audible$releasedate<- as.Date(audible$releasedate,format="%d-%m-%y")
+#Extract the Year COlumn from the releasedate Column
+audible<-audible %>%mutate(Year=year(audible$releasedate)) 
+
+```
+
+## Stars Column {#stars}
+
+The `Stars` Column represents the average rating given by users for a particular audiobook. It has a band of 1 to 5. But during scraping of the data, the rating was scraped into the same column as the stars bringing about a string concatenation error. There should be a separate `rating` column that represents the number of users who have rated the audiobook.
+
+```{r}
+audible %>% select(stars) %>% head(6)
+```
+
+```{r warning=FALSE}
+#split stars column into Stars and Rating Column,remove unwanted characters and convert columns to numeric 
+  audible <- audible %>% 
+    separate(stars, into = c("Stars", "Rating"), sep = "out of 5 stars") %>% 
+    mutate(
+      Stars = as.numeric(str_remove_all(Stars, " ")),
+      Rating = as.numeric(str_remove_all(Rating, ",|ratings"))
+    ) %>% 
+    mutate_at(
+      vars(Stars, Rating),
+      ~if_else(is.na(.), 0, .)
+    )
+```
+
+**cross-check**
+
+```{r}
+audible %>% select(Stars,Rating) %>% head(7) %>% kable()
+```
+
+## Price Column
+
+The `Price` column represents the price of the audiobook.
+
+```{r}
+audible %>% select(price) %>% head(10) 
+```
+
+This column is of string datatype and it has some unwanted characters such as the `,` and `Free` indicating that these books come at no cost at all.
+
+```{r}
+audible %>% select(price) %>% filter(price=="Free")%>% head(3)
+```
+
+It is imperative to remove these characters and typecast the data type
+
+```{r warning=FALSE}
+  audible <- audible %>% mutate(
+    price = case_when(
+      str_detect(price, ",") ~ as.numeric(str_remove(price, ",")),
+      str_detect(price, "Free") ~ as.numeric(str_remove(price, "Free")),
+      TRUE ~ as.numeric(price)
+    ),price=if_else(is.na(price),0,price)
+  )
+```
+
+**cross-check**
+
+```{r}
+audible %>% select(price) %>% head(10)
+```
+
+## Subsetting Needed Columns {#subsetting}
+
+Selecting useful columns
+
+```{r}
+audible %>% select(name:time,hours:time_seconds,releasedate,Year,language,Stars:price) %>% head(10) %>% kable()
+```
+
+## Data Validity
+
+This is measure to ensure that all columns have the right datatype
+
+```{r}
+audible %>% str()
+```
+
+## Saving the Data
+
+```{r}
+write.csv(audible,"C:/Users/SAMMY/Desktop/Audible/audible_cleaned.csv")
+```
+
+# Data Vizzes
+
+## Top 5 Authors in Audible
+
+```{r}
+# Filter top 5 authors
+top_authors <- audible %>%
+  group_by(author) %>%
+  summarise(n = n()) %>%
+  arrange(n) %>%
+  top_n(5)
+
+# Bar plot of top 5 Audible Authors
+ggplot(top_authors, aes(x = reorder(author, n), y = n, fill = author)) +
+  geom_bar(stat = "identity") +
+   geom_text(aes(label = n), hjust = -0.1, color = "black", size = 3.5) +
+  scale_fill_manual(values = c("矢島雅弘,石橋遊"="#FFA000","Smart Reading"="#FFB347","中西貴之,BJ"="#FFC680","div."="#FFDAB3","Online Studio Productions"="#FFEFE0")) +
+  coord_flip() +
+  labs(x = "Author", y = "Book Count", title = "Top 5 Authors in Audible") +
+  theme_classic() +
+  theme(legend.position = "none",plot.title = element_text(hjust = 0.5))
+
+```
+
+## Distribution of Star Rating
+
+```{r}
+star_summary <- audible %>%
+  group_by(Stars) %>%
+  summarise(count = n()) %>%
+  arrange(desc(Stars))
+
+# Create the bar plot
+ggplot(star_summary, aes(x =reorder(Stars,Stars), y = count)) +
+  geom_bar(stat = "identity", fill = "#FFA000", color = "#000000") +
+  geom_text(aes(label = count), vjust = -.5,hjust=0.5, color= "black", size = 3.5)+
+  labs(x = "Star Rating", y = "Count", title = "Distribution of Star Ratings") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Heatmap of Books Released By Year
+
+```{r}
+unique_years <- unique(audible$Year)
+year_summary <- audible %>%
+  group_by(Year) %>%
+  summarise(count = n()) %>%
+  arrange(Year)
+
+# Create heatmap
+ggplot(year_summary, aes(x = "", y = Year, fill = count)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "linen", high = "#FFA000") +
+  geom_text(aes(label = count), vjust = 0.5, hjust = 1,color = "black", size = 2.8,alpha=1)+
+  scale_y_continuous(breaks = unique_years)+
+  labs(x = "Book Count", y = "Year", title = "Heatmap of Books Released Each Year") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+<h3>You can access source code [ here](https://github.com/Sammyoddy/Audible-Data-Cleaning/blob/main/audible.R){style="COLOR:BLUE;"} </h3>
+
+# Conclusion
+
+In conclusion, the [Audible dataset](https://www.kaggle.com/datasets/snehangsude/audible-dataset){style="color:blue;"} provides a rich source of information for understanding trends in audiobook releases over the years. The dataset, once cleaned and appropriately processed, offers valuable insights into the distribution and frequency of book releases per year.
+
+The process of extracting the release year from the dates, summarizing the data by year, and visualizing the results in a heatmap, has allowed to effectively explore and understand the temporal patterns in the data.
+
+However, it's important to note that this is just the beginning. The dataset likely contains many more insights waiting to be discovered. Further analysis could involve exploring other variables in the dataset, examining the relationships between variables.
+
+Overall, the Audible dataset serves as a powerful tool for data-driven decision making in the audiobook industry, and its value is only enhanced through careful data cleaning and analysis. 📚🔍

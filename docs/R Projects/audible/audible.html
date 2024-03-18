@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SAMMY ODEYEMI - Audible Data Cleaning</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SAMMY ODEYEMI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html#portfolio" rel="" target="">
+ <span class="menu-text">Portfolio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Odeyemi Samuel O. CV.pdf" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/arduinounoboy" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sammyoddy" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:thesamuelodeyemi@gmail.com" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#libraries-used" id="toc-libraries-used" class="nav-link active" data-scroll-target="#libraries-used">Libraries Used</a></li>
+  <li><a href="#data-import" id="toc-data-import" class="nav-link" data-scroll-target="#data-import">Data Import</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a>
+  <ul class="collapse">
+  <li><a href="#authornarrator" id="toc-authornarrator" class="nav-link" data-scroll-target="#authornarrator">Author and Narrator Columns</a></li>
+  <li><a href="#time" id="toc-time" class="nav-link" data-scroll-target="#time">Time Column</a></li>
+  <li><a href="#releasedate" id="toc-releasedate" class="nav-link" data-scroll-target="#releasedate">Release Date Column</a></li>
+  <li><a href="#stars" id="toc-stars" class="nav-link" data-scroll-target="#stars">Stars Column</a></li>
+  <li><a href="#price-column" id="toc-price-column" class="nav-link" data-scroll-target="#price-column">Price Column</a></li>
+  <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting">Subsetting Needed Columns</a></li>
+  <li><a href="#data-validity" id="toc-data-validity" class="nav-link" data-scroll-target="#data-validity">Data Validity</a></li>
+  <li><a href="#saving-the-data" id="toc-saving-the-data" class="nav-link" data-scroll-target="#saving-the-data">Saving the Data</a></li>
+  </ul></li>
+  <li><a href="#data-vizzes" id="toc-data-vizzes" class="nav-link" data-scroll-target="#data-vizzes">Data Vizzes</a>
+  <ul class="collapse">
+  <li><a href="#top-5-authors-in-audible" id="toc-top-5-authors-in-audible" class="nav-link" data-scroll-target="#top-5-authors-in-audible">Top 5 Authors in Audible</a></li>
+  <li><a href="#distribution-of-star-rating" id="toc-distribution-of-star-rating" class="nav-link" data-scroll-target="#distribution-of-star-rating">Distribution of Star Rating</a></li>
+  <li><a href="#heatmap-of-books-released-by-year" id="toc-heatmap-of-books-released-by-year" class="nav-link" data-scroll-target="#heatmap-of-books-released-by-year">Heatmap of Books Released By Year</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Audible Data Cleaning</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="audiblepage.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+
+Data Cleaning is the process of identifying and correcting or removing errors, inaccuracies, and inconsistencies and overall appropriating the data to improve the quality of the data, thereby making it more suitable for analysis. It is a crucial step in the data analysis process as the quality of data directly impacts the validity of the results. It can involve but not limited to: 
+<ul>
+  <li>Handling Missing Values</li>
+  <li>Removing Duplicates</li>
+  <li>Data Type Conversion</li>
+  <li>Outlier Detection</li>
+  <li>Error Correction</li>
+</ul>
+<p>The Audible dataset is a collection of data related to audiobooks gathered from <a href="audible.in" style="color:blue" title="link to Audiobooks">Audible</a>. It contains data from authors of audiobooks to release dates. The data represents the important details of audiobooks from 1998 till 2025 (pre-planned releases) and it was obtained from <a href="https://www.kaggle.com/datasets/snehangsude/audible-dataset" style="color:blue;" title="audible dataset">Kaggle</a>. A peek into the Audible dataset indicates that there are some errors and inconsistencies which can be corrected using string manipulation techniques along side other data cleaning techniques.</p>
+<section id="libraries-used" class="level1">
+<h1>Libraries Used</h1>
+<p>The <code>tidyverse</code> library is a collection of R packages that can be used in Data Analysis. Some of the packages to be used are the <code>readr</code> for data import, <code>dplyr</code> for data wrangling, <code>stringr</code> for string manipulation to mention a few. Since these packages are housed in the <code>tidyverse</code>. I call this library since it is already installed.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.1     ✔ tibble    3.2.0
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="data-import" class="level1">
+<h1>Data Import</h1>
+<p>The Audible <a href="https://www.kaggle.com/datasets/snehangsude/audible-dataset" style="color:blue;">dataset</a> is a csv file from Kaggle and in order to deep dive into the data I proceeded to import it into RStudio, the IDE for the R Programming Language.</p>
+<div style="background-color:gray;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#read in audible csv </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>audible<span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"C:/Users/SAMMY/Desktop/Audible/audible_uncleaned.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 87489 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (8): name, author, narrator, time, releasedate, language, stars, price
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+</div>
+<p>A peek into the dataset just to get familiar with what the data is about :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#examine dataset </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(audible,<span class="dv">10</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 14%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 17%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">author</th>
+<th style="text-align: left;">narrator</th>
+<th style="text-align: left;">time</th>
+<th style="text-align: left;">releasedate</th>
+<th style="text-align: left;">language</th>
+<th style="text-align: left;">stars</th>
+<th style="text-align: left;">price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Geronimo Stilton #11 &amp; #12</td>
+<td style="text-align: left;">Writtenby:GeronimoStilton</td>
+<td style="text-align: left;">Narratedby:BillLobely</td>
+<td style="text-align: left;">2 hrs and 20 mins</td>
+<td style="text-align: left;">04-08-08</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">5 out of 5 stars34 ratings</td>
+<td style="text-align: left;">468.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Burning Maze</td>
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:RobbieDaymond</td>
+<td style="text-align: left;">13 hrs and 8 mins</td>
+<td style="text-align: left;">01-05-18</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">4.5 out of 5 stars41 ratings</td>
+<td style="text-align: left;">820.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Deep End</td>
+<td style="text-align: left;">Writtenby:JeffKinney</td>
+<td style="text-align: left;">Narratedby:DanRussell</td>
+<td style="text-align: left;">2 hrs and 3 mins</td>
+<td style="text-align: left;">06-11-20</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">4.5 out of 5 stars38 ratings</td>
+<td style="text-align: left;">410.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daughter of the Deep</td>
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:SoneelaNankani</td>
+<td style="text-align: left;">11 hrs and 16 mins</td>
+<td style="text-align: left;">05-10-21</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">4.5 out of 5 stars12 ratings</td>
+<td style="text-align: left;">615.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Lightning Thief: Percy Jackson, Book 1</td>
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:JesseBernstein</td>
+<td style="text-align: left;">10 hrs</td>
+<td style="text-align: left;">13-01-10</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">4.5 out of 5 stars181 ratings</td>
+<td style="text-align: left;">820.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Hunger Games: Special Edition</td>
+<td style="text-align: left;">Writtenby:SuzanneCollins</td>
+<td style="text-align: left;">Narratedby:TatianaMaslany</td>
+<td style="text-align: left;">10 hrs and 35 mins</td>
+<td style="text-align: left;">30-10-18</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">5 out of 5 stars72 ratings</td>
+<td style="text-align: left;">656.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Quest for the Diamond Sword</td>
+<td style="text-align: left;">Writtenby:WinterMorgan</td>
+<td style="text-align: left;">Narratedby:LukeDaniels</td>
+<td style="text-align: left;">2 hrs and 23 mins</td>
+<td style="text-align: left;">25-11-14</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">5 out of 5 stars11 ratings</td>
+<td style="text-align: left;">233.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Dark Prophecy</td>
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:RobbieDaymond</td>
+<td style="text-align: left;">12 hrs and 32 mins</td>
+<td style="text-align: left;">02-05-17</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">5 out of 5 stars50 ratings</td>
+<td style="text-align: left;">820.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Merlin Mission Collection</td>
+<td style="text-align: left;">Writtenby:MaryPopeOsborne</td>
+<td style="text-align: left;">Narratedby:MaryPopeOsborne</td>
+<td style="text-align: left;">10 hrs and 56 mins</td>
+<td style="text-align: left;">02-05-17</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">5 out of 5 stars5 ratings</td>
+<td style="text-align: left;">1,256.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Tyrant’s Tomb</td>
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:RobbieDaymond</td>
+<td style="text-align: left;">13 hrs and 22 mins</td>
+<td style="text-align: left;">24-09-19</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">5 out of 5 stars58 ratings</td>
+<td style="text-align: left;">820.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="data-cleaning" class="level1">
+<h1>Data Cleaning</h1>
+<section id="authornarrator" class="level2">
+<h2 class="anchored" data-anchor-id="authornarrator">Author and Narrator Columns</h2>
+<p>The <span style="color:teal;"><code>Author</code></span> and <span style="color:teal;"><code>Narrator</code></span> columns contain the names of the Authors and Narrators of the Audiobooks.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#select Author and Narrator columns</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(author,narrator) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">author</th>
+<th style="text-align: left;">narrator</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Writtenby:GeronimoStilton</td>
+<td style="text-align: left;">Narratedby:BillLobely</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:RobbieDaymond</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Writtenby:JeffKinney</td>
+<td style="text-align: left;">Narratedby:DanRussell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:SoneelaNankani</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:JesseBernstein</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Writtenby:SuzanneCollins</td>
+<td style="text-align: left;">Narratedby:TatianaMaslany</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Writtenby:WinterMorgan</td>
+<td style="text-align: left;">Narratedby:LukeDaniels</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:RobbieDaymond</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Writtenby:MaryPopeOsborne</td>
+<td style="text-align: left;">Narratedby:MaryPopeOsborne</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Writtenby:RickRiordan</td>
+<td style="text-align: left;">Narratedby:RobbieDaymond</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>These columns in the dataset have a common issue known as string concatenation errors. This occurs when two or more strings are joined together without appropriate spacing or delimiters. In this case, the names of authors and narrators are concatenated without spaces, making it difficult to distinguish between first and last names.</p>
+<p>Additionally, the strings ‘<em>Writtenby:</em>’ and ‘<em>Narratedby:</em>’ are concatenated with the names, adding unnecessary clutter to our data; hence the need to remove unnecessary strings and add spaces between the names using regular expressions.</p>
+<div style="background-color:gray;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#author and narrator column cleaned of unwanted characters and spaces added where necessary</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>audible<span class="ot">&lt;-</span>audible <span class="sc">%&gt;%</span><span class="fu">mutate_at</span>(<span class="fu">vars</span>(author,narrator),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span><span class="fu">if_else</span>(<span class="fu">str_detect</span>(.,<span class="st">"(Writtenby:)|(Narratedby:)"</span>),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">str_replace_all</span>(<span class="fu">str_remove</span>(.,<span class="st">"(Writtenby:)|(Narratedby:)|</span><span class="sc">\\</span><span class="st">d+"</span>),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"(?&lt;=[a-z])(?=[A-Z])"</span>, <span class="st">" "</span>),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        .)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p><strong>cross-check</strong></p>
+<p>It becomes important to <strong>check</strong> the content of these columns after performing the operation</p>
+<div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(author,narrator) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">author</th>
+<th style="text-align: left;">narrator</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Geronimo Stilton</td>
+<td style="text-align: left;">Bill Lobely</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Robbie Daymond</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jeff Kinney</td>
+<td style="text-align: left;">Dan Russell</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Soneela Nankani</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Jesse Bernstein</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="time" class="level2">
+<h2 class="anchored" data-anchor-id="time">Time Column</h2>
+<p>The <code>Time</code> column is the total duration of each audiobook</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(time) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">5</span>) <span class="sc">%&gt;%</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2 hrs and 20 mins</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13 hrs and 8 mins</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2 hrs and 3 mins</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11 hrs and 16 mins</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10 hrs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>It is a column of string datatype and the contents are needed to be extracted and typecasted to numeric values to aid further analysis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create new columns off the time column and typecast to numeric </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>audible <span class="ot">&lt;-</span> audible <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract hours and minutes into separate columns</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">hours =</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(time, <span class="st">"</span><span class="sc">\\</span><span class="st">d+(?=</span><span class="sc">\\</span><span class="st">s*hr)"</span>)),</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">minutes =</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(time, <span class="st">"</span><span class="sc">\\</span><span class="st">d+(?=</span><span class="sc">\\</span><span class="st">s*min)"</span>)),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Convert time to seconds</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">time_seconds =</span> <span class="fu">case_when</span>(</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(time, <span class="st">"hrs|hr"</span>) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">str_detect</span>(time, <span class="st">"mins|min"</span>) <span class="sc">~</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(time, <span class="st">"</span><span class="sc">\\</span><span class="st">d+(?=</span><span class="sc">\\</span><span class="st">s*hr)"</span>)) <span class="sc">*</span> <span class="dv">3600</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(time, <span class="st">"hrs|hr"</span>) <span class="sc">&amp;</span> <span class="fu">str_detect</span>(time, <span class="st">"min|mins"</span>) <span class="sc">~</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(time, <span class="st">"</span><span class="sc">\\</span><span class="st">d+(?=</span><span class="sc">\\</span><span class="st">s*hr)"</span>)) <span class="sc">*</span> <span class="dv">3600</span> <span class="sc">+</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(time, <span class="st">"</span><span class="sc">\\</span><span class="st">d+(?=</span><span class="sc">\\</span><span class="st">s*min)"</span>)) <span class="sc">*</span> <span class="dv">60</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(time, <span class="st">"mins|min"</span>) <span class="sc">~</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>        <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(time, <span class="st">"</span><span class="sc">\\</span><span class="st">d+"</span>)) <span class="sc">*</span> <span class="dv">60</span>,</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(time)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `mutate()`.
+ℹ In argument: `time_seconds = case_when(...)`.
+Caused by warning:
+! NAs introduced by coercion</code></pre>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+NA values
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The NA values are introduced because there are some observations that may not have either hours or minutes. In such instances, since there is no hour or minute to extract as the case may be, the newly created ‘hours’ or ‘minutes’ columns return NA. This is a common occurrence in data processing when the expected data is not present in certain observations. And to handle such instances, NA values are replaced with zero</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Handle NA values (if there are cases like "2 hours" with no mins or "45 mins" with no hours)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>audible<span class="sc">$</span>hours[<span class="fu">is.na</span>(audible<span class="sc">$</span>hours)] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>audible<span class="sc">$</span>minutes[<span class="fu">is.na</span>(audible<span class="sc">$</span>minutes)] <span class="ot">&lt;-</span> <span class="dv">0</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>cross-check</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(time,hours,minutes,time_seconds) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">6</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">time</th>
+<th style="text-align: right;">hours</th>
+<th style="text-align: right;">minutes</th>
+<th style="text-align: right;">time_seconds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2 hrs and 20 mins</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">8400</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13 hrs and 8 mins</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">47280</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2 hrs and 3 mins</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7380</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11 hrs and 16 mins</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">40560</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10 hrs</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">36000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10 hrs and 35 mins</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">38100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="releasedate" class="level2">
+<h2 class="anchored" data-anchor-id="releasedate">Release Date Column</h2>
+<p>The <code>Release Date</code> Column just as the name implies is the release date of each and every audiobook contained in the dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(releasedate) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">releasedate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">04-08-08</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">01-05-18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">06-11-20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">05-10-21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13-01-10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>It is of string datatype, hence the need to convert to Date in its truest form.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#converted releasedate column of data type string to date as should be</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>audible<span class="sc">$</span>releasedate<span class="ot">&lt;-</span> <span class="fu">as.Date</span>(audible<span class="sc">$</span>releasedate,<span class="at">format=</span><span class="st">"%d-%m-%y"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract the Year COlumn from the releasedate Column</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>audible<span class="ot">&lt;-</span>audible <span class="sc">%&gt;%</span><span class="fu">mutate</span>(<span class="at">Year=</span><span class="fu">year</span>(audible<span class="sc">$</span>releasedate)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="stars" class="level2">
+<h2 class="anchored" data-anchor-id="stars">Stars Column</h2>
+<p>The <code>Stars</code> Column represents the average rating given by users for a particular audiobook. It has a band of 1 to 5. But during scraping of the data, the rating was scraped into the same column as the stars bringing about a string concatenation error. There should be a separate <code>rating</code> column that represents the number of users who have rated the audiobook.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(stars) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  stars                        
+  &lt;chr&gt;                        
+1 5 out of 5 stars34 ratings   
+2 4.5 out of 5 stars41 ratings 
+3 4.5 out of 5 stars38 ratings 
+4 4.5 out of 5 stars12 ratings 
+5 4.5 out of 5 stars181 ratings
+6 5 out of 5 stars72 ratings   </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#split stars column into Stars and Rating Column,remove unwanted characters and convert columns to numeric </span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  audible <span class="ot">&lt;-</span> audible <span class="sc">%&gt;%</span> </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">separate</span>(stars, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Stars"</span>, <span class="st">"Rating"</span>), <span class="at">sep =</span> <span class="st">"out of 5 stars"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">Stars =</span> <span class="fu">as.numeric</span>(<span class="fu">str_remove_all</span>(Stars, <span class="st">" "</span>)),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">Rating =</span> <span class="fu">as.numeric</span>(<span class="fu">str_remove_all</span>(Rating, <span class="st">",|ratings"</span>))</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate_at</span>(</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">vars</span>(Stars, Rating),</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>      <span class="sc">~</span><span class="fu">if_else</span>(<span class="fu">is.na</span>(.), <span class="dv">0</span>, .)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>cross-check</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(Stars,Rating) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">7</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Stars</th>
+<th style="text-align: right;">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">41</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">181</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">11</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="price-column" class="level2">
+<h2 class="anchored" data-anchor-id="price-column">Price Column</h2>
+<p>The <code>Price</code> column represents the price of the audiobook.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(price) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 1
+   price   
+   &lt;chr&gt;   
+ 1 468.00  
+ 2 820.00  
+ 3 410.00  
+ 4 615.00  
+ 5 820.00  
+ 6 656.00  
+ 7 233.00  
+ 8 820.00  
+ 9 1,256.00
+10 820.00  </code></pre>
+</div>
+</div>
+<p>This column is of string datatype and it has some unwanted characters such as the <code>,</code> and <code>Free</code> indicating that these books come at no cost at all.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(price) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(price<span class="sc">==</span><span class="st">"Free"</span>)<span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  price
+  &lt;chr&gt;
+1 Free 
+2 Free 
+3 Free </code></pre>
+</div>
+</div>
+<p>It is imperative to remove these characters and typecast the data type</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>  audible <span class="ot">&lt;-</span> audible <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">price =</span> <span class="fu">case_when</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(price, <span class="st">","</span>) <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">str_remove</span>(price, <span class="st">","</span>)),</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(price, <span class="st">"Free"</span>) <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">str_remove</span>(price, <span class="st">"Free"</span>)),</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(price)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    ),<span class="at">price=</span><span class="fu">if_else</span>(<span class="fu">is.na</span>(price),<span class="dv">0</span>,price)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>cross-check</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(price) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 1
+   price
+   &lt;dbl&gt;
+ 1   468
+ 2   820
+ 3   410
+ 4   615
+ 5   820
+ 6   656
+ 7   233
+ 8   820
+ 9  1256
+10   820</code></pre>
+</div>
+</div>
+</section>
+<section id="subsetting" class="level2">
+<h2 class="anchored" data-anchor-id="subsetting">Subsetting Needed Columns</h2>
+<p>Selecting useful columns</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">select</span>(name<span class="sc">:</span>time,hours<span class="sc">:</span>time_seconds,releasedate,Year,language,Stars<span class="sc">:</span>price) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span> <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 2%">
+<col style="width: 5%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 3%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">author</th>
+<th style="text-align: left;">narrator</th>
+<th style="text-align: left;">time</th>
+<th style="text-align: right;">hours</th>
+<th style="text-align: right;">minutes</th>
+<th style="text-align: right;">time_seconds</th>
+<th style="text-align: left;">releasedate</th>
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">language</th>
+<th style="text-align: right;">Stars</th>
+<th style="text-align: right;">Rating</th>
+<th style="text-align: right;">price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Geronimo Stilton #11 &amp; #12</td>
+<td style="text-align: left;">Geronimo Stilton</td>
+<td style="text-align: left;">Bill Lobely</td>
+<td style="text-align: left;">2 hrs and 20 mins</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">8400</td>
+<td style="text-align: left;">2008-08-04</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">468</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Burning Maze</td>
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Robbie Daymond</td>
+<td style="text-align: left;">13 hrs and 8 mins</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">47280</td>
+<td style="text-align: left;">2018-05-01</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">820</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Deep End</td>
+<td style="text-align: left;">Jeff Kinney</td>
+<td style="text-align: left;">Dan Russell</td>
+<td style="text-align: left;">2 hrs and 3 mins</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7380</td>
+<td style="text-align: left;">2020-11-06</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">410</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Daughter of the Deep</td>
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Soneela Nankani</td>
+<td style="text-align: left;">11 hrs and 16 mins</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">40560</td>
+<td style="text-align: left;">2021-10-05</td>
+<td style="text-align: right;">2021</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">615</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Lightning Thief: Percy Jackson, Book 1</td>
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Jesse Bernstein</td>
+<td style="text-align: left;">10 hrs</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">36000</td>
+<td style="text-align: left;">2010-01-13</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">181</td>
+<td style="text-align: right;">820</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Hunger Games: Special Edition</td>
+<td style="text-align: left;">Suzanne Collins</td>
+<td style="text-align: left;">Tatiana Maslany</td>
+<td style="text-align: left;">10 hrs and 35 mins</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">38100</td>
+<td style="text-align: left;">2018-10-30</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">656</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Quest for the Diamond Sword</td>
+<td style="text-align: left;">Winter Morgan</td>
+<td style="text-align: left;">Luke Daniels</td>
+<td style="text-align: left;">2 hrs and 23 mins</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">8580</td>
+<td style="text-align: left;">2014-11-25</td>
+<td style="text-align: right;">2014</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">233</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Dark Prophecy</td>
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Robbie Daymond</td>
+<td style="text-align: left;">12 hrs and 32 mins</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">45120</td>
+<td style="text-align: left;">2017-05-02</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">820</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Merlin Mission Collection</td>
+<td style="text-align: left;">Mary Pope Osborne</td>
+<td style="text-align: left;">Mary Pope Osborne</td>
+<td style="text-align: left;">10 hrs and 56 mins</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">39360</td>
+<td style="text-align: left;">2017-05-02</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1256</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Tyrant’s Tomb</td>
+<td style="text-align: left;">Rick Riordan</td>
+<td style="text-align: left;">Robbie Daymond</td>
+<td style="text-align: left;">13 hrs and 22 mins</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">48120</td>
+<td style="text-align: left;">2019-09-24</td>
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">820</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="data-validity" class="level2">
+<h2 class="anchored" data-anchor-id="data-validity">Data Validity</h2>
+<p>This is measure to ensure that all columns have the right datatype</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>audible <span class="sc">%&gt;%</span> <span class="fu">str</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [87,489 × 13] (S3: tbl_df/tbl/data.frame)
+ $ name        : chr [1:87489] "Geronimo Stilton #11 &amp; #12" "The Burning Maze" "The Deep End" "Daughter of the Deep" ...
+ $ author      : chr [1:87489] "Geronimo Stilton" "Rick Riordan" "Jeff Kinney" "Rick Riordan" ...
+ $ narrator    : chr [1:87489] "Bill Lobely" "Robbie Daymond" "Dan Russell" "Soneela Nankani" ...
+ $ time        : chr [1:87489] "2 hrs and 20 mins" "13 hrs and 8 mins" "2 hrs and 3 mins" "11 hrs and 16 mins" ...
+ $ releasedate : Date[1:87489], format: "2008-08-04" "2018-05-01" ...
+ $ language    : chr [1:87489] "English" "English" "English" "English" ...
+ $ Stars       : num [1:87489] 5 4.5 4.5 4.5 4.5 5 5 5 5 5 ...
+ $ Rating      : num [1:87489] 34 41 38 12 181 72 11 50 5 58 ...
+ $ price       : num [1:87489] 468 820 410 615 820 ...
+ $ hours       : num [1:87489] 2 13 2 11 10 10 2 12 10 13 ...
+ $ minutes     : num [1:87489] 20 8 3 16 0 35 23 32 56 22 ...
+ $ time_seconds: num [1:87489] 8400 47280 7380 40560 36000 ...
+ $ Year        : num [1:87489] 2008 2018 2020 2021 2010 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="saving-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="saving-the-data">Saving the Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(audible,<span class="st">"C:/Users/SAMMY/Desktop/Audible/audible_cleaned.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="data-vizzes" class="level1">
+<h1>Data Vizzes</h1>
+<section id="top-5-authors-in-audible" class="level2">
+<h2 class="anchored" data-anchor-id="top-5-authors-in-audible">Top 5 Authors in Audible</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter top 5 authors</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>top_authors <span class="ot">&lt;-</span> audible <span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author) <span class="sc">%&gt;%</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(n) <span class="sc">%&gt;%</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Selecting by n</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar plot of top 5 Audible Authors</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top_authors, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(author, n), <span class="at">y =</span> n, <span class="at">fill =</span> author)) <span class="sc">+</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">3.5</span>) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"矢島雅弘,石橋遊"</span><span class="ot">=</span><span class="st">"#FFA000"</span>,<span class="st">"Smart Reading"</span><span class="ot">=</span><span class="st">"#FFB347"</span>,<span class="st">"中西貴之,BJ"</span><span class="ot">=</span><span class="st">"#FFC680"</span>,<span class="st">"div."</span><span class="ot">=</span><span class="st">"#FFDAB3"</span>,<span class="st">"Online Studio Productions"</span><span class="ot">=</span><span class="st">"#FFEFE0"</span>)) <span class="sc">+</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Author"</span>, <span class="at">y =</span> <span class="st">"Book Count"</span>, <span class="at">title =</span> <span class="st">"Top 5 Authors in Audible"</span>) <span class="sc">+</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="audible_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="distribution-of-star-rating" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-of-star-rating">Distribution of Star Rating</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>star_summary <span class="ot">&lt;-</span> audible <span class="sc">%&gt;%</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Stars) <span class="sc">%&gt;%</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Stars))</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the bar plot</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(star_summary, <span class="fu">aes</span>(<span class="at">x =</span><span class="fu">reorder</span>(Stars,Stars), <span class="at">y =</span> count)) <span class="sc">+</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#FFA000"</span>, <span class="at">color =</span> <span class="st">"#000000"</span>) <span class="sc">+</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> count), <span class="at">vjust =</span> <span class="sc">-</span>.<span class="dv">5</span>,<span class="at">hjust=</span><span class="fl">0.5</span>, <span class="at">color=</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">3.5</span>)<span class="sc">+</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Star Rating"</span>, <span class="at">y =</span> <span class="st">"Count"</span>, <span class="at">title =</span> <span class="st">"Distribution of Star Ratings"</span>) <span class="sc">+</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="audible_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="heatmap-of-books-released-by-year" class="level2">
+<h2 class="anchored" data-anchor-id="heatmap-of-books-released-by-year">Heatmap of Books Released By Year</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>unique_years <span class="ot">&lt;-</span> <span class="fu">unique</span>(audible<span class="sc">$</span>Year)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>year_summary <span class="ot">&lt;-</span> audible <span class="sc">%&gt;%</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Year)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create heatmap</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(year_summary, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> Year, <span class="at">fill =</span> count)) <span class="sc">+</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">"linen"</span>, <span class="at">high =</span> <span class="st">"#FFA000"</span>) <span class="sc">+</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> count), <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust =</span> <span class="dv">1</span>,<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">2.8</span>,<span class="at">alpha=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> unique_years)<span class="sc">+</span></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Book Count"</span>, <span class="at">y =</span> <span class="st">"Year"</span>, <span class="at">title =</span> <span class="st">"Heatmap of Books Released Each Year"</span>) <span class="sc">+</span></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="audible_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<h3 class="anchored">
+You can access source code <a href="https://github.com/Sammyoddy/Audible-Data-Cleaning/blob/main/audible.R" style="COLOR:BLUE;">here</a>
+</h3>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In conclusion, the <a href="https://www.kaggle.com/datasets/snehangsude/audible-dataset" style="color:blue;">Audible dataset</a> provides a rich source of information for understanding trends in audiobook releases over the years. The dataset, once cleaned and appropriately processed, offers valuable insights into the distribution and frequency of book releases per year.</p>
+<p>The process of extracting the release year from the dates, summarizing the data by year, and visualizing the results in a heatmap, has allowed to effectively explore and understand the temporal patterns in the data.</p>
+<p>However, it’s important to note that this is just the beginning. The dataset likely contains many more insights waiting to be discovered. Further analysis could involve exploring other variables in the dataset, examining the relationships between variables.</p>
+<p>Overall, the Audible dataset serves as a powerful tool for data-driven decision making in the audiobook industry, and its value is only enhanced through careful data cleaning and analysis. 📚🔍</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

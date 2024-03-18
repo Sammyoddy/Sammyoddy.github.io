@@ -90,7 +90,7 @@ Our interactive dashboard fulfills the following requirements:
 Right-click on image to open dashboard in new tab, if content too tiny
 :::
 
-###      To interact with the Excel Dashboard, [click here](https://docs.google.com/spreadsheets/d/1MgupqU3UkujLIxkbMIwgry4sgDuM7gj_/edit?usp=drive_link&ouid=107549502594190094236&rtpof=true&sd=true){style="COLOR:BLUE;"}
+### To interact with the Excel Dashboard, [click here](https://docs.google.com/spreadsheets/d/1MgupqU3UkujLIxkbMIwgry4sgDuM7gj_/edit?usp=drive_link&ouid=107549502594190094236&rtpof=true&sd=true){style="COLOR:BLUE;"}
 
 ## Recommendations {#recommendations}
 
