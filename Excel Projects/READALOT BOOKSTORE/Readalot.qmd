@@ -1,0 +1,90 @@
+---
+title: "Book Sales Analysis at Read-A-Lot Bookstore."
+toc: true
+monofont: 'Consolas'
+---
+
+![](READ-A-LOT%20PAGE.png){fig-align="center" width="618"}
+
+## Introduction
+
+In this interesting data analysis project, I explore book sales at Read-A-Lot Bookstore. My goal is to understand trends, patterns, and insights related to global book sales at Read-A-Lot Bookstore. The dataset covers various genres, authors, and publishers from 1980 to 2020. By carefully analyzing this data, I aim to provide valuable business information for Read-A-Lot Ltd. 📚🔍
+
+## Overview
+
+The analysis revolves around answering critical questions:
+
+1.  **Historical Book Production** : An examination of books published anually?
+
+2.  **Genre and Publisher Trends**: What are the total sales of the top 5 book genres and top 5 publishers worldwide during this period?
+
+3.  **Regional Dominance**: Which book genres dominated?
+
+4.  **Global Sales Trends**: How did the total book sales trend evolve globally during specific time period.
+
+## **Data Source**
+
+The [dataset](https://www.kaggle.com/datasets/thedevastator/books-sales-and-ratings){style="color:blue;"} used is sourced from [Kaggle](www.kaggle.com){style="color:blue;"}and contains information on books with sales exceeding a certain threshold.
+
+## Examine the Dataset
+
+A peek into the data; the first 10 rows of data:
+
+```{r echo=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
+```
+
+```{r message=FALSE, echo=FALSE}
+readalot<- read_csv('C:/Users/SAMMY/Desktop/Portfoliooo/Sammy Odeyemi/Excel Projects/READALOT BOOKSTORE/readalot.csv')
+```
+
+```{r echo=FALSE}
+kable(head(readalot,10))
+```
+
+## Key Dashboard Requirements
+
+#### The interactive dashboard fulfills the following requirements:
+
+1.  Users can select Publishers and Authors that have their books on Read-A-Lot platformand Cities to compare sales and quantity trends.
+
+2.  The dashboard displays the top 5 Genres, top 5 Books by revenue corresponding to the chosen criteria.
+
+## Dashboard
+
+![](READALOT%20DASHBOARD.png)
+
+::: {.callout-note appearance="simple"}
+## Important!
+
+Right-click on image to open dashboard in new tab, if content too tiny
+:::
+
+### To interact with the Excel Dashboard, [click here](https://docs.google.com/spreadsheets/d/19efEmgDO40vBvnmscP6v7M93o0M5Aazo/edit?usp=drive_link&ouid=107549502594190094236&rtpof=true&sd=true){style="color:blue;"}
+
+## Recommendations
+
+1.  Identify a Target Audience: Understand your readers’ demographics, psychographics, and online behavior to better market to them.
+
+<!-- -->
+
+2.  Build an Author Platform: This can help amplify a book’s exposure and reach more readers.
+
+<!-- -->
+
+3.  Design a Book’s Cover: A well-designed cover can attract potential readers.
+
+## Conclusion
+
+In conclusion, the book sales analysis for Read-A-Lot Bookstore has yielded valuable insights into the sales for the year 2023:
+
+-   **Insights**:
+
+    -   Total Book Sales grossed **\$47.74M** in the year **2023**.
+
+    -   **Fiction Genre** sold the most of all Genres.
+
+    -   **Amazon Digital Services Inc.** grossed in a Revenue of **\$19.69M** topping all publishers.
+
+    -   **2010-2014** marked the years books were published the most, totalling a count of **226 Books**.

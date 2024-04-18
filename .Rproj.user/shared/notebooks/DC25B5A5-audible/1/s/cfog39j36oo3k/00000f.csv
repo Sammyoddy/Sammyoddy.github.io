@@ -1,3 +1,0 @@
-"0","# Handle NA values (if there are cases like ""2 hours"" with no mins or ""45 mins"" with no hours)"
-"0","audible$hours[is.na(audible$hours)] <- 0"
-"0","audible$minutes[is.na(audible$minutes)] <- 0 "

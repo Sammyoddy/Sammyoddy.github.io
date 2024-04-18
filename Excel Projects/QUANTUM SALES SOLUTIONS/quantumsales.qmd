@@ -48,13 +48,13 @@ quantumsales<-read_csv('C:/Users/SAMMY/Desktop/Portfoliooo/Sammy Odeyemi/Excel P
 
 ```
 
-```{r}
+```{r echo=FALSE}
 kable(head(quantumsales,10))
 ```
 
 ## Key Dashboard Requirements
 
-#### Our interactive dashboard fulfills the following requirements:
+#### The interactive dashboard fulfills the following requirements:
 
 1.  Users can select Customers that patronize Quantum Sales Solutions, Regions, Products and Cities to compare sales trends.
 

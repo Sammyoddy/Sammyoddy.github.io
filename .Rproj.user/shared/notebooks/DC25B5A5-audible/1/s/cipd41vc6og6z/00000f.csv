@@ -1,7 +1,0 @@
-"0","#author and narrator column cleaned of unwanted characters and spaces added where necessary"
-"0","audible<-audible %>%mutate_at(vars(author,narrator),"
-"0","  ~if_else(str_detect(.,""(Writtenby:)|(Narratedby:)""),"
-"0","        str_replace_all(str_remove(.,""(Writtenby:)|(Narratedby:)|\\d+""),"
-"0","                        ""(?<=[a-z])(?=[A-Z])"", "" ""),"
-"0","        .)"
-"0","  )"

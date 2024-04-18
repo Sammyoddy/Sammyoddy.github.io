@@ -158,6 +158,10 @@ audible<-audible %>%mutate(Year=year(audible$releasedate))
 
 ```
 
+```{r}
+str(audible$releasedate)
+```
+
 ## Stars Column {#stars}
 
 The `Stars` Column represents the average rating given by users for a particular audiobook. It has a band of 1 to 5. But during scraping of the data, the rating was scraped into the same column as the stars bringing about a string concatenation error. There should be a separate `rating` column that represents the number of users who have rated the audiobook.
@@ -303,7 +307,7 @@ ggplot(year_summary, aes(x = "", y = Year, fill = count)) +
 
 ```
 
-<h3>You can access source code [ here](https://github.com/Sammyoddy/Audible-Data-Cleaning/blob/main/audible.R){style="COLOR:BLUE;"} </h3>
+<h3>You can access source code [here](https://github.com/Sammyoddy/Audible-Data-Cleaning/blob/main/audible.R){style="COLOR:BLUE;"}</h3>
 
 # Conclusion
 

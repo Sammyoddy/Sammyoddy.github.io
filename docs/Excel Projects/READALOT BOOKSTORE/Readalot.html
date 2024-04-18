@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SAMMY ODEYEMI - Quantum Sales Solutions Analysis</title>
+<title>SAMMY ODEYEMI - Book Sales Analysis at Read-A-Lot Bookstore.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,8 +128,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source"><strong>Data Source</strong></a></li>
+  <li><a href="#examine-the-dataset" id="toc-examine-the-dataset" class="nav-link" data-scroll-target="#examine-the-dataset">Examine the Dataset</a></li>
   <li><a href="#key-dashboard-requirements" id="toc-key-dashboard-requirements" class="nav-link" data-scroll-target="#key-dashboard-requirements">Key Dashboard Requirements</a></li>
   <li><a href="#dashboard" id="toc-dashboard" class="nav-link" data-scroll-target="#dashboard">Dashboard</a>
   <ul class="collapse">
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Quantum Sales Solutions Analysis</h1>
+<h1 class="title">Book Sales Analysis at Read-A-Lot Bookstore.</h1>
 </div>
 
 
@@ -162,375 +162,251 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="QUANTUM PAGE.png" width="380" height="253" class="figure-img"></p>
+<p><img src="READ-A-LOT PAGE.png" class="img-fluid figure-img" width="618"></p>
 </figure>
 </div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Welcome to the Quantum Sales Solutions <a href="https://drive.google.com/file/d/1g25SQHG5yIdIxRw19t0wcgwdGcu70y1O/view?usp=sharing" style="COLOR:BLUE;">dataset</a> documentation! In this comprehensive guide, we explore the captivating world of beverage and snack sales, focusing on the year 2023. Whether you’re a data analyst, a business strategist, or simply curious about the flavors that defined that era, this documentation promises valuable insights.</p>
+<p>In this interesting data analysis project, I explore book sales at Read-A-Lot Bookstore. My goal is to understand trends, patterns, and insights related to global book sales at Read-A-Lot Bookstore. The dataset covers various genres, authors, and publishers from 1980 to 2020. By carefully analyzing this data, I aim to provide valuable business information for Read-A-Lot Ltd.&nbsp;📚🔍</p>
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Quantum Sales Solutions, a dynamic player in the market, orchestrates the distribution and delight of delectable treats. The dataset spans the year 2023 and encompasses a rich tapestry of products, regions, and consumer preferences. Let’s dive into the pixelated aisles of Quantum Sales Solutions and uncover the stories behind the sales for the year.</p>
+<p>The analysis revolves around answering critical questions:</p>
+<ol type="1">
+<li><p><strong>Historical Book Production</strong> : An examination of books published anually?</p></li>
+<li><p><strong>Genre and Publisher Trends</strong>: What are the total sales of the top 5 book genres and top 5 publishers worldwide during this period?</p></li>
+<li><p><strong>Regional Dominance</strong>: Which book genres dominated?</p></li>
+<li><p><strong>Global Sales Trends</strong>: How did the total book sales trend evolve globally during specific time period.</p></li>
+</ol>
 </section>
 <section id="data-source" class="level2">
-<h2 class="anchored" data-anchor-id="data-source">Data Source</h2>
-<p>The <a href="https://drive.google.com/file/d/1g25SQHG5yIdIxRw19t0wcgwdGcu70y1O/view?usp=sharing" style="color:blue;">dataset</a> for this project was meticulously collected by Quantum Sales Solutions. It captures transactions, quantities, and other relevant information related to beverages, dried fruits, nuts, candy, and soups.This dataset has been cleaned, organized, and prepared for analysis.</p>
+<h2 class="anchored" data-anchor-id="data-source"><strong>Data Source</strong></h2>
+<p>The <a href="https://www.kaggle.com/datasets/thedevastator/books-sales-and-ratings" style="color:blue;">dataset</a> used is sourced from <a href="www.kaggle.com" style="color:blue;">Kaggle</a>and contains information on books with sales exceeding a certain threshold.</p>
 </section>
-<section id="methodology" class="level2">
-<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<p>I followed a structured approach, adhering to the six steps of the data analysis process:</p>
-<ol type="1">
-<li><p><strong>Ask</strong>: I defined the problem, communicated with stakeholders, and understood the business context. Synergy Ltd.&nbsp;requested an interactive dashboard showcasing game sales trends by region, genre, and platform.</p></li>
-<li><p><strong>Prepare</strong>: I obtained the <a href="https://drive.google.com/file/d/1g25SQHG5yIdIxRw19t0wcgwdGcu70y1O/view?usp=sharing" style="color:blue;">dataset</a>, ensuring data integrity and cleanliness. Our primary analysis occurred on a duplicate worksheet to preserve the original data.</p></li>
-<li><p><strong>Process</strong>: I cleaned and transformed the data, preparing it for visualization.</p></li>
-<li><p><strong>Share</strong>: I created an interactive dashboard in Excel, allowing users to explore sales trends based on their preferences.</p></li>
-<li><p><strong>Analyze</strong>: I visualized the data, identifying patterns and drawing meaningful conclusions.</p></li>
-<li><p><strong>Act</strong>: Our insights informed strategic decisions for Synergy Ltd.</p>
-<h2 id="examine-the-dataset" class="anchored">Examine the Dataset</h2>
-<p>A peek into the data; the first 10 rows of data:</p></li>
-</ol>
+<section id="examine-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="examine-the-dataset">Examine the Dataset</h2>
+<p>A peek into the data; the first 10 rows of data:</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
-<col style="width: 2%">
-<col style="width: 3%">
-<col style="width: 3%">
-<col style="width: 3%">
-<col style="width: 4%">
-<col style="width: 2%">
 <col style="width: 1%">
+<col style="width: 5%">
+<col style="width: 12%">
+<col style="width: 20%">
 <col style="width: 4%">
 <col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 1%">
-<col style="width: 3%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 4%">
-<col style="width: 2%">
-<col style="width: 3%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 3%">
 <col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 3%">
 <col style="width: 5%">
 <col style="width: 3%">
-<col style="width: 2%">
-<col style="width: 2%">
 <col style="width: 3%">
+<col style="width: 10%">
+<col style="width: 3%">
+<col style="width: 2%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Order ID</th>
-<th style="text-align: left;">Order Date</th>
-<th style="text-align: right;">Customer ID</th>
-<th style="text-align: left;">Customer Name</th>
-<th style="text-align: left;">Address</th>
-<th style="text-align: left;">City</th>
-<th style="text-align: left;">State</th>
-<th style="text-align: right;">ZIP/Postal Code</th>
-<th style="text-align: left;">Country/Region</th>
-<th style="text-align: left;">Salesperson</th>
-<th style="text-align: left;">Region</th>
-<th style="text-align: left;">Shipped Date</th>
-<th style="text-align: left;">Shipper Name</th>
-<th style="text-align: left;">Ship Name</th>
-<th style="text-align: left;">Ship Address</th>
-<th style="text-align: left;">Ship City</th>
-<th style="text-align: left;">Ship State</th>
-<th style="text-align: right;">Ship ZIP/Postal Code</th>
-<th style="text-align: left;">Ship Country/Region</th>
-<th style="text-align: left;">Payment Type</th>
-<th style="text-align: left;">Product Name</th>
-<th style="text-align: left;">Category</th>
-<th style="text-align: left;">Unit Price</th>
-<th style="text-align: right;">Quantity</th>
-<th style="text-align: left;">Revenue</th>
-<th style="text-align: left;">Shipping Fee</th>
+<th style="text-align: right;">index</th>
+<th style="text-align: right;">Publishing Year</th>
+<th style="text-align: left;">Book Name</th>
+<th style="text-align: left;">Author</th>
+<th style="text-align: left;">language_code</th>
+<th style="text-align: left;">Author_Rating</th>
+<th style="text-align: right;">Book_average_rating</th>
+<th style="text-align: right;">Book_ratings_count</th>
+<th style="text-align: left;">genre</th>
+<th style="text-align: right;">gross sales</th>
+<th style="text-align: right;">publisher revenue</th>
+<th style="text-align: right;">sale price</th>
+<th style="text-align: right;">sales rank</th>
+<th style="text-align: left;">Publisher</th>
+<th style="text-align: right;">units sold</th>
+<th style="text-align: left;">sales</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1001</td>
-<td style="text-align: left;">01/27/14</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: left;">Company AA</td>
-<td style="text-align: left;">789 27th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Mariya Sergienko</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: left;">01/29/14</td>
-<td style="text-align: left;">Shipping Company B</td>
-<td style="text-align: left;">Karen Toh</td>
-<td style="text-align: left;">789 27th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Check</td>
-<td style="text-align: left;">Beer</td>
-<td style="text-align: left;">Beverages</td>
-<td style="text-align: left;">$14.00</td>
-<td style="text-align: right;">49</td>
-<td style="text-align: left;">$686.00</td>
-<td style="text-align: left;">$66.54</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1975</td>
+<td style="text-align: left;">Beowulf</td>
+<td style="text-align: left;">Unknown, Seamus Heaney</td>
+<td style="text-align: left;">en-US</td>
+<td style="text-align: left;">Novice</td>
+<td style="text-align: right;">3.42</td>
+<td style="text-align: right;">155903</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">34160.00</td>
+<td style="text-align: right;">20496.0</td>
+<td style="text-align: right;">4.88</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">HarperCollins Publishers</td>
+<td style="text-align: right;">7000</td>
+<td style="text-align: left;">$34,160</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1002</td>
-<td style="text-align: left;">01/27/14</td>
-<td style="text-align: right;">27</td>
-<td style="text-align: left;">Company AA</td>
-<td style="text-align: left;">789 27th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Mariya Sergienko</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: left;">01/29/14</td>
-<td style="text-align: left;">Shipping Company B</td>
-<td style="text-align: left;">Karen Toh</td>
-<td style="text-align: left;">789 27th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Check</td>
-<td style="text-align: left;">Dried Plums</td>
-<td style="text-align: left;">Dried Fruit &amp; Nuts</td>
-<td style="text-align: left;">$3.50</td>
-<td style="text-align: right;">47</td>
-<td style="text-align: left;">$164.50</td>
-<td style="text-align: left;">$16.61</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1987</td>
+<td style="text-align: left;">Batman: Year One</td>
+<td style="text-align: left;">Frank Miller, David Mazzucchelli, Richmond Lewis, Dennis O’Neil</td>
+<td style="text-align: left;">eng</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">4.23</td>
+<td style="text-align: right;">145267</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">12437.50</td>
+<td style="text-align: right;">7462.5</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">HarperCollins Publishers</td>
+<td style="text-align: right;">6250</td>
+<td style="text-align: left;">$12,438</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">1003</td>
-<td style="text-align: left;">01/04/2014</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">Company D</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Andrew Cencini</td>
-<td style="text-align: left;">East</td>
-<td style="text-align: left;">01/06/2014</td>
-<td style="text-align: left;">Shipping Company A</td>
-<td style="text-align: left;">Christina Lee</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Credit Card</td>
-<td style="text-align: left;">Dried Pears</td>
-<td style="text-align: left;">Dried Fruit &amp; Nuts</td>
-<td style="text-align: left;">$30.00</td>
-<td style="text-align: right;">69</td>
-<td style="text-align: left;">$2,070.00</td>
-<td style="text-align: left;">$198.72</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: left;">Go Set a Watchman</td>
+<td style="text-align: left;">Harper Lee</td>
+<td style="text-align: left;">eng</td>
+<td style="text-align: left;">Novice</td>
+<td style="text-align: right;">3.31</td>
+<td style="text-align: right;">138669</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">47795.00</td>
+<td style="text-align: right;">28677.0</td>
+<td style="text-align: right;">8.69</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Amazon Digital Services, Inc.</td>
+<td style="text-align: right;">5500</td>
+<td style="text-align: left;">$47,795</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1004</td>
-<td style="text-align: left;">01/04/2014</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">Company D</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Andrew Cencini</td>
-<td style="text-align: left;">East</td>
-<td style="text-align: left;">01/06/2014</td>
-<td style="text-align: left;">Shipping Company A</td>
-<td style="text-align: left;">Christina Lee</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Credit Card</td>
-<td style="text-align: left;">Dried Apples</td>
-<td style="text-align: left;">Dried Fruit &amp; Nuts</td>
-<td style="text-align: left;">$53.00</td>
-<td style="text-align: right;">89</td>
-<td style="text-align: left;">$4,717.00</td>
-<td style="text-align: left;">$448.12</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: left;">When You Are Engulfed in Flames</td>
+<td style="text-align: left;">David Sedaris</td>
+<td style="text-align: left;">en-US</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">4.04</td>
+<td style="text-align: right;">150898</td>
+<td style="text-align: left;">fiction</td>
+<td style="text-align: right;">41250.00</td>
+<td style="text-align: right;">24750.0</td>
+<td style="text-align: right;">7.50</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Hachette Book Group</td>
+<td style="text-align: right;">5500</td>
+<td style="text-align: left;">$41,250</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">1005</td>
-<td style="text-align: left;">01/04/2014</td>
 <td style="text-align: right;">4</td>
-<td style="text-align: left;">Company D</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Andrew Cencini</td>
-<td style="text-align: left;">East</td>
-<td style="text-align: left;">01/06/2014</td>
-<td style="text-align: left;">Shipping Company A</td>
-<td style="text-align: left;">Christina Lee</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Credit Card</td>
-<td style="text-align: left;">Dried Plums</td>
-<td style="text-align: left;">Dried Fruit &amp; Nuts</td>
-<td style="text-align: left;">$3.50</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: left;">$38.50</td>
-<td style="text-align: left;">$3.73</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: left;">Daughter of Smoke &amp; Bone</td>
+<td style="text-align: left;">Laini Taylor</td>
+<td style="text-align: left;">eng</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">4.04</td>
+<td style="text-align: right;">198283</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">37952.50</td>
+<td style="text-align: right;">22771.5</td>
+<td style="text-align: right;">7.99</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Penguin Group (USA) LLC</td>
+<td style="text-align: right;">4750</td>
+<td style="text-align: left;">$37,953</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1006</td>
-<td style="text-align: left;">01/12/2014</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: left;">Company L</td>
-<td style="text-align: left;">123 12th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Mariya Sergienko</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: left;">01/14/14</td>
-<td style="text-align: left;">Shipping Company B</td>
-<td style="text-align: left;">John Edwards</td>
-<td style="text-align: left;">123 12th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Credit Card</td>
-<td style="text-align: left;">Chai</td>
-<td style="text-align: left;">Beverages</td>
-<td style="text-align: left;">$18.00</td>
-<td style="text-align: right;">81</td>
-<td style="text-align: left;">$1,458.00</td>
-<td style="text-align: left;">$141.43</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: left;">Red Queen</td>
+<td style="text-align: left;">Victoria Aveyard</td>
+<td style="text-align: left;">eng</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">4.08</td>
+<td style="text-align: right;">83354</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">19960.00</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">4.99</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Amazon Digital Services, Inc.</td>
+<td style="text-align: right;">4000</td>
+<td style="text-align: left;">$19,960</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">1007</td>
-<td style="text-align: left;">01/12/2014</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: left;">Company L</td>
-<td style="text-align: left;">123 12th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Mariya Sergienko</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: left;">01/14/14</td>
-<td style="text-align: left;">Shipping Company B</td>
-<td style="text-align: left;">John Edwards</td>
-<td style="text-align: left;">123 12th Street</td>
-<td style="text-align: left;">Las Vegas</td>
-<td style="text-align: left;">NV</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Credit Card</td>
-<td style="text-align: left;">Coffee</td>
-<td style="text-align: left;">Beverages</td>
-<td style="text-align: left;">$46.00</td>
-<td style="text-align: right;">44</td>
-<td style="text-align: left;">$2,024.00</td>
-<td style="text-align: left;">$198.35</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: left;">The Power of Habit</td>
+<td style="text-align: left;">Charles Duhigg</td>
+<td style="text-align: left;">eng</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">4.03</td>
+<td style="text-align: right;">155977</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">27491.67</td>
+<td style="text-align: right;">16495.0</td>
+<td style="text-align: right;">6.99</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">HarperCollins Publishers</td>
+<td style="text-align: right;">3933</td>
+<td style="text-align: left;">$27,492</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1008</td>
-<td style="text-align: left;">01/08/2014</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1994</td>
+<td style="text-align: left;">Midnight in the Garden of Good and Evil</td>
+<td style="text-align: left;">John Berendt</td>
+<td style="text-align: left;">eng</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">3.90</td>
+<td style="text-align: right;">167997</td>
+<td style="text-align: left;">nonfiction</td>
+<td style="text-align: right;">26182.00</td>
+<td style="text-align: right;">15709.2</td>
+<td style="text-align: right;">6.89</td>
 <td style="text-align: right;">8</td>
-<td style="text-align: left;">Company H</td>
-<td style="text-align: left;">123 8th Street</td>
-<td style="text-align: left;">Portland</td>
-<td style="text-align: left;">OR</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Nancy Freehafer</td>
-<td style="text-align: left;">North</td>
-<td style="text-align: left;">01/10/2014</td>
-<td style="text-align: left;">Shipping Company C</td>
-<td style="text-align: left;">Elizabeth Andersen</td>
-<td style="text-align: left;">123 8th Street</td>
-<td style="text-align: left;">Portland</td>
-<td style="text-align: left;">OR</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Credit Card</td>
-<td style="text-align: left;">Chocolate Biscuits Mix</td>
-<td style="text-align: left;">Baked Goods &amp; Mixes</td>
-<td style="text-align: left;">$9.20</td>
-<td style="text-align: right;">38</td>
-<td style="text-align: left;">$349.60</td>
-<td style="text-align: left;">$36.01</td>
+<td style="text-align: left;">Hachette Book Group</td>
+<td style="text-align: right;">3800</td>
+<td style="text-align: left;">$26,182</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">1009</td>
-<td style="text-align: left;">01/04/2014</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">Company D</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Andrew Cencini</td>
-<td style="text-align: left;">East</td>
-<td style="text-align: left;">01/06/2014</td>
-<td style="text-align: left;">Shipping Company C</td>
-<td style="text-align: left;">Christina Lee</td>
-<td style="text-align: left;">123 4th Street</td>
-<td style="text-align: left;">New York</td>
-<td style="text-align: left;">NY</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Check</td>
-<td style="text-align: left;">Chocolate Biscuits Mix</td>
-<td style="text-align: left;">Baked Goods &amp; Mixes</td>
-<td style="text-align: left;">$9.20</td>
-<td style="text-align: right;">88</td>
-<td style="text-align: left;">$809.60</td>
-<td style="text-align: left;">$79.34</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">Hopeless</td>
+<td style="text-align: left;">Colleen Hoover</td>
+<td style="text-align: left;">eng</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">4.34</td>
+<td style="text-align: right;">189938</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">26093.67</td>
+<td style="text-align: right;">15656.2</td>
+<td style="text-align: right;">6.99</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">HarperCollins Publishers</td>
+<td style="text-align: right;">3733</td>
+<td style="text-align: left;">$26,094</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">1010</td>
-<td style="text-align: left;">01/29/14</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: left;">Company CC</td>
-<td style="text-align: left;">789 29th Street</td>
-<td style="text-align: left;">Denver</td>
-<td style="text-align: left;">CO</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Jan Kotas</td>
-<td style="text-align: left;">West</td>
-<td style="text-align: left;">01/31/14</td>
-<td style="text-align: left;">Shipping Company B</td>
-<td style="text-align: left;">Soo Jung Lee</td>
-<td style="text-align: left;">789 29th Street</td>
-<td style="text-align: left;">Denver</td>
-<td style="text-align: left;">CO</td>
-<td style="text-align: right;">99999</td>
-<td style="text-align: left;">USA</td>
-<td style="text-align: left;">Check</td>
-<td style="text-align: left;">Chocolate</td>
-<td style="text-align: left;">Candy</td>
-<td style="text-align: left;">$12.75</td>
-<td style="text-align: right;">94</td>
-<td style="text-align: left;">$1,198.50</td>
-<td style="text-align: left;">$122.25</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2004</td>
+<td style="text-align: left;">The Truth About Forever</td>
+<td style="text-align: left;">Sarah Dessen</td>
+<td style="text-align: left;">en-US</td>
+<td style="text-align: left;">Intermediate</td>
+<td style="text-align: right;">4.13</td>
+<td style="text-align: right;">179415</td>
+<td style="text-align: left;">genre fiction</td>
+<td style="text-align: right;">17964.00</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">4.99</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">Amazon Digital Services, Inc.</td>
+<td style="text-align: right;">3600</td>
+<td style="text-align: left;">$17,964</td>
 </tr>
 </tbody>
 </table>
@@ -542,21 +418,21 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-interactive-dashboard-fulfills-the-following-requirements" class="level4">
 <h4 class="anchored" data-anchor-id="the-interactive-dashboard-fulfills-the-following-requirements">The interactive dashboard fulfills the following requirements:</h4>
 <ol type="1">
-<li><p>Users can select Customers that patronize Quantum Sales Solutions, Regions, Products and Cities to compare sales trends.</p></li>
-<li><p>The dashboard displays the top 7 Salespersons, Sales by Product Category corresponding to the chosen criteria.</p></li>
+<li><p>Users can select Publishers and Authors that have their books on Read-A-Lot platformand Cities to compare sales and quantity trends.</p></li>
+<li><p>The dashboard displays the top 5 Genres, top 5 Books by revenue corresponding to the chosen criteria.</p></li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level2">
 <h2 class="anchored" data-anchor-id="dashboard">Dashboard</h2>
-<p><img src="QUANTUM SALES DASHBOARD.png" class="img-fluid"></p>
+<p><img src="READALOT DASHBOARD.png" class="img-fluid"></p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important!!!
+Important!
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -564,27 +440,33 @@ Important!!!
 </div>
 </div>
 <section id="to-interact-with-the-excel-dashboard-click-here" class="level3">
-<h3 class="anchored" data-anchor-id="to-interact-with-the-excel-dashboard-click-here">To interact with the Excel Dashboard, <a href="https://docs.google.com/spreadsheets/d/1ZSvjRw0L-T2-a0StG1drW7EDL9oaOYCb/edit?usp=sharing&amp;ouid=107549502594190094236&amp;rtpof=true&amp;sd=true" style="color:blue;">click here</a></h3>
+<h3 class="anchored" data-anchor-id="to-interact-with-the-excel-dashboard-click-here">To interact with the Excel Dashboard, <a href="https://docs.google.com/spreadsheets/d/19efEmgDO40vBvnmscP6v7M93o0M5Aazo/edit?usp=drive_link&amp;ouid=107549502594190094236&amp;rtpof=true&amp;sd=true" style="color:blue;">click here</a></h3>
 </section>
 </section>
 <section id="recommendations" class="level2">
 <h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
 <ol type="1">
-<li><p>Recognize top performers like <strong>Nancy Freehafer</strong> with rewards and provide training opportunities for those underperforming to improve their skills.</p></li>
-<li><p>Promote top-selling product categories more prominently, and analyze low-performing categories for potential improvements or discontinuation.</p></li>
-<li><p>Develop growth strategies for regions that are underperforming like in the West and Increase investment in high-performing regions</p></li>
+<li>Identify a Target Audience: Understand your readers’ demographics, psychographics, and online behavior to better market to them.</li>
+</ol>
+<!-- -->
+<ol start="2" type="1">
+<li>Build an Author Platform: This can help amplify a book’s exposure and reach more readers.</li>
+</ol>
+<!-- -->
+<ol start="3" type="1">
+<li>Design a Book’s Cover: A well-designed cover can attract potential readers.</li>
 </ol>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In conclusion, the product sales analysis for Quantum Sales Solutions has yielded valuable insights into the sales for the year 2023:</p>
+<p>In conclusion, the book sales analysis for Read-A-Lot Bookstore has yielded valuable insights into the sales for the year 2023:</p>
 <ul>
 <li><p><strong>Insights</strong>:</p>
 <ul>
-<li><p>The <strong>North</strong> had more Sales garnering <strong>32%</strong> of total sales .</p></li>
-<li><p><strong>Beverages</strong> sold the most at <strong>₦110,577</strong></p></li>
-<li><p><strong>December</strong> grossed highest sales by month at <strong>₦66,643</strong></p></li>
-<li><p>Sales for the year <strong>2023</strong> totaled the sum of <strong>₦435,036</strong></p></li>
+<li><p>Total Book Sales grossed <strong>$47.74M</strong> in the year <strong>2023</strong>.</p></li>
+<li><p><strong>Fiction Genre</strong> sold the most of all Genres.</p></li>
+<li><p><strong>Amazon Digital Services Inc.</strong> grossed in a Revenue of <strong>$19.69M</strong> topping all publishers.</p></li>
+<li><p><strong>2010-2014</strong> marked the years books were published the most, totalling a count of <strong>226 Books</strong>.</p></li>
 </ul></li>
 </ul>
 
