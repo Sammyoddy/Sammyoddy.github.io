@@ -340,7 +340,7 @@
     "href": "R Projects/audible/audible.html#heatmap-of-books-released-by-year",
     "title": "Audible Data Cleaning",
     "section": "Heatmap of Books Released By Year",
-    "text": "Heatmap of Books Released By Year\n\nunique_years &lt;- unique(audible$Year)\nyear_summary &lt;- audible %&gt;%\n  group_by(Year) %&gt;%\n  summarise(count = n()) %&gt;%\n  arrange(Year)\n\n# Create heatmap\nggplot(year_summary, aes(x = \"\", y = Year, fill = count)) +\n  geom_tile(color = \"white\") +\n  scale_fill_gradient(low = \"linen\", high = \"#FFA000\") +\n  geom_text(aes(label = count), vjust = 0.5, hjust = 1,color = \"black\", size = 2.8,alpha=1)+\n  scale_y_continuous(breaks = unique_years)+\n  labs(x = \"Book Count\", y = \"Year\", title = \"Heatmap of Books Released Each Year\") +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n\n\n\n\nYou can access source code here"
+    "text": "Heatmap of Books Released By Year\n\nunique_years &lt;- unique(audible$Year)\nyear_summary &lt;- audible %&gt;%\n  group_by(Year) %&gt;%\n  summarise(count = n()) %&gt;%\n  arrange(Year)\n\n# Create heatmap\nggplot(year_summary, aes(x = \"\", y = Year, fill = count)) +\n  geom_tile(color = \"white\") +\n  scale_fill_gradient(low = \"linen\", high = \"#FFA000\") +\n  geom_text(aes(label = count), vjust = 0.5, hjust = 1,color = \"black\", size = 2.8,alpha=1)+\n  scale_y_continuous(breaks = unique_years)+\n  labs(x = \"Book Count\", y = \"Year\", title = \"Heatmap of Books Released Each Year\") +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n\n\n\n\nYou can access dataset here and source code here"
   },
   {
     "objectID": "R Projects/audible/audible.html",
