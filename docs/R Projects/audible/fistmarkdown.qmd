@@ -1,0 +1,84 @@
+---
+title: "Ibrahim Alayo"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(pROC)
+```
+
+```{r message= FALSE, warning=FALSE}
+ndhsrasheeddata <- read_csv("ndhsrasheed.csv") %>% view()
+```
+
+```{r}
+ndhsrasheedselect<-select(ndhsrasheeddata, wealth, edu, rworking, resid, relig, visithosp, teenmom, agefbirth, hofistula, tchild) 
+```
+
+```{r}
+ndhsrasheedselect<-drop_na(ndhsrasheedselect) %>% view()
+```
+
+```{r}
+# Factor the columns for logistic regression 
+ndhsrasheedselect$wealth <- as.factor(ndhsrasheedselect$wealth) 
+ndhsrasheedselect$edu <- as.factor(ndhsrasheedselect$edu) 
+ndhsrasheedselect$rworking <- as.factor(ndhsrasheedselect$rworking) 
+ndhsrasheedselect$resid <- as.factor(ndhsrasheedselect$resid)
+ndhsrasheedselect$relig <- as.factor(ndhsrasheedselect$relig)
+ndhsrasheedselect$visithosp <- as.factor(ndhsrasheedselect$visithosp) 
+ndhsrasheedselect$teenmom <- as.factor(ndhsrasheedselect$teenmom)
+```
+
+```{r}
+fistulamodel1 <-    glm(ndhsrasheedselect$hofistula~ wealth + edu + rworking + resid + relig + visithosp + teenmom + agefbirth + tchild, family=binomial(link = "logit"), data=ndhsrasheedselect)
+```
+
+```{r}
+summary(fistulamodel1)
+```
+
+```{r}
+fistulamodel2 <-    glm(hofistula~ wealth + edu + rworking + resid + relig + visithosp + teenmom + agefbirth + tchild, family=binomial(link = "cloglog"),       data=ndhsrasheedselect)
+```
+
+```{r}
+summary(fistulamodel2)
+```
+
+```{r}
+fistulamodel3 <-    glm(hofistula~ wealth + edu + rworking + resid + relig + visithosp + teenmom + agefbirth + tchild, family=binomial(link = "probit"),       data=ndhsrasheedselect)
+```
+
+```{r}
+summary(fistulamodel3)
+```
+
+```{r}
+us <- predict(fistulamodel1, type = "response")
+```
+
+```{r}
+roc_curve<- roc(ndhsrasheedselect$hofistula, us)
+```
+
+```{r}
+auc_value <- auc(roc_curve)
+```
+
+```{r warning=FALSE}
+plot(roc_curve, main="ROC curve", col="#007c80")
+text(0.5, 0.5, paste("AUC =", round(auc_value, 4)), cex=0.8)
+```
