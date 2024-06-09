@@ -1,9 +1,7 @@
 ---
 title: "Ibrahim Alayo"
-output:
-  word_document: default
-  pdf_document: default
-  html_document: default
+toc: true
+monofont: Consolas
 date: "`r Sys.Date()`"
 ---
 
