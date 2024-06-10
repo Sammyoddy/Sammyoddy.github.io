@@ -137,11 +137,7 @@ R Projects
 This is a Data Cleaning Project for Audible. I employed R and RStudio to perform Data Cleaning, and took it a nudge further by analysing and making Visualizations.   </div>  
 <a class="btn btn-primary" href="/R Projects/audible/audible.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project   </a> 
 
-<a class="btn btn-primary" href="/R Projects/audible/fistmarkdown.qmd" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project   </a></div>
+<a class="btn btn-primary" href="/R Projects/audible/fistmarkdown.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project   </a></div>
 ```
 :::
 :::
-
-```         
-```{quarto-collapsible} ## Your H2 Heading Your content goes here.
-```

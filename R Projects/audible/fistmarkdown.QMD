@@ -24,7 +24,8 @@ ndhsrasheeddata <- read_csv("ndhsrasheed.csv") %>% view()
 ```
 
 ```{r}
-ndhsrasheedselect<-select(ndhsrasheeddata, wealth, edu, rworking, resid, relig, visithosp, teenmom, agefbirth, hofistula, tchild) 
+ndhsrasheedselect<-select(ndhsrasheeddata, wealth, edu, rworking, resid, relig, visithosp,
+teenmom, agefbirth, hofistula, tchild) 
 ```
 
 ```{r}
@@ -43,7 +44,9 @@ ndhsrasheedselect$teenmom <- as.factor(ndhsrasheedselect$teenmom)
 ```
 
 ```{r}
-fistulamodel1 <-    glm(ndhsrasheedselect$hofistula~ wealth + edu + rworking + resid + relig + visithosp + teenmom + agefbirth + tchild, family=binomial(link = "logit"), data=ndhsrasheedselect)
+fistulamodel1 <-    glm(ndhsrasheedselect$hofistula~ wealth + edu + rworking + resid + 
+relig + visithosp + teenmom + agefbirth + tchild, family=binomial(link = "logit"), 
+data=ndhsrasheedselect)
 ```
 
 ```{r}
@@ -51,7 +54,9 @@ summary(fistulamodel1)
 ```
 
 ```{r}
-fistulamodel2 <-    glm(hofistula~ wealth + edu + rworking + resid + relig + visithosp + teenmom + agefbirth + tchild, family=binomial(link = "cloglog"),       data=ndhsrasheedselect)
+fistulamodel2 <-  glm(hofistula~ wealth + edu + rworking + resid + relig + visithosp + teenmom
++ agefbirth + tchild, family=binomial(link = "cloglog"),
+data=ndhsrasheedselect)
 ```
 
 ```{r}
@@ -59,7 +64,9 @@ summary(fistulamodel2)
 ```
 
 ```{r}
-fistulamodel3 <-    glm(hofistula~ wealth + edu + rworking + resid + relig + visithosp + teenmom + agefbirth + tchild, family=binomial(link = "probit"),       data=ndhsrasheedselect)
+fistulamodel3 <-glm(hofistula~ wealth + edu + rworking + resid + relig + visithosp
++ teenmom + agefbirth + tchild, family=binomial(link = "probit"),
+data=ndhsrasheedselect)
 ```
 
 ```{r}
