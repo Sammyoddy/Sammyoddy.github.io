@@ -26,7 +26,13 @@ ndhsrasheedselect<-drop_na(ndhsrasheedselect) %>% view()
 
 ```{r}
 # Factor the columns for logistic regression  
-ndhsrasheedselect$wealth <- as.factor(ndhsrasheedselect$wealth) ndhsrasheedselect$edu <- as.factor(ndhsrasheedselect$edu)  ndhsrasheedselect$rworking <- as.factor(ndhsrasheedselect$rworking)  ndhsrasheedselect$resid <- as.factor(ndhsrasheedselect$resid) ndhsrasheedselect$relig <- as.factor(ndhsrasheedselect$relig) ndhsrasheedselect$visithosp <- as.factor(ndhsrasheedselect$visithosp)  ndhsrasheedselect$teenmom <- as.factor(ndhsrasheedselect$teenmom)
+ndhsrasheedselect$wealth <- as.factor(ndhsrasheedselect$wealth) 
+ndhsrasheedselect$edu <- as.factor(ndhsrasheedselect$edu)  
+ndhsrasheedselect$rworking <- as.factor(ndhsrasheedselect$rworking) 
+ndhsrasheedselect$resid <- as.factor(ndhsrasheedselect$resid)
+ndhsrasheedselect$relig <- as.factor(ndhsrasheedselect$relig) 
+ndhsrasheedselect$visithosp <- as.factor(ndhsrasheedselect$visithosp) 
+ndhsrasheedselect$teenmom <- as.factor(ndhsrasheedselect$teenmom)
 ```
 
 ```{r}
@@ -67,5 +73,6 @@ auc_value <- auc(roc_curve)
 ```
 
 ```{r warning=FALSE}
-plot(roc_curve, main="ROC curve", col="#007c80") text(0.5, 0.5, paste("AUC =", round(auc_value, 4)), cex=0.8)
+plot(roc_curve, main="ROC curve", col="#007c80") 
+text(0.5, 0.5, paste("AUC =", round(auc_value, 4)), cex=0.8)
 ```
