@@ -1,0 +1,6 @@
+```{---}
+title: "Investigative Analysis of A Murder Mystery"
+toc: true
+monofont: 'Consolas'
+---
+```
