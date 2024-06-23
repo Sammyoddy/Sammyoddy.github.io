@@ -1,0 +1,17 @@
+---
+title: "Global Heart Attack Analysis"
+toc: true
+monofont: 'Consolas'
+---
+
+![](heartattack.png){fig-align="center" width="414" height="275"}
+
+![](HEART ATTACK DASHBOARD.png)
+
+::: {.callout-note appearance="simple"}
+## Important!!!
+
+Right-click on image to open dashboard in new tab, if content too tiny
+:::
+
+#### To access sql source code, [click here](https://drive.google.com/file/d/1mrAzeSncKbehZ6TLI4-jZ3ECAv4Ua8fI/view?usp=drive_link){style="COLOR:BLUE;"}

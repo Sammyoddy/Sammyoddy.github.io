@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SAMMY ODEYEMI - MURDER MYSTERY WITH SQL</title>
+<title>SAMMY ODEYEMI - Global Heart Attack Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,23 +129,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#finding-the-killer" id="toc-finding-the-killer" class="nav-link" data-scroll-target="#finding-the-killer">FINDING THE KILLER</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MURDER MYSTERY WITH SQL</h1>
+<h1 class="title">Global Heart Attack Analysis</h1>
 </div>
 
 
@@ -164,96 +155,27 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="murdermystery.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="471"></p>
+<p><img src="heartattack.png" class="quarto-figure quarto-figure-center figure-img" width="414" height="275"></p>
 </figure>
 </div>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<blockquote class="blockquote">
-<div class="line-block">The <a href="https://mystery.knightlab.com/" style="color:blue;">SQL Murder Mystery</a> is an engaging SQL exercise designed to flex SQL skills through a fun and interactive crime-solving scenario. Developed by the Knight Lab at Northwestern University, this mystery challenges participants to use SQL queries to investigate a fictional murder that occurred in <span style="color:teal;"><strong>SQL City on January 15, 2018</strong></span>. By exploring the database, analyzing clues, and piecing together evidence, participants can identify the culprit and solve the case.</div>
-</blockquote>
-<div id="Objectives">
-<p>The primary objective of the <a href="https://mystery.knightlab.com/" style="color: blue;">SQL Murder Mystery</a> is to solve the murder case that is unsolved with the use of SQL to query the <a href="https://drive.google.com/file/d/1ldVzunq2bW1kaYTdHiuoOqhBG9wl9ItH/view?usp=drive_link" style="color:blue;">crime database</a> . It entirely entails:</p>
-<ol type="1">
-<li><p><strong>Exploring Database Structure</strong>: Understand the layout and relationships within the database by examining tables and their schemas.</p></li>
-<li><p><strong>Retrieve and Analyze Data</strong>: Use SQL queries to extract relevant information from the database, such as crime scene reports, witness statements, and suspect details.</p></li>
-<li><p><strong>Identify Patterns and Clues</strong>: Analyze the data to uncover patterns and connections that point to the suspect.</p></li>
-<li><p><strong>Solve the Mystery</strong>: Combine the gathered evidence to determine the identity of the murderer and understand the motive behind the crime.</p></li>
-</ol>
-</div>
-<section id="here-is-the-entity-relationship-diagram-to-the-database." class="level4">
-<h4 class="anchored" data-anchor-id="here-is-the-entity-relationship-diagram-to-the-database.">Here is the <a href="https://drive.google.com/file/d/13LLlOBBenX-BZ2LN6l8iSard-EkCq7-j/view?usp=drive_link" style="color:blue;">Entity Relationship Diagram</a> to the <a href="https://drive.google.com/file/d/1ldVzunq2bW1kaYTdHiuoOqhBG9wl9ItH/view?usp=drive_link" style="color: blue;">database</a>.</h4>
-<p><img src="erddiagram.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="finding-the-killer" class="level3">
-<h3 class="anchored" data-anchor-id="finding-the-killer">FINDING THE KILLER</h3>
-<blockquote class="blockquote">
-<h5 id="from-the-clues-left-with-the-murder-occurred-in-sql-city-on-january-15-2018" class="anchored">From the clues left with, the murder occurred in <span style="color:teal;"><strong>SQL City on January 15, 2018</strong></span></h5>
-</blockquote>
-<p><img src="Query 1.png" class="img-fluid" width="719"></p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="QR1.JPG" class="img-fluid quarto-figure quarto-figure-left figure-img" width="1594"></p>
-</figure>
-</div>
-<blockquote class="blockquote">
-<h5 id="our-search-leads-us-to-two-witnesses-whom-we-have-to-look-to-in-the-person-table" class="anchored">Our search leads us to two witnesses whom we have to look to in the person table</h5>
-<blockquote class="blockquote">
-<h5 id="witness-1" style="color: teal;" class="anchored"><strong>WITNESS 1</strong></h5>
-</blockquote>
-</blockquote>
-<p><img src="Query 2.png" style="COLOR:TEAL;" width="719" height="235"></p>
-<p><img src="QR2.JPG" class="img-fluid"></p>
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<h5 id="witness-2" style="color: teal;" class="anchored"><strong>WITNESS 2</strong></h5>
-</blockquote>
-</blockquote>
-<p><img src="Query 3.png" width="719" height="235"></p>
-<p><img src="QR3.JPG" width="664" height="117"></p>
-<blockquote class="blockquote">
-<h5 id="it-becomes-imperative-to-check-the-interviews-of-these-witnesses" class="anchored">It becomes imperative to check the <span style="color:teal;"><strong>interviews</strong></span> of these <span style="color:teal;"><strong>witnesses</strong></span></h5>
-</blockquote>
-<p><img src="Query 4.png" width="719" height="235"></p>
-<p><img src="QR4.JPG" class="img-fluid"></p>
-<blockquote class="blockquote">
-<h5 id="taking-into-consideration-the-descriptive-words-both-witnesses-used-in-telling-their-side-of-the-story-from-the-query-result" class="anchored">Taking into consideration the <span style="color:teal;"><strong>descriptive words</strong></span> both <span style="color:teal;">witnesses</span> used in telling their side of the story from the query result:</h5>
-</blockquote>
-<p><img src="Query 5.png" width="719" height="235"></p>
-<p><img src="QR5.JPG" class="img-fluid"></p>
-<blockquote class="blockquote">
-<h5 id="i-take-the-initiative-to-check-this-person-of-interest-out-and-cross-check-if-they-have-been-interviewed" class="anchored">I take the initiative to check this <span style="color:teal;"><strong>Person of Interest</strong></span> <strong>out</strong> and cross check if they have been interviewed:</h5>
-</blockquote>
-<p><img src="Query 6.png" width="719" height="235"></p>
-<p><img src="QR6.JPG" class="img-fluid"></p>
-<blockquote class="blockquote">
-<h5 id="this-person-of-interest-checks-out-as-the-culprit-and-his-interview-transcript-indicates-there-is-also-an-accomplice-whom-we-will-find-out-according-to-jeremy-bowers-confession-and-description" class="anchored">This <span style="color:teal;"><strong>Person of Interest</strong></span> <strong>checks out as the culprit and</strong> his interview Transcript indicates there is also an accomplice whom we will find out according to <span style="color:red;"><strong>Jeremy Bowers’</strong></span> confession and description</h5>
-</blockquote>
-<p><img src="Query 7.png" width="719" height="235"></p>
-<p><img src="QR7.JPG" class="img-fluid"></p>
-<div class="callout callout-style-simple callout-tip callout-titled">
+<p><img src="HEART ATTACK DASHBOARD.png" class="img-fluid"></p>
+<div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Success!!!
+Important!!!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The Culprit; <span style="color:red;"><strong>Jeremy Bowers</strong></span> and the Mastermind <span style="color:red;"><strong>Miranda Priestly</strong></span> are both complicit and the Murder Mystery has been resolved!</p>
+<p>Right-click on image to open dashboard in new tab, if content too tiny</p>
 </div>
 </div>
-<section id="to-access-source-code-click-here" class="level4">
-<h4 class="anchored" data-anchor-id="to-access-source-code-click-here">To access source code, <a href="https://drive.google.com/file/d/1doExqY8DXaSMc83soGpa1AJFM0nZwWXh/view?usp=drive_link" style="COLOR:BLUE;">click here</a></h4>
-</section>
-<section id="section" class="level4">
-<h4 class="anchored" data-anchor-id="section"></h4>
+<section id="to-access-sql-source-code-click-here" class="level4">
+<h4 class="anchored" data-anchor-id="to-access-sql-source-code-click-here">To access sql source code, <a href="https://drive.google.com/file/d/1mrAzeSncKbehZ6TLI4-jZ3ECAv4Ua8fI/view?usp=drive_link" style="COLOR:BLUE;">click here</a></h4>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

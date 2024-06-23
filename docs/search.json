@@ -242,7 +242,7 @@
     "href": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#key-dashboard-requirements",
     "title": "Quantum Sales Solutions Analysis",
     "section": "Key Dashboard Requirements",
-    "text": "Key Dashboard Requirements\n\nOur interactive dashboard fulfills the following requirements:\n\nUsers can select Customers that patronize Quantum Sales Solutions, Regions, Products and Cities to compare sales trends.\nThe dashboard displays the top 7 Salespersons, Sales by Product Category corresponding to the chosen criteria."
+    "text": "Key Dashboard Requirements\n\nThe interactive dashboard fulfills the following requirements:\n\nUsers can select Customers that patronize Quantum Sales Solutions, Regions, Products and Cities to compare sales trends.\nThe dashboard displays the top 7 Salespersons, Sales by Product Category corresponding to the chosen criteria."
   },
   {
     "objectID": "Excel Projects/QUANTUM SALES SOLUTIONS/quantumsales.html#dashboard",
@@ -340,7 +340,7 @@
     "href": "R Projects/audible/audible.html#heatmap-of-books-released-by-year",
     "title": "Audible Data Cleaning",
     "section": "Heatmap of Books Released By Year",
-    "text": "Heatmap of Books Released By Year\n\nunique_years &lt;- unique(audible$Year)\nyear_summary &lt;- audible %&gt;%\n  group_by(Year) %&gt;%\n  summarise(count = n()) %&gt;%\n  arrange(Year)\n\n# Create heatmap\nggplot(year_summary, aes(x = \"\", y = Year, fill = count)) +\n  geom_tile(color = \"white\") +\n  scale_fill_gradient(low = \"linen\", high = \"#FFA000\") +\n  geom_text(aes(label = count), vjust = 0.5, hjust = 1,color = \"black\", size = 2.8,alpha=1)+\n  scale_y_continuous(breaks = unique_years)+\n  labs(x = \"Book Count\", y = \"Year\", title = \"Heatmap of Books Released Each Year\") +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n\n\n\n\nYou can access dataset here and source code here"
+    "text": "Heatmap of Books Released By Year\n\nunique_years &lt;- unique(audible$Year)\nyear_summary &lt;- audible %&gt;%\n  group_by(Year) %&gt;%\n  summarise(count = n()) %&gt;%\n  arrange(Year)\n\n# Create heatmap\nggplot(year_summary, aes(x = \"\", y = Year, fill = count)) +\n  geom_tile(color = \"white\") +\n  scale_fill_gradient(low = \"linen\", high = \"#FFA000\") +\n  geom_text(aes(label = count), vjust = 0.5, hjust = 1,color = \"black\", size = 2.8,alpha=1)+\n  scale_y_continuous(breaks = unique_years)+\n  labs(x = \"Book Count\", y = \"Year\", title = \"Heatmap of Books Released Each Year\") +\n  theme_classic() +\n  theme(plot.title = element_text(hjust = 0.5))\n\n\n\n\n\n\n\n\n\nYou can access dataset here and source code here"
   },
   {
     "objectID": "R Projects/audible/audible.html",
@@ -446,5 +446,19 @@
     "title": "SAMMY ODEYEMI",
     "section": "",
     "text": "title: \"Investigative Analysis of A Murder Mystery\"\ntoc: true\nmonofont: 'Consolas'\n---"
+  },
+  {
+    "objectID": "SQL x POWER BI Projects/MURDER MYSTERY/murdermystery.html#introduction",
+    "href": "SQL x POWER BI Projects/MURDER MYSTERY/murdermystery.html#introduction",
+    "title": "MURDER MYSTERY WITH SQL",
+    "section": "Introduction",
+    "text": "Introduction\n\nThe SQL Murder Mystery is an engaging SQL exercise designed to flex SQL skills through a fun and interactive crime-solving scenario. Developed by the Knight Lab at Northwestern University, this mystery challenges participants to use SQL queries to investigate a fictional murder that occurred in SQL City on January 15, 2018. By exploring the database, analyzing clues, and piecing together evidence, participants can identify the culprit and solve the case.\n\n\nThe primary objective of the SQL Murder Mystery is to solve the murder case that is unsolved with the use of SQL to query the crime database . It entirely entails:\n\nExploring Database Structure: Understand the layout and relationships within the database by examining tables and their schemas.\nRetrieve and Analyze Data: Use SQL queries to extract relevant information from the database, such as crime scene reports, witness statements, and suspect details.\nIdentify Patterns and Clues: Analyze the data to uncover patterns and connections that point to the suspect.\nSolve the Mystery: Combine the gathered evidence to determine the identity of the murderer and understand the motive behind the crime.\n\n\n\nHere is the Entity Relationship Diagram to the database.\n\n\n\n\nFINDING THE KILLER\n\nFrom the clues left with, the murder occurred in SQL City on January 15, 2018\n\n\n\n\n\n\n\n\nOur search leads us to two witnesses whom we have to look to in the person table\n\nWITNESS 1\n\n\n\n\n\n\nWITNESS 2\n\n\n\n\n\nIt becomes imperative to check the interviews of these witnesses\n\n\n\n\nTaking into consideration the descriptive words both witnesses used in telling their side of the story from the query result:\n\n\n\n\nI take the initiative to check this Person of Interest out and cross check if they have been interviewed:\n\n\n\n\nThis Person of Interest checks out as the culprit and his interview Transcript indicates there is also an accomplice whom we will find out according to Jeremy Bowers’ confession and description\n\n\n\n\n\n\n\n\n\nSuccess!!!\n\n\n\nThe Culprit; Jeremy Bowers and the Mastermind Miranda Priestly are both complicit and the Murder Mystery has been resolved!\n\n\n\nTo access source code, click here"
+  },
+  {
+    "objectID": "SQL x POWER BI Projects/HEART ATTACK/heartattack.html",
+    "href": "SQL x POWER BI Projects/HEART ATTACK/heartattack.html",
+    "title": "Global Heart Attack Analysis",
+    "section": "",
+    "text": "Important!!!\n\n\n\nRight-click on image to open dashboard in new tab, if content too tiny\n\n\n\nTo access sql source code, click here"
   }
 ]

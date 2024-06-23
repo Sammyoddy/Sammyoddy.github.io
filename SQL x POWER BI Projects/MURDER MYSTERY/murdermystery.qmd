@@ -1,6 +1,85 @@
-```{---}
-title: "Investigative Analysis of A Murder Mystery"
+---
+title: "MURDER MYSTERY WITH SQL"
 toc: true
 monofont: 'Consolas'
 ---
-```
+
+![](murdermystery.png){fig-align="center" width="471"}
+
+## Introduction
+
+> | The [SQL Murder Mystery](https://mystery.knightlab.com/){style="color:blue;"} is an engaging SQL exercise designed to flex SQL skills through a fun and interactive crime-solving scenario. Developed by the Knight Lab at Northwestern University, this mystery challenges participants to use SQL queries to investigate a fictional murder that occurred in [**SQL City on January 15, 2018**]{style="color:teal;"}. By exploring the database, analyzing clues, and piecing together evidence, participants can identify the culprit and solve the case.
+
+::: {#Objectives}
+The primary objective of the [SQL Murder Mystery](https://mystery.knightlab.com/){style="color: blue;"} is to solve the murder case that is unsolved with the use of SQL to query the [crime database](https://drive.google.com/file/d/1ldVzunq2bW1kaYTdHiuoOqhBG9wl9ItH/view?usp=drive_link){style="color:blue;"} . It entirely entails:
+
+1.  **Exploring Database Structure**: Understand the layout and relationships within the database by examining tables and their schemas.
+
+2.  **Retrieve and Analyze Data**: Use SQL queries to extract relevant information from the database, such as crime scene reports, witness statements, and suspect details.
+
+3.  **Identify Patterns and Clues**: Analyze the data to uncover patterns and connections that point to the suspect.
+
+4.  **Solve the Mystery**: Combine the gathered evidence to determine the identity of the murderer and understand the motive behind the crime.
+:::
+
+#### Here is the [Entity Relationship Diagram](https://drive.google.com/file/d/13LLlOBBenX-BZ2LN6l8iSard-EkCq7-j/view?usp=drive_link){style="color:blue;"} to the [database](https://drive.google.com/file/d/1ldVzunq2bW1kaYTdHiuoOqhBG9wl9ItH/view?usp=drive_link){style="color: blue;"}.
+
+![](erddiagram.png)
+
+<hr>
+
+### FINDING THE KILLER
+
+> ##### From the clues left with, the murder occurred in [**SQL City on January 15, 2018**]{style="color:teal;"}
+
+![](Query%201.png){width="719"}
+
+![](QR1.JPG){fig-align="left" width="1594"}
+
+> ##### Our search leads us to two witnesses whom we have to look to in the person table
+>
+> > ##### **WITNESS 1** {style="color: teal;"}
+
+![](Query 2.png){style="COLOR:TEAL;" width="719" height="235"}
+
+![](QR2.JPG)
+
+> > ##### **WITNESS 2** {style="color: teal;"}
+
+![](Query 3.png){width="719" height="235"}
+
+![](QR3.JPG){width="664" height="117"}
+
+> ##### It becomes imperative to check the [**interviews**]{style="color:teal;"} of these [**witnesses**]{style="color:teal;"}
+
+![](Query 4.png){width="719" height="235"}
+
+![](QR4.JPG)
+
+> ##### Taking into consideration the [**descriptive words**]{style="color:teal;"} both [witnesses]{style="color:teal;"} used in telling their side of the story  from the query result:
+
+![](Query 5.png){width="719" height="235"}
+
+![](QR5.JPG)
+
+> ##### I take the initiative to check this [**Person of Interest**]{style="color:teal;"} **out** and cross check if they have been interviewed:
+
+![](Query 6.png){width="719" height="235"}
+
+![](QR6.JPG)
+
+> ##### This [**Person of Interest**]{style="color:teal;"} **checks out  as the culprit and** his interview Transcript  indicates there is also an accomplice whom we will find out  according to [**Jeremy Bowers'**]{style="color:red;"} confession and description
+
+![](Query 7.png){width="719" height="235"}
+
+![](QR7.JPG)
+
+::: {.callout-tip appearance="simple"}
+## Success!!!
+
+The Culprit; [**Jeremy Bowers**]{style="color:red;"} and the Mastermind [**Miranda Priestly**]{style="color:red;"} are both complicit and the Murder Mystery has been resolved!
+:::
+
+#### To access source code, [click here](https://drive.google.com/file/d/1doExqY8DXaSMc83soGpa1AJFM0nZwWXh/view?usp=drive_link){style="COLOR:BLUE;"}
+
+#### 
