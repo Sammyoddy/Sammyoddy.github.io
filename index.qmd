@@ -55,6 +55,22 @@ SQL x POWER BI Projects
 ```{=html}
 <!-- First Section -->
 <div style="flex: 1; padding: 10px;">
+  <a href="/SQL x POWER BI Projects/MURDER MYSTERY/murdermystery.html" style="width:100%">
+    <img src="/SQL x POWER BI Projects/MURDER MYSTERY/murdermysterymain.png" class="img-fluid">
+  </a>
+  <div style="text-align: center; padding: 0 3px; min-height: 6rem;">
+    A murder has occurred in SQL City, and the objective is to solve it as the Detective assigned. Using SQL queries to search through the Police Department Database to find clues and evidence; the goal is to identify the murderer and bring them to justice.
+  </div>
+  <a class="btn btn-primary" href="/SQL x POWER BI Projects/MURDER MYSTERY/murdermystery.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project
+  </a>
+</div>
+```
+:::
+
+::: {.g-col-12 .g-col-md-6}
+```{=html}
+<!-- Second Section -->
+<div style="flex: 1; padding: 10px;">
   <a href="/SQL x POWER BI Projects/HEART ATTACK/heartattack.html" style="width:100%">
     <img src="/SQL x POWER BI Projects/HEART ATTACK/heartattackmain.png" class="img-fluid">
   </a>
@@ -69,17 +85,6 @@ SQL x POWER BI Projects
 
 ::: {.g-col-12 .g-col-md-6}
 ```{=html}
-<!-- Second Section -->
-<div style="flex: 1; padding: 10px;">
-  <a href="/SQL x POWER BI Projects/MURDER MYSTERY/murdermystery.html" style="width:100%">
-    <img src="/SQL x POWER BI Projects/MURDER MYSTERY/murdermysterymain.png" class="img-fluid">
-  </a>
-  <div style="text-align: center; padding: 0 3px; min-height: 6rem;">
-    A murder has occurred in SQL City, and the objective is to solve it as the Detective assigned. Using SQL queries to search through the Police Department Database to find clues and evidence; the goal is to identify the murderer and bring them to justice.
-  </div>
-  <a class="btn btn-primary" href="/SQL x POWER BI Projects/MURDER MYSTERY/murdermystery.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project
-  </a>
-</div>
 ```
 :::
 :::
@@ -177,6 +182,17 @@ R Projects
 ```{=html}
 <!-- First Section -->
 <div style="flex: 1; padding: 10px;">   
+<a href="/R Projects/Health Analysis/HEALTHDATA.html" style="width:100%">   
+<img src="/R Projects/Health Analysis/HEALTH PREDICTION main.jpg" class="img-fluid">   </a> 
+<div style="text-align: center; padding: 0 3px; min-height: 6rem;"> 
+This is a Health Analytics Project. I employed R and RStudio to perform Data Transformation and Visualization on various health-related variables, and also fitted multiple linear regression models to make predictions.</div>  
+<a class="btn btn-primary" href="/R Projects/Health Analysis/HEALTHDATA.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project</a> 
+</div>
+```
+::: {.g-col-12 .g-col-md-6}
+```{=html}
+<!-- Second Section -->
+<div style="flex: 1; padding: 10px;">   
 <a href="/R Projects/audible/audible.html" style="width:100%">   
 <img src="/R Projects/audible/audiblemain.jpg" class="img-fluid">   </a> 
 <div style="text-align: center; padding: 0 3px; min-height: 6rem;">   
@@ -184,5 +200,6 @@ This is a Data Cleaning Project for Audible. I employed R and RStudio to perform
 <a class="btn btn-primary" href="/R Projects/audible/audible.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project</a> 
 </div>
 ```
+:::
 :::
 :::

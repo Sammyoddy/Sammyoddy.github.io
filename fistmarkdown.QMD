@@ -1,5 +1,5 @@
 ---
-title: "fistulafinal"
+title: "Ibrahim Alayo"
 author: "Ibrahim Alayo"
 date: "`r Sys.Date()`"
 ---
@@ -12,12 +12,16 @@ library(tidyverse)
 library(pROC)
 ```
 
+```{r}
+library(ggplot2)
+```
+
 ```{r message= FALSE, warning=FALSE}
 ndhsrasheeddata <- read_csv("ndhsrasheed.csv") %>% view()
 ```
 
 ```{r}
-ndhsrasheedselect<-select(ndhsrasheeddata, wealth, edu, rworking, resid, relig, visithosp, teenmom, agefbirth, hofistula, tchild) 
+ndhsrasheedselect<-select(ndhsrasheeddata, wealth, edu, rworking, resid, relig, visithosp, teenmom, agefbirth, hofistula, tchild)
 ```
 
 ```{r}
@@ -75,4 +79,31 @@ auc_value <- auc(roc_curve)
 ```{r warning=FALSE}
 plot(roc_curve, main="ROC curve", col="#007c80") 
 text(0.5, 0.5, paste("AUC =", round(auc_value, 4)), cex=0.8)
+```
+
+```{r}
+coefficients <- coef(fistulamodel1)
+odds_ratios <- exp(coefficients)
+conf_intervals <- exp(confint(fistulamodel1))
+```
+
+```{r}
+odds_ratios_df <- data.frame(Variable = names(odds_ratios),Odds_Ratio = odds_ratios,CI_Lower = conf_intervals[, 1],
+  CI_Upper = conf_intervals[, 2])
+```
+
+```{r}
+print(odds_ratios_df)
+```
+
+```{r}
+ggplot(odds_ratios_df, aes(x = Variable, y = Odds_Ratio)) +
+  geom_point() +
+  geom_errorbar(aes(ymin = CI_Lower, ymax = CI_Upper), width = 0.2) +
+  coord_flip() +
+  labs(title = "Odds Ratios for Fistula Model",
+       x = "Predictor Variables",
+       y = "Odds Ratio (log scale)") +
+  scale_y_log10() +
+  theme_minimal()
 ```

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ibrahim Alayo">
-<meta name="dcterms.date" content="2024-06-21">
+<meta name="dcterms.date" content="2024-07-05">
 
-<title>SAMMY ODEYEMI - fistulafinal</title>
+<title>SAMMY ODEYEMI - Ibrahim Alayo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">fistulafinal</h1>
+<h1 class="title">Ibrahim Alayo</h1>
 </div>
 
 
@@ -189,7 +189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 21, 2024</p>
+      <p class="date">July 5, 2024</p>
     </div>
   </div>
   
@@ -232,29 +232,32 @@ Attaching package: 'pROC'</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ndhsrasheeddata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"ndhsrasheed.csv"</span>) <span class="sc">%&gt;%</span> <span class="fu">view</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="ot">&lt;-</span><span class="fu">select</span>(ndhsrasheeddata, wealth, edu, rworking, resid, relig, visithosp, teenmom, agefbirth, hofistula, tchild) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ndhsrasheeddata <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"ndhsrasheed.csv"</span>) <span class="sc">%&gt;%</span> <span class="fu">view</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="ot">&lt;-</span><span class="fu">drop_na</span>(ndhsrasheedselect) <span class="sc">%&gt;%</span> <span class="fu">view</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="ot">&lt;-</span><span class="fu">select</span>(ndhsrasheeddata, wealth, edu, rworking, resid, relig, visithosp, teenmom, agefbirth, hofistula, tchild)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Factor the columns for logistic regression  </span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>wealth <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>wealth) </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>edu <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>edu)  </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>rworking <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>rworking) </span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>resid <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>resid)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>relig <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>relig) </span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>visithosp <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>visithosp) </span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>teenmom <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>teenmom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="ot">&lt;-</span><span class="fu">drop_na</span>(ndhsrasheedselect) <span class="sc">%&gt;%</span> <span class="fu">view</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fistulamodel1 <span class="ot">&lt;-</span><span class="fu">glm</span>(ndhsrasheedselect<span class="sc">$</span>hofistula<span class="sc">~</span> wealth <span class="sc">+</span> edu <span class="sc">+</span> rworking <span class="sc">+</span> resid <span class="sc">+</span> relig <span class="sc">+</span> visithosp <span class="sc">+</span> teenmom <span class="sc">+</span> agefbirth <span class="sc">+</span> tchild, <span class="at">family=</span><span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>), <span class="at">data=</span>ndhsrasheedselect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Factor the columns for logistic regression  </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>wealth <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>wealth) </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>edu <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>edu)  </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>rworking <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>rworking) </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>resid <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>resid)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>relig <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>relig) </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>visithosp <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>visithosp) </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>ndhsrasheedselect<span class="sc">$</span>teenmom <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(ndhsrasheedselect<span class="sc">$</span>teenmom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fistulamodel1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fistulamodel1 <span class="ot">&lt;-</span><span class="fu">glm</span>(ndhsrasheedselect<span class="sc">$</span>hofistula<span class="sc">~</span> wealth <span class="sc">+</span> edu <span class="sc">+</span> rworking <span class="sc">+</span> resid <span class="sc">+</span> relig <span class="sc">+</span> visithosp <span class="sc">+</span> teenmom <span class="sc">+</span> agefbirth <span class="sc">+</span> tchild, <span class="at">family=</span><span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>), <span class="at">data=</span>ndhsrasheedselect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fistulamodel1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -295,11 +298,11 @@ Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fistulamodel2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(hofistula<span class="sc">~</span> wealth <span class="sc">+</span> edu <span class="sc">+</span> rworking <span class="sc">+</span> resid <span class="sc">+</span> relig <span class="sc">+</span> visithosp <span class="sc">+</span> teenmom <span class="sc">+</span> agefbirth <span class="sc">+</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>tchild, <span class="at">family=</span><span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"cloglog"</span>),<span class="at">data=</span>ndhsrasheedselect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fistulamodel2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(hofistula<span class="sc">~</span> wealth <span class="sc">+</span> edu <span class="sc">+</span> rworking <span class="sc">+</span> resid <span class="sc">+</span> relig <span class="sc">+</span> visithosp <span class="sc">+</span> teenmom <span class="sc">+</span> agefbirth <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tchild, <span class="at">family=</span><span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"cloglog"</span>),<span class="at">data=</span>ndhsrasheedselect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fistulamodel2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fistulamodel2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -340,10 +343,10 @@ Number of Fisher Scoring iterations: 5</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>fistulamodel3 <span class="ot">&lt;-</span><span class="fu">glm</span>(hofistula<span class="sc">~</span> wealth <span class="sc">+</span> edu <span class="sc">+</span> rworking <span class="sc">+</span> resid <span class="sc">+</span> relig <span class="sc">+</span> visithosp <span class="sc">+</span> teenmom <span class="sc">+</span> agefbirth <span class="sc">+</span> tchild, <span class="at">family=</span><span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"probit"</span>),<span class="at">data=</span>ndhsrasheedselect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fistulamodel3 <span class="ot">&lt;-</span><span class="fu">glm</span>(hofistula<span class="sc">~</span> wealth <span class="sc">+</span> edu <span class="sc">+</span> rworking <span class="sc">+</span> resid <span class="sc">+</span> relig <span class="sc">+</span> visithosp <span class="sc">+</span> teenmom <span class="sc">+</span> agefbirth <span class="sc">+</span> tchild, <span class="at">family=</span><span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"probit"</span>),<span class="at">data=</span>ndhsrasheedselect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fistulamodel3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fistulamodel3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -384,10 +387,10 @@ Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>us <span class="ot">&lt;-</span> <span class="fu">predict</span>(fistulamodel1, <span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>us <span class="ot">&lt;-</span> <span class="fu">predict</span>(fistulamodel1, <span class="at">type =</span> <span class="st">"response"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>roc_curve<span class="ot">&lt;-</span> <span class="fu">roc</span>(ndhsrasheedselect<span class="sc">$</span>hofistula, us)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>roc_curve<span class="ot">&lt;-</span> <span class="fu">roc</span>(ndhsrasheedselect<span class="sc">$</span>hofistula, us)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Setting levels: control = 0, case = 1</code></pre>
 </div>
@@ -396,15 +399,65 @@ Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>auc_value <span class="ot">&lt;-</span> <span class="fu">auc</span>(roc_curve)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>auc_value <span class="ot">&lt;-</span> <span class="fu">auc</span>(roc_curve)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(roc_curve, <span class="at">main=</span><span class="st">"ROC curve"</span>, <span class="at">col=</span><span class="st">"#007c80"</span>) </span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fu">paste</span>(<span class="st">"AUC ="</span>, <span class="fu">round</span>(auc_value, <span class="dv">4</span>)), <span class="at">cex=</span><span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(roc_curve, <span class="at">main=</span><span class="st">"ROC curve"</span>, <span class="at">col=</span><span class="st">"#007c80"</span>) </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="fu">paste</span>(<span class="st">"AUC ="</span>, <span class="fu">round</span>(auc_value, <span class="dv">4</span>)), <span class="at">cex=</span><span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="fistmarkdown_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="fistmarkdown_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>coefficients <span class="ot">&lt;-</span> <span class="fu">coef</span>(fistulamodel1)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>odds_ratios <span class="ot">&lt;-</span> <span class="fu">exp</span>(coefficients)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>conf_intervals <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="fu">confint</span>(fistulamodel1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Waiting for profiling to be done...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>odds_ratios_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Variable =</span> <span class="fu">names</span>(odds_ratios),<span class="at">Odds_Ratio =</span> odds_ratios,<span class="at">CI_Lower =</span> conf_intervals[, <span class="dv">1</span>],</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">CI_Upper =</span> conf_intervals[, <span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(odds_ratios_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               Variable Odds_Ratio  CI_Lower  CI_Upper
+(Intercept) (Intercept)  0.2722441 0.2298430 0.3224416
+wealth2         wealth2  0.6854753 0.6575677 0.7145818
+wealth3         wealth3  0.7030946 0.6719063 0.7357399
+edu1               edu1  0.7583424 0.7253608 0.7928564
+edu2               edu2  0.7392534 0.7035685 0.7767631
+edu3               edu3  1.3562708 1.2568574 1.4637022
+rworking1     rworking1  1.1070256 1.0673614 1.1481552
+resid2           resid2  1.3014527 1.2544972 1.3501560
+relig2           relig2  2.4928911 2.4007163 2.5887025
+relig3           relig3  0.4087246 0.3398236 0.4891940
+visithosp1   visithosp1  1.7574061 1.7037602 1.8127995
+teenmom1       teenmom1  1.3023504 1.2355301 1.3727700
+agefbirth     agefbirth  1.0187461 1.0122230 1.0253096
+tchild           tchild  1.0667651 1.0602799 1.0732984</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(odds_ratios_df, <span class="fu">aes</span>(<span class="at">x =</span> Variable, <span class="at">y =</span> Odds_Ratio)) <span class="sc">+</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> CI_Lower, <span class="at">ymax =</span> CI_Upper), <span class="at">width =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Odds Ratios for Fistula Model"</span>,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Predictor Variables"</span>,</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Odds Ratio (log scale)"</span>) <span class="sc">+</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="fistmarkdown_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

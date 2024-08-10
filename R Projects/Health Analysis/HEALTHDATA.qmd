@@ -1,0 +1,509 @@
+---
+title: "HEALTH ANALYTICS WITH R"
+author: "SAMMY ODEYEMI" 
+toc: true
+monofont: 'Consolas'
+---
+
+![](HEALTH PREDICTION.jpg){fig-align="center" width="380"}
+
+## INTRODUCTION TO HEALTH ANALYTICS WITH R ⚕️ {style="color:#004046;"}
+
+<div>
+
+[**Health Analytics** is a rapidly growing field that leverages data analysis to improve healthcare outcomes, optimize operations, and inform policy decisions. By analyzing health-related data, we can uncover patterns, trends, and insights that can lead to better patient care, cost management, and overall health system efficiency.]{style="color:#282c30;"}
+
+[In this project, I use R, a powerful statistical programming language, to analyze a [dataset](https://drive.google.com/file/d/1gDY_-7nL5KUzLtmSJgI8w0LCiVkFTlDD/view?usp=drive_link){style="color:blue;"} containing various health-related variables. The dataset includes information on individuals’ age, sex, body mass index (BMI), number of children, smoking status, region of residence, and insurance charges. The goal is to explore how these factors influence health insurance costs and identify key drivers of these costs.]{style="color:#282c30;"}
+
+</div>
+
+## [INSTALL NECESSARY PACKAGES]{style="color:#004046;"} 📦
+
+```{r eval=FALSE}
+install.packages(c("corrplot","ggplot2","tidyr","dplyr","readr","knitr"))
+```
+
+The **`install.packages`** function in R is used to install one or more packages from CRAN (the Comprehensive R Archive Network). The codeblock instruction is to install five packages: **`corrplot`**, **`ggplot2`**, **`tidyr`**, **`dplyr`**, and **`readr`**. Here’s a brief description of each:
+
+1.  **`corrplot`**: This package is used for visualizing correlation matrices. It provides a variety of methods to display correlations, making it easier to understand the relationships between variables in your dataset.
+
+2.  **`ggplot2`**: A powerful and widely-used package for data visualization. It implements the grammar of graphics, allowing you to create complex and aesthetically pleasing plots with a high degree of customization.
+
+3.  **`tidyr`**: This package helps in tidying your data. It provides functions to reshape and clean your data, making it easier to work with and analyze. Key functions include **`gather`**, **`spread`**, **`separate`**, and **`unite`**.
+
+4.  **`dplyr`**: A package for data manipulation. It provides a set of functions (verbs) that help you perform common data manipulation tasks such as filtering, selecting, mutating, summarizing, and arranging data. It’s known for its simplicity and speed.
+
+5.  **`readr`**: This package is used for reading rectangular data (like CSV files) into R. It provides functions that are faster and more convenient than the base R functions for reading data.
+
+6.  **`knitr`**: This package is used for dynamic report generation in R. It allows to integrate R code with LaTeX, HTML, Markdown, and other formats, making it easier to create reproducible reports and documents that include both code and output.
+
+## [LOAD LIBRARIES]{style="color:#004046;"} 
+
+```{r}
+library(corrplot)
+library(ggplot2) 
+library(tidyr) 
+library(dplyr) 
+library(readr)
+library(tidyverse)
+library(knitr)
+```
+
+By calling these packages, one is equipped with powerful tools to clean, manipulate, visualize, and analyze the health dataset effectively.
+
+## [CHECK WORKING DIRECTORY]{style="color:#004046;"}
+
+```{r}
+getwd()
+```
+
+The `getwd()` function in R stands for “get working directory.” It returns the current working directory of the R session. The working directory is the folder where R reads and saves files by default. Knowing the current working directory is important because it helps to understand where your files are being stored and accessed from.
+
+## [SET WORKING DIRECTORY]{style="color:#004046;"}
+
+```{r}
+setwd("C:/Users/SAMMY/Desktop/Portfoliooo/Sammy Odeyemi/R Projects/Health Analysis")
+```
+
+The `setwd()` function in R sets the working directory to a specified path. This means R will read and write files from this directory by default.
+
+::: callout-note
+## Note
+
+As in your Desktop/Workspace, the Working Directory would be different!
+:::
+
+## [IMPORT HEALTH DATASET AND VIEW]{style="COLOR:#004046;"}
+
+```{r}
+healthdata<-read_csv("Health-Insurance-Dataset.csv")
+```
+
+```{r}
+kable(head(healthdata,20))
+```
+
+-   **`healthdata <- read_csv("Health-Insurance-Dataset.csv")`**: Reads the CSV file named “Health-Insurance-Dataset.csv” into a data frame called **`healthdata`**. This function is part of the **`readr`** package and is used to import data into R for analysis.
+
+-   **`View(healthdata)`**: Opens a spreadsheet-like view of the **`healthdata`** data frame in RStudio, allowing to inspect the data visually.
+
+## DISPLAY STRUCTURE OF DATAFRAME {style="color:#004046;"}
+
+```{r}
+str(healthdata)
+```
+
+-   [**`str(healthdata)`**: Provides a compact, human-readable summary of the structure of the **`healthdata`** data frame, including the type of each variable and a preview of the data.]{style="color:#0c1621;"}
+
+    ## VISUALIZATIONS 📊 {style="color:#004046;"}
+
+#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [AGE]{style="color:orange;"}
+
+```{r}
+ggplot(healthdata,aes(x=age)) +   
+  geom_histogram(fill="#004046",binwidth = 5,color="bisque") + 
+  ggtitle("Visualization for Predictor Variable Age") +  
+  theme_minimal()
+```
+
+[This block of code creates a histogram to visualize the distribution of the **`age`** variable in the **`healthdata`** data frame. The histogram uses bins of 5 years to group the ages, and it is styled with specific fill and border colors. The plot is titled “Visualization for Predictor Variable Age” and uses a minimal theme for a clean look.]{style="color:#0c1621;"}
+
+[This visualization helps in understanding the distribution of ages in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
+
+#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [**SEX**]{style="COLOR:#CBC3E3;"}
+
+```{r}
+ggplot(healthdata,aes(x=sex, fill = sex)) +
+  geom_bar(color="bisque") +   
+  scale_fill_manual(values = c("male"="#004046","female"="#007d76")) +
+  geom_text(aes(label = ..count..), stat = "count", vjust = -0.3) +
+  ggtitle("Visualization for Predictor Variable Sex") +   
+  theme_minimal()
+```
+
+[This block of code creates a bar plot to visualize the distribution of the **`sex`** variable in the **`healthdata`** dataset. The bars are colored based on sex, with custom colors for “male” and “female.” The plot includes count labels above each bar, a title “Visualization for Predictor Variable Sex,” and uses a minimal theme for a clean look.]{style="color:#0c1621;"}
+
+[This visualization helps in understanding the distribution of sexes in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
+
+#### [**VISUALIZE PREDICTOR VARIABLE**]{style="COLOR:#004046;"} **[BMI]{style="color:orange;"}**
+
+```{r}
+ggplot(healthdata, aes(x = bmi)) +
+  geom_histogram(binwidth = 2, fill = "#004046", color = "bisque") +   
+  labs(title = "BMI Distribution", x = "BMI", y = "Count") +   
+  theme_minimal()    
+```
+
+[This block of code creates a histogram to visualize the distribution of the **`bmi`** variable in the **`healthdata`** dataset. The histogram uses bins of 2 units to group the BMI values and is styled with a specific fill color and border color. The plot is titled “BMI Distribution” and uses a minimal theme for a clean look.]{style="color:#0c1621;"}
+
+[This visualization helps in understanding the distribution of BMI values in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
+
+#### [VISUALIZE PREDICTOR VARIABLE]{style="COLOR: #004046;"} [CHILDREN ]{style="COLOR:#CBC3E3;"}
+
+```{r}
+ggplot(healthdata, aes(x = factor(children))) +
+  geom_bar(fill = "#004046", color="bisque") +
+  labs(title = "Number of Children", x = "Children", y = "Count") +
+  geom_text(aes(label = ..count..), stat = "count", vjust = -0.3) +
+  theme_minimal() 
+```
+
+[This block of code creates a bar plot to visualize the distribution of the **`children`** variable in the **`healthdata`** dataset. The bars are colored with a specific fill and border color. The plot includes count labels above each bar, a title “Number of Children,” and uses a minimal theme for a clean look.]{style="color:#0c1621;"}
+
+[This visualization helps in understanding the distribution of the number of children in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
+
+#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#CBC3E3;"} [SMOKER]{style="color:orange;"}
+
+```{r}
+ggplot(healthdata, aes(x = smoker, fill = smoker)) +
+geom_bar() +   
+labs(title = "Smoker vs. Non-Smoker", x = "Smoker", y = "Count") +       scale_fill_manual(values = c("yes" = "antiquewhite4", "no" = "#004046")) +     geom_text(stat = "count", aes(label = ..count..), vjust = -0.5) +
+theme_minimal() 
+```
+
+[This block of code creates a bar plot to visualize the distribution of the **`smoker`** variable in the **`healthdata`** dataset. The bars are colored based on smoking status, with custom colors for “yes” and “no.” The plot includes count labels above each bar, a title “Smoker vs. Non-Smoker,” and uses a minimal theme for a clean look.]{style="color:#0c1621;"}
+
+[This visualization helps in understanding the distribution of smokers and non-smokers in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
+
+#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [REGION]{style="color:#CBC3E3;"} 
+
+```{r}
+ggplot(healthdata, aes(x = region, fill = region)) +
+  geom_bar() +
+  labs(title = "Distribution by Region", x = "Region", y = "Count") +   scale_fill_manual(values = c("southwest" = "darkorchid", "southeast" = "#004046", "northwest" = "antiquewhite4", "northeast" = "darkgoldenrod")) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5) +
+  theme_minimal() 
+```
+
+[This block of code creates a bar plot to visualize the distribution of the **`region`** variable in the **`healthdata`** dataset. The bars are colored based on the region, with custom colors for “southwest,” “southeast,” “northwest,” and “northeast.” The plot includes count labels above each bar, a title “Distribution by Region,” and uses a minimal theme for a clean look.]{style="color:#0c1621;"}
+
+[This visualization helps in understanding the distribution of regions in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
+
+#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [CHARGES]{style="color:orange;"} 
+
+```{r}
+ggplot(healthdata, aes(x = charges)) +   
+  geom_density(fill = "#004046", alpha = 0.9, color="bisque") +   
+  labs(title = "Density of Charges", x = "Charges", y = "Density") +   theme_minimal() 
+```
+
+[This block of code creates a density plot to visualize the distribution of the **`charges`** variable in the **`healthdata`** dataset. The density plot is styled with a specific fill color, transparency level, and border color. The plot is titled “Density of Charges” and uses a minimal theme for a clean look.]{style="color:#0c1621;"}
+
+[This visualization helps in understanding the distribution of charges in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
+
+## [REPORT]{style="COLOR:#004046;"}
+
+Piecing it altogether, we make a report off of the charts generated in RStudio using the viz Tool: Power BI
+
+![](HEALTHDATA REPORT.jpg){fig-align="center"}
+
+## [DESCRIPTIVE SUMMARY]{style="COLOR:#004046;"}
+
+The `summary()` function in R provides a quick overview of the dataset, including basic statistics for each variable
+
+```{r}
+summary(healthdata)
+```
+
+::: {.callout-note appearance="simple"}
+## Interpretation of Descriptive Statistics
+
+-   **Age**: The ages in your dataset range from **18** to **64** years, with a median age of **39**. This indicates a fairly balanced distribution of ages around the middle age group.
+
+-   **BMI**: BMI values range from **15.96** to **53.13**, with a median of **30.40**. The mean BMI is slightly higher at **30.66**, suggesting a slight skew towards higher BMI values.
+
+-   **Children**: The number of children ranges from **0** to **5**, with a median of **1**. This shows that most individuals have one or no children.
+
+-   **Charges**: Medical charges vary widely from **\$1,122** to **\$63,770**, with a median charge of **\$9,382**. The mean charge is **\$13,270**, indicating a right-skewed distribution with some high-cost outliers.
+
+-   **Sex, Smoker, Region**: These are categorical variables, and their summary indicates the dataset includes diverse categories for each.
+:::
+
+## [ASSUMPTION TEST ON PREDICTOR VARIABLES TO DETERMINE INDEPENDENCE USING CORRELATION COEFFICIENTS]{style="COLOR:#004046;"}
+
+It becomes imperative to convert non-numeric columns in the `healthdata` dataset to numeric values and this is essential for performing further numerical analyses and visualizations
+
+```{r}
+#convert to numeric and factors, the columns that are non-numeric 
+healthdata$sex<-as.numeric(as.factor(healthdata$sex))
+healthdata$smoker<-as.numeric(as.factor(healthdata$smoker))
+healthdata$region<-as.numeric(as.factor(healthdata$region))
+```
+
+```{r}
+#USING SCATTERPLOTS AND CORRELATION MATRIX 
+corr_matrix<- cor(healthdata[,c("age","sex","bmi","children","smoker","region","charges")])
+corr_matrix
+```
+
+In this block of code, we calculate the correlation matrix for selected variables in the **`healthdata`** dataset. This matrix helps in understanding the linear relationships between pairs of variables such as `age`, `sex`, `bmi`, `children`, `smoker`, `region`, and `charges`.
+
+```{r}
+#Visualizing for correlation 
+corr_colors <- colorRampPalette(c("#E0F2F1", "#007D76"))(100) 
+corrplot(corr_matrix,method="color",addCoef.col = "black",col=corr_colors)
+```
+
+Above is a color-coded plot that clearly shows the strength and direction of relationships between the variables, aiding in the identification of patterns and potential multicollinearity.
+
+::: {.callout-note appearance="simple"}
+## Interpretation of Correlation Matrix
+
+-   **Age**: Positively correlated with **`charges`** (0.299).
+
+-   **Sex**: Weak correlations with all variables.
+
+-   **BMI**: Positively correlated with **`charges`** (0.198) and **`region`** (0.158).
+
+-   **Children**: Weak correlations with all variables.
+
+-   **Smoker**: Strongly correlated with **`charges`** (0.787).
+
+-   **Region**: Weak correlations with all variables.
+
+-   **Charges**: Strongly correlated with **`smoker`** (0.787), moderately with **`age`** (0.299) and **`BMI`** (0.198).
+
+Key relationships: **`smoker`** and **`charges`** (strong), **`age`** and **`charges`** (moderate), **`BMI`** and **`charges`** (moderate). Other variables show weak correlations.
+:::
+
+```{r}
+pairs(~ age + sex + bmi + children + smoker + region + charges, data = healthdata)
+```
+
+The above chart and block of code helps in visualizing a pairwise relationship between the variables.
+
+A scatterplot matrix is visualized, where each cell in the matrix is a scatterplot of one variable against another.
+
+## [LINEAR REGRESSION MODELS FOR PREDICTOR VARIABLES]{style="COLOR:#004046;"} 
+
+#### [LINEAR MODEL 1]{style="color:#004046"}
+
+The codeblock below fits a linear regression model to predict `charges` based on `smoker`, `age` and `bmi`
+
+**Description**:
+
+-   **Model**: Predicts **`charges`** using **`smoker`**, **`age`**, and **`bmi`**.
+
+-   **Summary**: Provides coefficients, significance, R-squared, and residuals.
+
+This helps understand how these predictors influence **`charges`**.
+
+```{r}
+# Logistic regression models for predictor variables 
+# Age, Smoker and BMI  
+lm1<- lm(charges ~ smoker + age + bmi, healthdata) 
+summary(lm1)
+```
+
+::: {.callout-note appearance="simple"}
+## Interpretation of Linear Model 1
+
+**Coefficients**:
+
+-   **Intercept**: -35500.51
+
+-   **Smoker**: +23823.68 (higher charges for smokers)
+
+-   **Age**: +259.55 (increase per year)
+
+-   **BMI**: +322.62 (increase per unit)
+
+**Significance**: All predictors are highly significant (p \< 2e-16).
+
+**Model Fit**:
+
+-   **R-squared**: 0.7475 (74.75% variability explained)
+
+-   **Residual Standard Error**: 6092
+
+**Conclusion**: Smoking, age, and BMI significantly impact charges, with smoking having the largest effect.
+:::
+
+#### LINEAR MODEL 2 {style="color:#004046"}
+
+The codeblock below fits a linear regression model to predict `charges` based on `smoker`, `age`, `bmi`, `children`, `region`, and `sex`
+
+**Description**:
+
+-   **Model**: Predicts **`charges`** using **`smoker`**, **`age`**, **`bmi`**, **`children`**, **`region`**, and **`sex`**.
+
+-   **Summary**: Provides coefficients, significance, R-squared, and residuals.
+
+```{r}
+  # Logistic regression models for predictor variables 
+  # Age, Smoker, children, region, sex and BMI   
+  lm2<- lm(charges ~ smoker + age + bmi + children + region + sex, healthdata) 
+  summary(lm2)
+```
+
+::: {.callout-note style="color:0c1621;" appearance="simple"}
+## Interpretation of Linear Model 2
+
+**Coefficients**:
+
+-   **Smoker**: +23820.43 (higher charges)
+
+-   **Age**: +257.29 (per year)
+
+-   **BMI**: +332.57 (per unit)
+
+-   **Children**: +479.37 (per child)
+
+-   **Region**: -353.64 (slight decrease)
+
+-   **Sex**: -131.11 (not significant)
+
+**Significance**: All predictors except **`sex`** are significant.
+
+**Model Fit**:
+
+-   **R-squared**: 0.7507 (75.07% variability explained)
+
+-   **Residual Standard Error**: 6060
+
+**Conclusion**: Smoking, age, BMI, children, and region significantly impact charges, with smoking having the largest effect.
+:::
+
+#### LINEAR MODEL 3 {style="color:#004046;"}
+
+[The codeblock below fits a linear regression model to predict `charges` based on `smoker`, `age`, `bmi`, `children` and `region`]{style="color:0c1621;"}
+
+```{r}
+# Logistic regression models for predictor variables 
+# Age, Smoker, children, region, BMI   
+lm3<- lm(charges ~ smoker + age + bmi + children + region, healthdata) 
+
+summary(lm3)
+```
+
+::: {.callout-note appearance="simple"}
+### Interpretation of the Linear Regression Model
+
+**Coefficients**:
+
+-   **Smoker**: +23808.21 (higher charges)
+
+-   **Age**: +257.41 (per year)
+
+-   **BMI**: +332.04 (per unit)
+
+-   **Children**: +478.44 (per child)
+
+-   **Region**: -353.45 (slight decrease)
+
+**Significance**:
+
+-   All predictors are significant (**`p < 0.05`**).
+
+**Model Fit**:
+
+-   **R-squared**: 0.7507 (75.07% variability explained)
+
+-   **Residual Standard Error**: 6058
+
+**Conclusion**:
+
+-   Smoking, age, BMI, children, and region significantly impact charges, with smoking having the largest effect.
+:::
+
+## RESIDUALS AND FITTED VALUES FOR LINEAR MODEL 1 {style="color:#004046;"}
+
+The codeblock below calculates the residuals and fitted values for the linear regression model `lm1` and stores them in a data frame:
+
+```{r}
+#Calculate residuals and fitted values for residuals
+residualslm1<-data.frame(residuals=resid(lm1), Fitted=fitted(lm1))
+```
+
+**Description**:
+
+-   **Residuals**: Differences between observed and predicted values from **`lm1`**.
+
+    -   **`resid(lm1)`**: Extracts residuals from **`lm1`**.
+
+-   **Fitted Values**: Predicted values from **`lm1`**.
+
+    -   **`fitted(lm1)`**: Extracts fitted values from **`lm1`**.
+
+```{r}
+#Create Visuals for Residuals and Fitted Values  
+ggplot(residualslm1, aes(Fitted,residuals))+
+  geom_point(aes(color="#004046")) +
+  geom_hline(yintercept = 0,linetype="dashed",color="#004046")+
+  labs(title = "Residuals vs Fitted Plot", x="Fitted Values",y="Residuals")+   theme_minimal()
+```
+
+::: {.callout-note appearance="simple"}
+## Interpretation of the Residuals vs Fitted Plot
+
+The plot visualizes the residuals (differences between observed and predicted values) against the fitted values from your linear regression model.
+
+**Key Observations**:
+
+-   **No Clear Pattern**: The residuals are scattered randomly around the horizontal dashed line at zero, indicating no obvious pattern.
+
+-   **Homoscedasticity**: The spread of residuals appears consistent across all fitted values, suggesting constant variance (homoscedasticity).
+
+-   **Outliers**: There are a few points far from the zero line, which might be outliers.
+
+**Conclusion**:
+
+-   The random scatter and consistent spread suggest that the model’s assumptions are reasonably met.
+
+-   The lack of a clear pattern indicates that the model does not suffer from major issues like non-linearity.
+:::
+
+### Q-Q Plot of Residuals
+
+The Q-Q plot compares the residuals’ quantiles to a normal distribution’s quantiles.
+
+```{r}
+#QQ Plot of Residuals
+ggplot(residualslm1, aes(sample=residuals))+   stat_qq(color="#004046")+   stat_qq_line(color="#004046")+   labs(title = "Q-Q Plot of Residuals", x="Theoretical Quantiles",y="Sample Quantiles")+   theme_minimal()
+```
+
+::: {.callout-note appearance="simple"}
+#### Interpretation:
+
+-   **Central Points**: Residuals are approximately normally distributed.
+
+-   **Deviations at Extremes**: More extreme residuals than expected, indicating heavier tails.
+
+#### Conclusion:
+
+The residuals deviate from normality at the extremes, suggesting potential issues with the model’s assumptions. Consider transformations or alternative models.
+:::
+
+::: {.callout-tip appearance="simple"}
+## Source file
+
+Access source file [here](https://drive.google.com/file/d/1Hol9apORGNO0ZIK3dJv3l1Tn2t-jqaqR/view?usp=drive_link){style="color:blue;"}
+:::
+
+## OVERALL CONCLUSION {style="color:##004046;"}
+
+[In this health analytics project, I explored various factors affecting medical charges using a dataset that included variables such as age, BMI, number of children, smoking status, region, and charges. Here’s a summary of our key findings and analyses:]{style="color:0c1621;"}
+
+1.  [**Data Visualization**:]{style="color:0c1621;"}
+
+-   [`ggplot2` was used to create visualizations that highlighted the relationships between different variables. For example, it was observed that smokers tend to have higher medical charges compared to non-smokers.]{style="color:0c1621;"}
+
+-   [The `corrplot` package helped to visualize correlations between variables, revealing significant relationships, such as the positive correlation between BMI and charges. ]{style="color:0c1621;"}
+
+2.  [**Data Transformation and Cleaning**: ]{style="color:0c1621;"}
+
+-   [Using `dplyr` and `tidyr`, the data was transformed to ensure it was ready for analysis. This creating new variables where necessary. ]{style="color:0c1621;"}
+
+3.  [**Linear Regression Modeling**:]{style="color:0c1621;"}
+
+-   [Linear regression modeling was performed to predict medical charges based on various predictor variables. The models showed that age, BMI, smoking status, and region are significant predictors of medical charges.]{style="color:0c1621;"}
+
+-   [The Q-Q plot of residuals indicated that while the central residuals were approximately normally distributed, there were deviations at the extremes, suggesting potential issues with the model’s assumptions.]{style="color:0c1621;"}
+
+4.  [**Model Evaluation**: ]{style="color:0c1621;"}
+
+-   [I evaluated the model’s performance and identified areas where it could be improved. The deviations in the Q-Q plot suggest that there might be need to consider transformations or alternative models to better fit the data.]{style="color:0c1621;"}
+
+#### FINAL THOUGHTS: {style="color:#004046;"}
+
+[This analysis provides valuable insights into the factors influencing medical charges. The findings can help in understanding the cost drivers in healthcare and potentially inform policy decisions. Future work could involve exploring non-linear models or other advanced techniques to improve prediction accuracy.]{style="color:#0c1621;"}
