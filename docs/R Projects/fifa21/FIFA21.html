@@ -2250,20 +2250,12 @@ The convert weight function
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">as.numeric</span>(<span class="fu">str_remove</span>(., <span class="st">"★"</span>)), </span>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">as.numeric</span>(.))</span>
 <span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: There were 3 warnings in `mutate()`.
-The first warning was:
-ℹ In argument: `across(...)`.
-Caused by warning in `if_else()`:
-! NAs introduced by coercion
-ℹ Run `dplyr::last_dplyr_warnings()` to see the 2 remaining warnings.</code></pre>
-</div>
 </div>
 <section id="check-7" class="level4">
 <h4 class="anchored" data-anchor-id="check-7">check</h4>
 <p>To crosscheck that the columns are clear of the star symbol (★):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>fifa21raw <span class="sc">%&gt;%</span><span class="fu">select</span>(WeakFootRating,Skill_Moves,InjuryRating) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">5</span>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>fifa21raw <span class="sc">%&gt;%</span><span class="fu">select</span>(WeakFootRating,Skill_Moves,InjuryRating) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">5</span>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -2309,11 +2301,11 @@ Caused by warning in `if_else()`:
 <h2 class="anchored" data-anchor-id="sub-setting-columns">Sub-setting Columns</h2>
 <p>This is important so as to focus on relevant data and to be rid of unnecessary columns.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>fifa21raw <span class="ot">&lt;-</span> fifa21raw <span class="sc">%&gt;%</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(ID<span class="sc">:</span>Contract, Contract_type, Positions, height_cm, Weight_kg, <span class="st">`</span><span class="at">Preferred Foot</span><span class="st">`</span><span class="sc">:</span>Hits)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>fifa21raw <span class="ot">&lt;-</span> fifa21raw <span class="sc">%&gt;%</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(ID<span class="sc">:</span>Contract, Contract_type, Positions, height_cm, Weight_kg, <span class="st">`</span><span class="at">Preferred Foot</span><span class="st">`</span><span class="sc">:</span>Hits)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>fifa21raw <span class="sc">%&gt;%</span> <span class="fu">select</span>(ID<span class="sc">:</span>Hits)<span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>fifa21raw <span class="sc">%&gt;%</span> <span class="fu">select</span>(ID<span class="sc">:</span>Hits)<span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
@@ -3287,7 +3279,7 @@ Caused by warning in `if_else()`:
 <section id="saving-wrangled-data" class="level2">
 <h2 class="anchored" data-anchor-id="saving-wrangled-data">Saving Wrangled Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(<span class="fu">as.data.frame</span>(fifa21raw),<span class="st">"fifa21_cleaned.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(<span class="fu">as.data.frame</span>(fifa21raw),<span class="st">"fifa21_cleaned.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">

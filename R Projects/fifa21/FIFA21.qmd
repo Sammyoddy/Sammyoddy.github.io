@@ -332,7 +332,7 @@ fifa21raw %>% select(WeakFootRating,Skill_Moves,InjuryRating) %>% head(5) %>% kn
 
 They have similar inconsistency, hence the need to treat them altogether:
 
-```{r}
+```{r warning=FALSE}
 fifa21raw <- fifa21raw %>%
   mutate(across(c(WeakFootRating, Skill_Moves, InjuryRating), 
             ~ if_else(str_detect(., "★"), 
