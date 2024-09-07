@@ -178,7 +178,7 @@ R Projects
 </h2>
 
 ::: grid
-::: {.g-col-12 .g-col-md-6}
+::: {style=".g-col-12 .g-col-md-6"}
 ```{=html}
 <!-- First Section -->
 <div style="flex: 1; padding: 10px;">   
@@ -189,9 +189,24 @@ This is a Health Analytics Project. I employed R and RStudio to perform Data Tra
 <a class="btn btn-primary" href="/R Projects/Health Analysis/HEALTHDATA.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project</a> 
 </div>
 ```
+:::
+
 ::: {.g-col-12 .g-col-md-6}
 ```{=html}
 <!-- Second Section -->
+<div style="flex: 1; padding: 10px;">   
+<a href="/R Projects/fifa21/FIFA21.html" style="width:100%">   
+<img src="/R Projects/fifa21/fifa212.jpg" class="img-fluid">   </a> 
+<div style="text-align: center; padding: 0 3px; min-height: 6rem;">   
+This is a Data Wrangling Project. I employed R and RStudio to perform Data Cleaning and Transformation. </div>  
+<a class="btn btn-primary" href="/R Projects/fifa21/FIFA21.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project</a> 
+</div>
+```
+:::
+
+::: {.g-col-12 .g-col-md-6}
+```{=html}
+<!-- Third Section -->
 <div style="flex: 1; padding: 10px;">   
 <a href="/R Projects/audible/audible.html" style="width:100%">   
 <img src="/R Projects/audible/audiblemain.jpg" class="img-fluid">   </a> 
@@ -200,6 +215,5 @@ This is a Data Cleaning Project for Audible. I employed R and RStudio to perform
 <a class="btn btn-primary" href="/R Projects/audible/audible.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project</a> 
 </div>
 ```
-:::
 :::
 :::

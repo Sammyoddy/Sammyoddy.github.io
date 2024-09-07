@@ -101,6 +101,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-J0F89RNG9X"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-J0F89RNG9X', { 'anonymize_ip': true});
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -607,7 +616,7 @@ dbl (4): age, bmi, children, charges
 <p><span style="color:#0c1621;">This visualization helps in understanding the distribution of sexes in the dataset, which can be useful for identifying patterns or anomalies in the data.</span></p>
 </section>
 <section id="visualize-predictor-variable-bmi" class="level4">
-<h4 class="anchored" data-anchor-id="visualize-predictor-variable-bmi"><span style="COLOR:#004046;"><strong>VISUALIZE PREDICTOR VARIABLE</strong></span> <strong><span style="color:orange;">BMI</span></strong></h4>
+<h4 class="anchored" data-anchor-id="visualize-predictor-variable-bmi"><span style="COLOR:#004046;"><strong>VISUALIZE PREDICTOR VARIABLE</strong></span> <span style="color:orange;"><strong>BMI</strong></span></h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(healthdata, <span class="fu">aes</span>(<span class="at">x =</span> bmi)) <span class="sc">+</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>, <span class="at">fill =</span> <span class="st">"#004046"</span>, <span class="at">color =</span> <span class="st">"bisque"</span>) <span class="sc">+</span>   </span>
