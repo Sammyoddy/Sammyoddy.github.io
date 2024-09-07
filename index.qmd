@@ -187,7 +187,7 @@ R Projects
 <img src="/R Projects/Health Analysis/HEALTH PREDICTION main.jpg" class="img-fluid">   </a> 
 <div style="text-align: center; padding: 0 3px; min-height: 6rem;"> 
 This is a Health Analytics Project. I employed R and RStudio to perform Data Transformation and Visualization on various health-related variables, and also fitted multiple linear regression models to make predictions.</div>  
-<a class="btn btn-primary" href="/R Projects/Health Analysis/HEALTHDATA.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:14px;">View Project</a> 
+<a class="btn btn-primary" href="/R Projects/Health Analysis/HEALTHDATA.html" role="button" style="width:169px;height:51px;padding:10px;margin-top:16px;">View Project</a> 
 </div>
 ```
 :::
