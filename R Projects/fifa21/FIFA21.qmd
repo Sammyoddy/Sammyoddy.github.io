@@ -361,7 +361,7 @@ fifa21raw <- fifa21raw %>%
 ```
 
 ```{r}
-knitr::kable(fifa21raw) %>% head(10)
+fifa21raw %>% select(ID:Hits)%>% head(10) %>% knitr::kable()
 ```
 
 ## Saving Wrangled Data
