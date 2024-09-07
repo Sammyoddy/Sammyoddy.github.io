@@ -5,7 +5,7 @@ toc: true
 monofont: 'Consolas'
 ---
 
-![](HEALTH PREDICTION.jpg){fig-align="center" width="380"}
+![](HEALTH%20PREDICTION.jpg){fig-align="center" width="380"}
 
 ## INTRODUCTION TO HEALTH ANALYTICS WITH R ⚕️ {style="color:#004046;"}
 
@@ -37,7 +37,7 @@ The **`install.packages`** function in R is used to install one or more packages
 
 6.  **`knitr`**: This package is used for dynamic report generation in R. It allows to integrate R code with LaTeX, HTML, Markdown, and other formats, making it easier to create reproducible reports and documents that include both code and output.
 
-## [LOAD LIBRARIES]{style="color:#004046;"} 
+## [LOAD LIBRARIES]{style="color:#004046;"}
 
 ```{r}
 library(corrplot)
@@ -125,7 +125,7 @@ ggplot(healthdata,aes(x=sex, fill = sex)) +
 
 [This visualization helps in understanding the distribution of sexes in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
 
-#### [**VISUALIZE PREDICTOR VARIABLE**]{style="COLOR:#004046;"} **[BMI]{style="color:orange;"}**
+#### [**VISUALIZE PREDICTOR VARIABLE**]{style="COLOR:#004046;"} [**BMI**]{style="color:orange;"}
 
 ```{r}
 ggplot(healthdata, aes(x = bmi)) +
@@ -138,7 +138,7 @@ ggplot(healthdata, aes(x = bmi)) +
 
 [This visualization helps in understanding the distribution of BMI values in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
 
-#### [VISUALIZE PREDICTOR VARIABLE]{style="COLOR: #004046;"} [CHILDREN ]{style="COLOR:#CBC3E3;"}
+#### [VISUALIZE PREDICTOR VARIABLE]{style="COLOR: #004046;"} [CHILDREN]{style="COLOR:#CBC3E3;"}
 
 ```{r}
 ggplot(healthdata, aes(x = factor(children))) +
@@ -165,7 +165,7 @@ theme_minimal()
 
 [This visualization helps in understanding the distribution of smokers and non-smokers in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
 
-#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [REGION]{style="color:#CBC3E3;"} 
+#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [REGION]{style="color:#CBC3E3;"}
 
 ```{r}
 ggplot(healthdata, aes(x = region, fill = region)) +
@@ -179,7 +179,7 @@ ggplot(healthdata, aes(x = region, fill = region)) +
 
 [This visualization helps in understanding the distribution of regions in the dataset, which can be useful for identifying patterns or anomalies in the data.]{style="color:#0c1621;"}
 
-#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [CHARGES]{style="color:orange;"} 
+#### [VISUALIZE PREDICTOR VARIABLE]{style="color:#004046;"} [CHARGES]{style="color:orange;"}
 
 ```{r}
 ggplot(healthdata, aes(x = charges)) +   
@@ -195,7 +195,7 @@ ggplot(healthdata, aes(x = charges)) +
 
 Piecing it altogether, we make a report off of the charts generated in RStudio using the viz Tool: Power BI
 
-![](HEALTHDATA REPORT.jpg){fig-align="center"}
+![](HEALTHDATA%20REPORT.jpg){fig-align="center"}
 
 ## [DESCRIPTIVE SUMMARY]{style="COLOR:#004046;"}
 
@@ -274,7 +274,7 @@ The above chart and block of code helps in visualizing a pairwise relationship b
 
 A scatterplot matrix is visualized, where each cell in the matrix is a scatterplot of one variable against another.
 
-## [LINEAR REGRESSION MODELS FOR PREDICTOR VARIABLES]{style="COLOR:#004046;"} 
+## [LINEAR REGRESSION MODELS FOR PREDICTOR VARIABLES]{style="COLOR:#004046;"}
 
 #### [LINEAR MODEL 1]{style="color:#004046"}
 
@@ -488,11 +488,11 @@ Access source file [here](https://drive.google.com/file/d/1Hol9apORGNO0ZIK3dJv3l
 
 -   [`ggplot2` was used to create visualizations that highlighted the relationships between different variables. For example, it was observed that smokers tend to have higher medical charges compared to non-smokers.]{style="color:0c1621;"}
 
--   [The `corrplot` package helped to visualize correlations between variables, revealing significant relationships, such as the positive correlation between BMI and charges. ]{style="color:0c1621;"}
+-   [The `corrplot` package helped to visualize correlations between variables, revealing significant relationships, such as the positive correlation between BMI and charges.]{style="color:0c1621;"}
 
-2.  [**Data Transformation and Cleaning**: ]{style="color:0c1621;"}
+2.  [**Data Transformation and Cleaning**:]{style="color:0c1621;"}
 
--   [Using `dplyr` and `tidyr`, the data was transformed to ensure it was ready for analysis. This creating new variables where necessary. ]{style="color:0c1621;"}
+-   [Using `dplyr` and `tidyr`, the data was transformed to ensure it was ready for analysis. This creating new variables where necessary.]{style="color:0c1621;"}
 
 3.  [**Linear Regression Modeling**:]{style="color:0c1621;"}
 
@@ -500,7 +500,7 @@ Access source file [here](https://drive.google.com/file/d/1Hol9apORGNO0ZIK3dJv3l
 
 -   [The Q-Q plot of residuals indicated that while the central residuals were approximately normally distributed, there were deviations at the extremes, suggesting potential issues with the model’s assumptions.]{style="color:0c1621;"}
 
-4.  [**Model Evaluation**: ]{style="color:0c1621;"}
+4.  [**Model Evaluation**:]{style="color:0c1621;"}
 
 -   [I evaluated the model’s performance and identified areas where it could be improved. The deviations in the Q-Q plot suggest that there might be need to consider transformations or alternative models to better fit the data.]{style="color:0c1621;"}
 

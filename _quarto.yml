@@ -5,6 +5,7 @@ project:
 
 website:
   title: "SAMMY ODEYEMI"
+  google-analytics: "G-J0F89RNG9X"
   navbar:
     left:
       - href: index.qmd
